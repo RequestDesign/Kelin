@@ -1,3 +1,28 @@
+const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
+    let swiper;
+
+    breakpoint = window.matchMedia(breakpoint);
+
+    const enableSwiper = function (className, settings) {
+        swiper = new Swiper(className, settings);
+
+        if (callback) {
+            callback(swiper);
+        }
+    };
+
+    const cheker = function () {
+        if (breakpoint.matches) {
+            return enableSwiper(swiperClass, swiperSettings);
+        } else {
+            if (swiper !== undefined) swiper.destroy(true, true);
+            return;
+        }
+    };
+
+    breakpoint.addEventListener('change', cheker);
+    cheker();
+};
 const rem = function (rem) {
     if ($(window).width() > 768) {
         return 0.005208335 * $(window).width() * rem;
@@ -7,19 +32,15 @@ const rem = function (rem) {
     }
 };
 
-window.addEventListener('resize', () => {
-    resizeAbilitiesSwiper();
-    resizeClientsSwiper();
-    resizeTalentsSwiper();
-});
-window.addEventListener('load', () => {
-    resizeAbilitiesSwiper();
-    resizeClientsSwiper();
-    resizeTalentsSwiper();
+resizableSwiper('(max-width: 768px)', '.abilities-swiper', {
+    loop: true,
+    speed: 1200,
+    direction: 'horizontal',
+    slidesPerView: 'auto',
+    spaceBetween: rem(0.8)
 });
 
-//industry-swiper main page
-new Swiper('.home__industry-swiper', {
+resizableSwiper('(max-width: 100vw)', ' .home__industry-swiper', {
     loop: true,
     speed: 1200,
     direction: 'horizontal',
@@ -38,60 +59,15 @@ new Swiper('.home__industry-swiper', {
     }
 });
 
-//abilities-swiper main page
-let abilitiesSwiper = null,
-    abilitiesSwiperWrapper = document.querySelector('.abilities-swiper-wrapper');
+resizableSwiper('(max-width: 768px)', '.clients-swiper', {
+    loop: true,
+    speed: 1200,
+    direction: 'horizontal',
+    slidesPerView: 'auto',
+    spaceBetween: rem(0.8)
+});
 
-function resizeAbilitiesSwiper() {
-    if (window.innerWidth <= 768) {
-        abilitiesSwiperWrapper.classList.remove('home__businesses-needs-abilities-list');
-        if (!abilitiesSwiper) {
-            abilitiesSwiper = new Swiper('.abilities-swiper', {
-                loop: true,
-                speed: 1200,
-                direction: 'horizontal',
-                slidesPerView: 'auto',
-                spaceBetween: rem(0.8)
-            });
-        }
-    }
-    if (window.innerWidth > 768) {
-        if (abilitiesSwiper) {
-            abilitiesSwiperWrapper.classList.add('home__businesses-needs-abilities-list');
-            abilitiesSwiper.destroy();
-            abilitiesSwiper = null;
-        }
-    }
-}
-
-//clients-swiper main page
-let clientsSwiper = null,
-    clientsSwiperWrapper = document.querySelector('.clients-swiper-wrapper');
-
-function resizeClientsSwiper() {
-    if (window.innerWidth <= 768) {
-        clientsSwiperWrapper.classList.remove('clients-list');
-        if (!clientsSwiper) {
-            clientsSwiper = new Swiper('.clients-swiper', {
-                loop: true,
-                speed: 1200,
-                direction: 'horizontal',
-                slidesPerView: 'auto',
-                spaceBetween: rem(0.8)
-            });
-        }
-    }
-    if (window.innerWidth > 768) {
-        if (clientsSwiper) {
-            clientsSwiperWrapper.classList.add('clients-list');
-            clientsSwiper.destroy();
-            clientsSwiper = null;
-        }
-    }
-}
-
-//protection-swiper main page
-new Swiper('.home__protection-swiper', {
+resizableSwiper('(max-width: 100vw)', '.home__protection-swiper', {
     loop: true,
     speed: 1200,
     grabCursor: true,
@@ -102,9 +78,7 @@ new Swiper('.home__protection-swiper', {
     }
 });
 
-//tu-letters-swiper main page
-
-new Swiper('.home__tu-letters-swiper', {
+resizableSwiper('(max-width: 100vw)', '.home__tu-letters-swiper', {
     loop: true,
     speed: 1200,
     grabCursor: true,
@@ -122,34 +96,15 @@ new Swiper('.home__tu-letters-swiper', {
     }
 });
 
-//talents-swiper main page
-let talentsSwiper = null,
-    talentsSwiperWrapper = document.querySelector('.talents-swiper-wrapper');
+resizableSwiper('(max-width: 768px)', '.talents-swiper', {
+    loop: true,
+    speed: 1200,
+    direction: 'horizontal',
+    slidesPerView: 1.2,
+    spaceBetween: rem(0.8)
+});
 
-function resizeTalentsSwiper() {
-    if (window.innerWidth <= 768) {
-        talentsSwiperWrapper.classList.remove('talents__list-wrapper');
-        if (!talentsSwiper) {
-            talentsSwiper = new Swiper('.talents-swiper', {
-                loop: true,
-                speed: 1200,
-                direction: 'horizontal',
-                slidesPerView: 1.2,
-                spaceBetween: rem(0.8)
-            });
-        }
-    }
-    if (window.innerWidth > 768) {
-        if (talentsSwiper) {
-            talentsSwiperWrapper.classList.add('talents__list-wrapper');
-            talentsSwiper.destroy();
-            talentsSwiper = null;
-        }
-    }
-}
-
-//individual-calc-swiper main page
-new Swiper('.home__individual-calc-swiper', {
+resizableSwiper('(max-width: 100vw)', '.home__individual-calc-swiper', {
     loop: true,
     speed: 1200,
     grabCursor: true,
@@ -164,8 +119,7 @@ new Swiper('.home__individual-calc-swiper', {
     }
 });
 
-//home__category-list-swiper
-new Swiper('.home__category-list-swiper', {
+resizableSwiper('(max-width: 100vw)', '.home__category-list-swiper', {
     loop: true,
     speed: 1200,
     grabCursor: true,

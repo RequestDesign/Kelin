@@ -345,6 +345,11 @@
                 flex-wrap: wrap;
                 gap: 1.2rem;
 
+                @include small-tablet {
+                    flex-wrap: unset;
+                    gap: 0;
+                }
+
                 &-item {
                     display: flex;
                     justify-content: center;
@@ -2048,8 +2053,8 @@
 
             @include small-tablet {
                 display: flex;
-                flex-direction: column;
-                gap: 1.6rem;
+                flex-wrap: unset;
+                gap: 0;
             }
         }
 
@@ -2166,6 +2171,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1.3rem;
+
+    @include small-tablet {
+        flex-wrap: unset;
+        gap: 0;
+    }
 
     &__item {
         padding: 4.4rem;

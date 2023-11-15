@@ -5168,6 +5168,12 @@ section {
     margin-bottom: 4.8rem;
   }
 
+  .home__businesses-needs-abilities-list {
+    -ms-flex-wrap: unset;
+        flex-wrap: unset;
+    gap: 0;
+  }
+
   .home__businesses-needs-abilities-list-icon {
     display: none;
   }
@@ -5937,11 +5943,9 @@ section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 1.6rem;
+    -ms-flex-wrap: unset;
+        flex-wrap: unset;
+    gap: 0;
   }
 
   .talents__list-item {
@@ -5980,6 +5984,12 @@ section {
   .numbered-details__list-item-number {
     min-width: 8rem;
     min-height: 8rem;
+  }
+
+  .clients-list {
+    -ms-flex-wrap: unset;
+        flex-wrap: unset;
+    gap: 0;
   }
 
   .clients-list__item {
