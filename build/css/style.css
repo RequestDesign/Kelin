@@ -3282,6 +3282,7 @@ section {
 
 .home__price-title {
   margin-bottom: 4.4rem;
+  max-width: 104.2rem;
 }
 
 .home__individual-calc-text {
@@ -4404,7 +4405,11 @@ section {
   .insights__category-list {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-    overflow-x: hidden;
+    overflow-x: scroll;
+  }
+
+  .insights__category-list::-webkit-scrollbar {
+    display: none;
   }
 
   .insights__category-item a {
