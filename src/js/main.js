@@ -1,5 +1,16 @@
 // Custom scripts
 document.addEventListener('DOMContentLoaded', function () {
+    function setPhoneMask() {
+        const phoneInputs = document.querySelectorAll('input[type="tel"]');
+
+        phoneInputs.forEach((phoneInput) => {
+            const im = new Inputmask('+ 7 (999) 999-99-99');
+            im.mask(phoneInput);
+        });
+    }
+
+    setPhoneMask();
+
     //read more
     if (document.querySelector('.privacy__block-link')) {
         const buttons = document.querySelectorAll('.privacy__block-link');

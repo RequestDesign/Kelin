@@ -19,7 +19,10 @@
             margin-bottom: 5rem;
             @include small-tablet {
                 flex-wrap: nowrap;
-                overflow-x: hidden;
+                overflow-x: scroll;
+                &::-webkit-scrollbar{
+                    display: none;
+                }
             }
         }
 
