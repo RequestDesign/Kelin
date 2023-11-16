@@ -8,6 +8,10 @@
                 Знаем юридические особенности вашей отрасли в деталях. Предложим необходимые решения
                 и обеспечим защиту вашей компании.
             </p>
+            <picture class="business-areas__hero-image">
+                <source srcset="../img//business-areas/sphere.webp" type="image/webp" />
+                <img loading="lazy" src="../img//business-areas/sphere.webp" alt="" />
+            </picture>
             <button class="business-areas__hero-button button">Обсудить задачи с юристом</button>
         </div>
 
@@ -50,7 +54,7 @@
             </div>
         </div>
 
-        <div class="business-areas__planets planets background-blur">
+        <div class="business-areas__planets planets background-blur-bordered">
             <h1 class="planets__title section-title">Мы умеем работать с бизнесом любого масштаба</h1>
             <p class="planets__description text-regular">
                 прямо сейчас на поддержке <span>70</span> компаний малого и среднего бизнеса и
@@ -58,11 +62,12 @@
             </p>
         </div>
 
-        <div class="business-areas__spheres background-blur">
+        <div class="business-areas__spheres background-blur-bordered">
             <h1 class="business-areas__spheres-title section-title">
                 Знаем все юридические нюансы вашей сферы бизнеса
             </h1>
-            <ul class="business-areas__spheres-list">
+
+            <ul class="business-areas__spheres-list desktop">
                 <li class="business-areas__spheres-list-item">
                     <a href="#" class="text-regular">Производство</a>
                 </li>
@@ -95,15 +100,31 @@
                 </li>
             </ul>
 
+            <ul class="business-areas__spheres-list mobile">
+                <li class="business-areas__spheres-list-item">
+                    <a href="#" class="text-regular">Ритейл</a>
+                </li>
+                <li class="business-areas__spheres-list-item">
+                    <a href="#" class="text-regular">Производство</a>
+                </li>
+                <li class="business-areas__spheres-list-item">
+                    <a href="#" class="text-regular">Гос. учреждения</a>
+                </li>
+                <li class="business-areas__spheres-list-item">
+                    <a href="#" class="text-regular">EЩЁ</a>
+                </li>
+            </ul>
+
             <div class="business-areas__spheres-cards">
                 <div class="business-areas__spheres-card background-blur-bordered">
-                    <h2 class="business-areas__spheres-card-title title-h2-blue">Производство</h2>
                     <div class="business-areas__spheres-card-content">
-                        <img
-                            class="business-areas__spheres-card-image"
-                            src="../img/business-areas/production.webp"
-                            alt=""
-                        />
+                        <div class="business-areas__spheres-card-content-top">
+                            <div class="business-areas__spheres-card-image">
+                                <img src="../img/business-areas/area1.webp" alt="" />
+                            </div>
+
+                            <h2 class="business-areas__spheres-card-title title-h2-blue">Производство</h2>
+                        </div>
                         <div class="business-areas__spheres-card-text">
                             <p class="business-areas__spheres-card-text-description text-regular">
                                 Поможем на каждом этапе производственного цикла. Защитим от рисков и штрафов.
@@ -139,17 +160,147 @@
                 </div>
 
                 <div class="business-areas__spheres-card background-blur-bordered">
-                    <h2 class="business-areas__spheres-card-title title-h2-blue">Производство</h2>
                     <div class="business-areas__spheres-card-content">
-                        <img
-                            class="business-areas__spheres-card-image"
-                            src="../img/business-areas/production.webp"
-                            alt=""
-                        />
+                        <div class="business-areas__spheres-card-content-top">
+                            <div class="business-areas__spheres-card-image">
+                                <img src="../img/business-areas/area2.webp" alt="" />
+                            </div>
+
+                            <h2 class="business-areas__spheres-card-title title-h2-blue">Оптовая торговля</h2>
+                        </div>
                         <div class="business-areas__spheres-card-text">
                             <p class="business-areas__spheres-card-text-description text-regular">
-                                Поможем на каждом этапе производственного цикла. Защитим от рисков и штрафов.
-                                Подготовим нужную документацию и закроем любой юридический вопрос.
+                                Обеспечим безопасные отношения с клиентами и гарантии выполнения обязательств
+                                поставщиками. Сформируем базу крепких договоров.
+                            </p>
+                            <ul class="business-areas__spheres-card-text-list">
+                                <li class="business-areas__spheres-card-text-list-item">
+                                    — Выстраивание договорных отношений с контрагентами
+                                </li>
+                                <li class="business-areas__spheres-card-text-list-item">
+                                    — Взыскание проблемной задолженности
+                                </li>
+                                <li class="business-areas__spheres-card-text-list-item">
+                                    — Формирование крепких шаблонов договоров
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="business-areas__spheres-card-icons">
+                            <div class="business-areas__spheres-card-icon henkel">
+                                <img src="../img/business-areas/henkel.svg" alt="" />
+                            </div>
+                            <div class="business-areas__spheres-card-icon iff">
+                                <img src="../img/business-areas/iff.svg" alt="" />
+                            </div>
+                            <div class="business-areas__spheres-card-icon tetra">
+                                <img src="../img/business-areas/tetra.svg" alt="" />
+                            </div>
+                            <div class="business-areas__spheres-card-icon new-progress">
+                                <img src="../img/business-areas/new-progress.svg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="business-areas__spheres-card background-blur-bordered">
+                    <div class="business-areas__spheres-card-content">
+                        <div class="business-areas__spheres-card-content-top">
+                            <div class="business-areas__spheres-card-image">
+                                <img src="../img/business-areas/area3.webp" alt="" />
+                            </div>
+
+                            <h2 class="business-areas__spheres-card-title title-h2-blue">Логистика</h2>
+                        </div>
+                        <div class="business-areas__spheres-card-text">
+                            <p class="business-areas__spheres-card-text-description text-regular">
+                                Защитим в конфликтных ситуациях с клиентами. Возьмём на себя все вопросы по
+                                транспорту: покупка и продажа, страховка, лизинг, конфликты с водителями.
+                            </p>
+                            <ul class="business-areas__spheres-card-text-list">
+                                <li class="business-areas__spheres-card-text-list-item">
+                                    — Решение сложных вопросов при получении и сдаче груза
+                                </li>
+                                <li class="business-areas__spheres-card-text-list-item">
+                                    — Решение конфликтов с водителями и подрядчиками
+                                </li>
+                                <li class="business-areas__spheres-card-text-list-item">
+                                    — Взаимодействие и суды со страховыми компаниями
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="business-areas__spheres-card-icons">
+                            <div class="business-areas__spheres-card-icon henkel">
+                                <img src="../img/business-areas/henkel.svg" alt="" />
+                            </div>
+                            <div class="business-areas__spheres-card-icon iff">
+                                <img src="../img/business-areas/iff.svg" alt="" />
+                            </div>
+                            <div class="business-areas__spheres-card-icon tetra">
+                                <img src="../img/business-areas/tetra.svg" alt="" />
+                            </div>
+                            <div class="business-areas__spheres-card-icon new-progress">
+                                <img src="../img/business-areas/new-progress.svg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="business-areas__spheres-card background-blur-bordered">
+                    <div class="business-areas__spheres-card-content">
+                        <div class="business-areas__spheres-card-content-top">
+                            <div class="business-areas__spheres-card-image">
+                                <img src="../img/business-areas/area4.webp" alt="" />
+                            </div>
+
+                            <h2 class="business-areas__spheres-card-title title-h2-blue">Строительство</h2>
+                        </div>
+                        <div class="business-areas__spheres-card-text">
+                            <p class="business-areas__spheres-card-text-description text-regular">
+                                Обеспечим юридическую безопасность всей цепочки строительства: от застройщика
+                                до субподрядчика. Учтём все требования к стройке и защитим от рисков.
+                            </p>
+                            <ul class="business-areas__spheres-card-text-list">
+                                <li class="business-areas__spheres-card-text-list-item">
+                                    — Решение вопросов в рамках исполнения договора подряда
+                                </li>
+                                <li class="business-areas__spheres-card-text-list-item">
+                                    — Решение вопросов с иностранной рабочей силой
+                                </li>
+                                <li class="business-areas__spheres-card-text-list-item">
+                                    — Взаимодействие с государственными заказчиками
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="business-areas__spheres-card-icons">
+                            <div class="business-areas__spheres-card-icon henkel">
+                                <img src="../img/business-areas/henkel.svg" alt="" />
+                            </div>
+                            <div class="business-areas__spheres-card-icon iff">
+                                <img src="../img/business-areas/iff.svg" alt="" />
+                            </div>
+                            <div class="business-areas__spheres-card-icon tetra">
+                                <img src="../img/business-areas/tetra.svg" alt="" />
+                            </div>
+                            <div class="business-areas__spheres-card-icon new-progress">
+                                <img src="../img/business-areas/new-progress.svg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="business-areas__spheres-card background-blur-bordered">
+                    <div class="business-areas__spheres-card-content">
+                        <div class="business-areas__spheres-card-content-top">
+                            <div class="business-areas__spheres-card-image">
+                                <img src="../img/business-areas/area5.webp" alt="" />
+                            </div>
+
+                            <h2 class="business-areas__spheres-card-title title-h2-blue">Ритейл</h2>
+                        </div>
+                        <div class="business-areas__spheres-card-text">
+                            <p class="business-areas__spheres-card-text-description text-regular">
+                                Решим сложные вопросы поставок и производства, проверим подрядчика и
+                                документы, защитим от потребительского экстремизма.
                             </p>
                             <ul class="business-areas__spheres-card-text-list">
                                 <li class="business-areas__spheres-card-text-list-item">
@@ -181,153 +332,28 @@
                 </div>
 
                 <div class="business-areas__spheres-card background-blur-bordered">
-                    <h2 class="business-areas__spheres-card-title title-h2-blue">Производство</h2>
                     <div class="business-areas__spheres-card-content">
-                        <img
-                            class="business-areas__spheres-card-image"
-                            src="../img/business-areas/production.webp"
-                            alt=""
-                        />
-                        <div class="business-areas__spheres-card-text">
-                            <p class="business-areas__spheres-card-text-description text-regular">
-                                Поможем на каждом этапе производственного цикла. Защитим от рисков и штрафов.
-                                Подготовим нужную документацию и закроем любой юридический вопрос.
-                            </p>
-                            <ul class="business-areas__spheres-card-text-list">
-                                <li class="business-areas__spheres-card-text-list-item">
-                                    — Решение вопросов ВЭД и санкционных вопросов
-                                </li>
-                                <li class="business-areas__spheres-card-text-list-item">
-                                    — Урегулирование проблемных ситуаций на производстве
-                                </li>
-                                <li class="business-areas__spheres-card-text-list-item">
-                                    — Сопровождение взаимодействия с торговыми сетями
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="business-areas__spheres-card-icons">
-                            <div class="business-areas__spheres-card-icon henkel">
-                                <img src="../img/business-areas/henkel.svg" alt="" />
+                        <div class="business-areas__spheres-card-content-top">
+                            <div class="business-areas__spheres-card-image">
+                                <img src="../img/business-areas/area6.webp" alt="" />
                             </div>
-                            <div class="business-areas__spheres-card-icon iff">
-                                <img src="../img/business-areas/iff.svg" alt="" />
-                            </div>
-                            <div class="business-areas__spheres-card-icon tetra">
-                                <img src="../img/business-areas/tetra.svg" alt="" />
-                            </div>
-                            <div class="business-areas__spheres-card-icon new-progress">
-                                <img src="../img/business-areas/new-progress.svg" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="business-areas__spheres-card background-blur-bordered">
-                    <h2 class="business-areas__spheres-card-title title-h2-blue">Производство</h2>
-                    <div class="business-areas__spheres-card-content">
-                        <img
-                            class="business-areas__spheres-card-image"
-                            src="../img/business-areas/production.webp"
-                            alt=""
-                        />
+                            <h2 class="business-areas__spheres-card-title title-h2-blue">IT</h2>
+                        </div>
                         <div class="business-areas__spheres-card-text">
                             <p class="business-areas__spheres-card-text-description text-regular">
-                                Поможем на каждом этапе производственного цикла. Защитим от рисков и штрафов.
-                                Подготовим нужную документацию и закроем любой юридический вопрос.
+                                Сохраним интеллектуальные активы бизнеса на всех этапах: от создания до их
+                                реализации, а также поможем снизить HR-риски.
                             </p>
                             <ul class="business-areas__spheres-card-text-list">
                                 <li class="business-areas__spheres-card-text-list-item">
-                                    — Решение вопросов ВЭД и санкционных вопросов
+                                    — Защита интеллектуальной собственности компании
                                 </li>
                                 <li class="business-areas__spheres-card-text-list-item">
-                                    — Урегулирование проблемных ситуаций на производстве
+                                    — Разработка лицензионных договоров
                                 </li>
                                 <li class="business-areas__spheres-card-text-list-item">
-                                    — Сопровождение взаимодействия с торговыми сетями
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="business-areas__spheres-card-icons">
-                            <div class="business-areas__spheres-card-icon henkel">
-                                <img src="../img/business-areas/henkel.svg" alt="" />
-                            </div>
-                            <div class="business-areas__spheres-card-icon iff">
-                                <img src="../img/business-areas/iff.svg" alt="" />
-                            </div>
-                            <div class="business-areas__spheres-card-icon tetra">
-                                <img src="../img/business-areas/tetra.svg" alt="" />
-                            </div>
-                            <div class="business-areas__spheres-card-icon new-progress">
-                                <img src="../img/business-areas/new-progress.svg" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="business-areas__spheres-card background-blur-bordered">
-                    <h2 class="business-areas__spheres-card-title title-h2-blue">Производство</h2>
-                    <div class="business-areas__spheres-card-content">
-                        <img
-                            class="business-areas__spheres-card-image"
-                            src="../img/business-areas/production.webp"
-                            alt=""
-                        />
-                        <div class="business-areas__spheres-card-text">
-                            <p class="business-areas__spheres-card-text-description text-regular">
-                                Поможем на каждом этапе производственного цикла. Защитим от рисков и штрафов.
-                                Подготовим нужную документацию и закроем любой юридический вопрос.
-                            </p>
-                            <ul class="business-areas__spheres-card-text-list">
-                                <li class="business-areas__spheres-card-text-list-item">
-                                    — Решение вопросов ВЭД и санкционных вопросов
-                                </li>
-                                <li class="business-areas__spheres-card-text-list-item">
-                                    — Урегулирование проблемных ситуаций на производстве
-                                </li>
-                                <li class="business-areas__spheres-card-text-list-item">
-                                    — Сопровождение взаимодействия с торговыми сетями
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="business-areas__spheres-card-icons">
-                            <div class="business-areas__spheres-card-icon henkel">
-                                <img src="../img/business-areas/henkel.svg" alt="" />
-                            </div>
-                            <div class="business-areas__spheres-card-icon iff">
-                                <img src="../img/business-areas/iff.svg" alt="" />
-                            </div>
-                            <div class="business-areas__spheres-card-icon tetra">
-                                <img src="../img/business-areas/tetra.svg" alt="" />
-                            </div>
-                            <div class="business-areas__spheres-card-icon new-progress">
-                                <img src="../img/business-areas/new-progress.svg" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="business-areas__spheres-card background-blur-bordered">
-                    <h2 class="business-areas__spheres-card-title title-h2-blue">Производство</h2>
-                    <div class="business-areas__spheres-card-content">
-                        <img
-                            class="business-areas__spheres-card-image"
-                            src="../img/business-areas/production.webp"
-                            alt=""
-                        />
-                        <div class="business-areas__spheres-card-text">
-                            <p class="business-areas__spheres-card-text-description text-regular">
-                                Поможем на каждом этапе производственного цикла. Защитим от рисков и штрафов.
-                                Подготовим нужную документацию и закроем любой юридический вопрос.
-                            </p>
-                            <ul class="business-areas__spheres-card-text-list">
-                                <li class="business-areas__spheres-card-text-list-item">
-                                    — Решение вопросов ВЭД и санкционных вопросов
-                                </li>
-                                <li class="business-areas__spheres-card-text-list-item">
-                                    — Урегулирование проблемных ситуаций на производстве
-                                </li>
-                                <li class="business-areas__spheres-card-text-list-item">
-                                    — Сопровождение взаимодействия с торговыми сетями
+                                    — Всесторонний юридический консалтинг
                                 </li>
                             </ul>
                         </div>
@@ -359,11 +385,14 @@
                     </button>
 
                     <div class="business-areas__request-social request__social article__share">
-                        <p class="request__social-text">
-                            <span>Вместо заявки можно сразу написать нам в мессенджеры </span>
+                        <p class="business-areas__request-social-text request__social-text">
+                            <span class="desktop">Вместо заявки можно сразу написать нам в мессенджеры </span>
+                            <span class="mobile">Или напишите в мессенджеры:</span>
                         </p>
                         <ul class="request__social-icons article__share-icons">
-                            <li class="request__social-icons-item article__share-icons-item --telegramm">
+                            <li
+                                class="business-areas__request-social-icons-item request__social-icons-item article__share-icons-item --telegramm"
+                            >
                                 <a href="#">
                                     <svg
                                         width="33"
@@ -379,7 +408,9 @@
                                     </svg>
                                 </a>
                             </li>
-                            <li class="request__social-icons-item article__share-icons-item --whatsapp">
+                            <li
+                                class="business-areas__request-social-icons-item request__social-icons-item article__share-icons-item --whatsapp"
+                            >
                                 <a href="#">
                                     <svg
                                         width="30"
@@ -402,27 +433,28 @@
 
             <div class="business-areas__spheres-cards">
                 <div class="business-areas__spheres-card background-blur-bordered">
-                    <h2 class="business-areas__spheres-card-title title-h2-blue">Производство</h2>
                     <div class="business-areas__spheres-card-content">
-                        <img
-                            class="business-areas__spheres-card-image"
-                            src="../img/business-areas/production.webp"
-                            alt=""
-                        />
+                        <div class="business-areas__spheres-card-content-top">
+                            <div class="business-areas__spheres-card-image">
+                                <img src="../img/business-areas/area7.webp" alt="" />
+                            </div>
+
+                            <h2 class="business-areas__spheres-card-title title-h2-blue">Консалтинг</h2>
+                        </div>
                         <div class="business-areas__spheres-card-text">
                             <p class="business-areas__spheres-card-text-description text-regular">
-                                Поможем на каждом этапе производственного цикла. Защитим от рисков и штрафов.
-                                Подготовим нужную документацию и закроем любой юридический вопрос.
+                                Подготовим нужную документацию, проведём через все юридические процессы и
+                                защитим ваши знания от посягательств, плагиата и воровства.
                             </p>
                             <ul class="business-areas__spheres-card-text-list">
                                 <li class="business-areas__spheres-card-text-list-item">
-                                    — Решение вопросов ВЭД и санкционных вопросов
+                                    — Консультирование по всем отраслям права
                                 </li>
                                 <li class="business-areas__spheres-card-text-list-item">
-                                    — Урегулирование проблемных ситуаций на производстве
+                                    — Составление надёжных договоров
                                 </li>
                                 <li class="business-areas__spheres-card-text-list-item">
-                                    — Сопровождение взаимодействия с торговыми сетями
+                                    — Защита интеллектуальной собственности
                                 </li>
                             </ul>
                         </div>
@@ -444,27 +476,28 @@
                 </div>
 
                 <div class="business-areas__spheres-card background-blur-bordered">
-                    <h2 class="business-areas__spheres-card-title title-h2-blue">Производство</h2>
                     <div class="business-areas__spheres-card-content">
-                        <img
-                            class="business-areas__spheres-card-image"
-                            src="../img/business-areas/production.webp"
-                            alt=""
-                        />
+                        <div class="business-areas__spheres-card-content-top">
+                            <div class="business-areas__spheres-card-image">
+                                <img src="../img/business-areas/area8.webp" alt="" />
+                            </div>
+
+                            <h2 class="business-areas__spheres-card-title title-h2-blue">B2B-услуги</h2>
+                        </div>
                         <div class="business-areas__spheres-card-text">
                             <p class="business-areas__spheres-card-text-description text-regular">
-                                Поможем на каждом этапе производственного цикла. Защитим от рисков и штрафов.
-                                Подготовим нужную документацию и закроем любой юридический вопрос.
+                                Обеспечим безопасные и договорные отношения с клиентами и партнёрами. Закроем
+                                любой юридический вопрос вашего бизнеса.
                             </p>
                             <ul class="business-areas__spheres-card-text-list">
                                 <li class="business-areas__spheres-card-text-list-item">
-                                    — Решение вопросов ВЭД и санкционных вопросов
+                                    — Выстраивание договорной работы
                                 </li>
                                 <li class="business-areas__spheres-card-text-list-item">
-                                    — Урегулирование проблемных ситуаций на производстве
+                                    — Легализация работы с персональными данными
                                 </li>
                                 <li class="business-areas__spheres-card-text-list-item">
-                                    — Сопровождение взаимодействия с торговыми сетями
+                                    — Оформление отношений с государством
                                 </li>
                             </ul>
                         </div>
@@ -486,27 +519,28 @@
                 </div>
 
                 <div class="business-areas__spheres-card background-blur-bordered">
-                    <h2 class="business-areas__spheres-card-title title-h2-blue">Производство</h2>
                     <div class="business-areas__spheres-card-content">
-                        <img
-                            class="business-areas__spheres-card-image"
-                            src="../img/business-areas/production.webp"
-                            alt=""
-                        />
+                        <div class="business-areas__spheres-card-content-top">
+                            <div class="business-areas__spheres-card-image">
+                                <img src="../img/business-areas/area9.webp" alt="" />
+                            </div>
+
+                            <h2 class="business-areas__spheres-card-title title-h2-blue">Гос. учреждения</h2>
+                        </div>
                         <div class="business-areas__spheres-card-text">
                             <p class="business-areas__spheres-card-text-description text-regular">
-                                Поможем на каждом этапе производственного цикла. Защитим от рисков и штрафов.
-                                Подготовим нужную документацию и закроем любой юридический вопрос.
+                                Поможем разобраться в сложных требованиях законодательства. Возьмём на себя
+                                всю юридическую рутину, независимо от вашей специфики.
                             </p>
                             <ul class="business-areas__spheres-card-text-list">
                                 <li class="business-areas__spheres-card-text-list-item">
-                                    — Решение вопросов ВЭД и санкционных вопросов
+                                    — Решение вопросов трудового права любой сложности
                                 </li>
                                 <li class="business-areas__spheres-card-text-list-item">
-                                    — Урегулирование проблемных ситуаций на производстве
+                                    — Помощь с неочевидными требованиями законодательства
                                 </li>
                                 <li class="business-areas__spheres-card-text-list-item">
-                                    — Сопровождение взаимодействия с торговыми сетями
+                                    — Сопровождение и контроль осуществления закупок
                                 </li>
                             </ul>
                         </div>
@@ -528,27 +562,28 @@
                 </div>
 
                 <div class="business-areas__spheres-card background-blur-bordered">
-                    <h2 class="business-areas__spheres-card-title title-h2-blue">Производство</h2>
                     <div class="business-areas__spheres-card-content">
-                        <img
-                            class="business-areas__spheres-card-image"
-                            src="../img/business-areas/production.webp"
-                            alt=""
-                        />
+                        <div class="business-areas__spheres-card-content-top">
+                            <div class="business-areas__spheres-card-image">
+                                <img src="../img/business-areas/area10.webp" alt="" />
+                            </div>
+
+                            <h2 class="business-areas__spheres-card-title title-h2-blue">Финансы</h2>
+                        </div>
                         <div class="business-areas__spheres-card-text">
                             <p class="business-areas__spheres-card-text-description text-regular">
-                                Поможем на каждом этапе производственного цикла. Защитим от рисков и штрафов.
-                                Подготовим нужную документацию и закроем любой юридический вопрос.
+                                Сопровождение и консультирование в условиях жёсткого регулирования
+                                Центробанком и Налоговой.
                             </p>
                             <ul class="business-areas__spheres-card-text-list">
                                 <li class="business-areas__spheres-card-text-list-item">
-                                    — Решение вопросов ВЭД и санкционных вопросов
+                                    — Подготовка заключений по фин.регулированию
                                 </li>
                                 <li class="business-areas__spheres-card-text-list-item">
-                                    — Урегулирование проблемных ситуаций на производстве
+                                    — Помощь в взыскании проблемной задолженности
                                 </li>
                                 <li class="business-areas__spheres-card-text-list-item">
-                                    — Сопровождение взаимодействия с торговыми сетями
+                                    — Регулярный дайджест изменений в законах
                                 </li>
                             </ul>
                         </div>
@@ -570,27 +605,28 @@
                 </div>
 
                 <div class="business-areas__spheres-card background-blur-bordered">
-                    <h2 class="business-areas__spheres-card-title title-h2-blue">Производство</h2>
                     <div class="business-areas__spheres-card-content">
-                        <img
-                            class="business-areas__spheres-card-image"
-                            src="../img/business-areas/production.webp"
-                            alt=""
-                        />
+                        <div class="business-areas__spheres-card-content-top">
+                            <div class="business-areas__spheres-card-image">
+                                <img src="../img/business-areas/area11.webp" alt="" />
+                            </div>
+
+                            <h2 class="business-areas__spheres-card-title title-h2-blue">НКО</h2>
+                        </div>
                         <div class="business-areas__spheres-card-text">
                             <p class="business-areas__spheres-card-text-description text-regular">
-                                Поможем на каждом этапе производственного цикла. Защитим от рисков и штрафов.
-                                Подготовим нужную документацию и закроем любой юридический вопрос.
+                                Составим и проверим необходимые документы. Поможем разобраться в сложных
+                                правилах и тонкостях Минюста.
                             </p>
                             <ul class="business-areas__spheres-card-text-list">
                                 <li class="business-areas__spheres-card-text-list-item">
-                                    — Решение вопросов ВЭД и санкционных вопросов
+                                    — Разработка договоров пожертвования
                                 </li>
                                 <li class="business-areas__spheres-card-text-list-item">
-                                    — Урегулирование проблемных ситуаций на производстве
+                                    — Комплаенс в сфере НКО
                                 </li>
                                 <li class="business-areas__spheres-card-text-list-item">
-                                    — Сопровождение взаимодействия с торговыми сетями
+                                    — Оформление локальных нормативных актов НКО
                                 </li>
                             </ul>
                         </div>
@@ -612,27 +648,28 @@
                 </div>
 
                 <div class="business-areas__spheres-card background-blur-bordered">
-                    <h2 class="business-areas__spheres-card-title title-h2-blue">Производство</h2>
                     <div class="business-areas__spheres-card-content">
-                        <img
-                            class="business-areas__spheres-card-image"
-                            src="../img/business-areas/production.webp"
-                            alt=""
-                        />
+                        <div class="business-areas__spheres-card-content-top">
+                            <div class="business-areas__spheres-card-image">
+                                <img src="../img/business-areas/area12.webp" alt="" />
+                            </div>
+
+                            <h2 class="business-areas__spheres-card-title title-h2-blue">B2C-услуги</h2>
+                        </div>
                         <div class="business-areas__spheres-card-text">
                             <p class="business-areas__spheres-card-text-description text-regular">
-                                Поможем на каждом этапе производственного цикла. Защитим от рисков и штрафов.
-                                Подготовим нужную документацию и закроем любой юридический вопрос.
+                                Возьмём на себя создание крепких шаблонных решений любой сложности: от
+                                создания типовых договоров до регламента претензионной работы.
                             </p>
                             <ul class="business-areas__spheres-card-text-list">
                                 <li class="business-areas__spheres-card-text-list-item">
-                                    — Решение вопросов ВЭД и санкционных вопросов
+                                    — Разработка типовых договоров с клиентами
                                 </li>
                                 <li class="business-areas__spheres-card-text-list-item">
-                                    — Урегулирование проблемных ситуаций на производстве
+                                    — Формирование оферт, правил пользования сайтов
                                 </li>
                                 <li class="business-areas__spheres-card-text-list-item">
-                                    — Сопровождение взаимодействия с торговыми сетями
+                                    — Поддержка в вопросах защита прав потребителей
                                 </li>
                             </ul>
                         </div>
@@ -656,19 +693,25 @@
 
             <div class="business-areas__request request background-blue">
                 <h1 class="business-areas__request-title request-title section-title-lite">
-                    Получите <span> специальные условия</span> для вашей компании
+                    Соберём <span>команду юристов</span> с опытом в вашей сфере бизнеса
                 </h1>
                 <div class="business-areas__request-container">
-                    <button class="business-areas__request-button request__form-button button-white">
-                        Начать бесплатно
+                    <button class="business-areas__request-button request__form-button button-white desktop">
+                        Обсудить задачи с командой юристов
+                    </button>
+                    <button class="business-areas__request-button request__form-button button-white mobile">
+                        Обсудить задачи
                     </button>
 
                     <div class="business-areas__request-social request__social article__share">
                         <p class="request__social-text">
-                            <span>Вместо заявки можно сразу написать нам в мессенджеры </span>
+                            <span class="desktop">Вместо заявки можно сразу написать нам в мессенджеры </span>
+                            <span class="mobile"> Или напишите в мессенджеры:</span>
                         </p>
                         <ul class="request__social-icons article__share-icons">
-                            <li class="request__social-icons-item article__share-icons-item --telegramm">
+                            <li
+                                class="business-areas__request-social-icons-item request__social-icons-item article__share-icons-item --telegramm"
+                            >
                                 <a href="#">
                                     <svg
                                         width="33"
@@ -684,7 +727,9 @@
                                     </svg>
                                 </a>
                             </li>
-                            <li class="request__social-icons-item article__share-icons-item --whatsapp">
+                            <li
+                                class="business-areas__request-social-icons-item request__social-icons-item article__share-icons-item --whatsapp"
+                            >
                                 <a href="#">
                                     <svg
                                         width="30"
@@ -706,60 +751,97 @@
             </div>
         </div>
 
-        <div class="background-blur">
-            <h1 class="section-title">Знаем, как работать с любым бизнесом</h1>
-            <div>
-                <div></div>
-                <div></div>
-                <div></div>
+        <div class="business-areas__links background-blur-bordered">
+            <h1 class="business-areas__links-title section-title">
+                Знаем, как работать с <span>любым бизнесом</span>
+            </h1>
+            <div class="business-areas__links-list">
+                <div class="business-areas__links-list-item background-blur-bordered">
+                    <a class="business-areas__links-list-item-image image-scale" href="#">
+                        <img src="../img/business-areas/rubik-cube.webp" alt="" />
+                    </a>
+                    <div class="business-areas__links-list-item-text">
+                        <a class="business-areas__links-list-item-text-title title-h3 link-blue" href="#">
+                            Как мы работаем
+                        </a>
+                        <p class="business-areas__links-list-item-text-description text-regular">
+                            Поддержка бизнеса любого масштаба командой опытных юристов для любых задач.
+                        </p>
+                    </div>
+                </div>
+                <div class="business-areas__links-list-item background-blur-bordered">
+                    <a class="business-areas__links-list-item-image image-scale" href="#">
+                        <img src="../img/business-areas/ferris-wheel.webp" alt="" />
+                    </a>
+                    <div class="business-areas__links-list-item-text">
+                        <a class="business-areas__links-list-item-text-title title-h3 link-blue" href="#">
+                            Защита бизнеса 360°
+                        </a>
+                        <p class="business-areas__links-list-item-text-description text-regular">
+                            Полная юридическая защита вашего бизнеса, независимо от специфики и отрасли права.
+                        </p>
+                    </div>
+                </div>
+                <div class="business-areas__links-list-item background-blur-bordered">
+                    <a class="business-areas__links-list-item-image image-scale" href="#">
+                        <img src="../img/business-areas/newspaper.webp" alt="" />
+                    </a>
+                    <div class="business-areas__links-list-item-text">
+                        <a class="business-areas__links-list-item-text-title title-h3 link-blue" href="#">
+                            Бизнес-журнал
+                        </a>
+                        <p class="business-areas__links-list-item-text-description text-regular">
+                            Свежие инсайты юридической и правовой стороны бизнеса в одном месте.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="home__article background-blur">
+        <div class="home__article background-blur-bordered business-areas__article">
             <div class="home__article-box">
                 <div class="home__article-text-container">
                     <h2 class="home__article-title title-h2">
-                        <span>Опытные юристы для вашего бизнеса:</span> юридические услуги по подписке
+                        Юридическая поддержка бизнеса любого масштаба
                     </h2>
                     <p class="home__article-text text-regular">
-                        Наша компания предлагает полный пакет услуг юридического сопровождения для вашего
-                        бизнеса. Наша команда состоит из&nbsp;опытных юристов, которые готовы предоставить вам
-                        квалифицированную помощь в любых юридических вопросах.
+                        Оказываем квалифицированную юридическую помощь в любых вопросах каждой сферы бизнеса.
+                        Мы разбираемся во всех аспектах юридических задач и имеем практический опыт в каждой
+                        конкретной сфере бизнеса, независимо от его размера.
                     </p>
                     <p class="home__article-text text-regular">
-                        Мы понимаем, что в современном бизнесе важно не только быстро и&nbsp;эффективно решать
-                        проблемы, но и предупреждать их возникновение. Поэтому наши юристы оказывают услуги по
-                        подписке, что позволяет нашим клиентам избежать непредвиденных расходов и
-                        сосредоточиться на своих бизнес-операциях.
+                        Специализируемся на широком спектре юридических вопросов и имеем опыт работы в каждой
+                        сфере бизнеса. Наша команда юристов обладает глубокими знаниями и экспертизой.
+                        Эффективно разберёмся в самых сложных юридических вопросах.
                     </p>
                 </div>
-                <div class="home__article-image home__article-image-ship">
+                <div class="home__article-image business-areas__article-image-mountains">
                     <div class="home__article-image-text home__article-image-text-long">
                         <span>Экспертное сопровождение</span>
                     </div>
                 </div>
             </div>
             <div class="home__article-box">
-                <div class="home__article-image home__article-image-ballon">
+                <div class="home__article-image business-areas__article-image-bird">
                     <div class="home__article-image-text"><span>Многообразие услуг</span></div>
                 </div>
                 <div class="home__article-text-container">
                     <p class="home__article-text text-regular">
-                        Мы предоставляем юридическое сопровождение в широком спектре сфер, включая налоговую
-                        защиту, антимонопольное право, увольнение сотрудников, трудовые споры, судебные споры,
-                        регистрацию компании, юридические консультации и&nbsp;заключения, защиту бизнеса и
-                        многое другое.
+                        Предлагаем полный спектр юридических услуг, включая юридическое консультирование,
+                        разработку договоров и соглашений, представительство в суде, регистрацию компаний,
+                        защиту интеллектуальной собственности, вопросы налогообложения и многое другое.
                     </p>
                     <p class="home__article-text text-regular">
-                        Кроме того, наша команда готова оказать экспертную помощь в&nbsp;различных юридических
-                        вопросах. Наши юристы имеют богатый опыт работы в различных отраслях и специализациях,
-                        что позволяет нам предоставлять нашим клиентам качественные и профессиональные услуги.
+                        Мы понимаем, что каждая сфера бизнеса имеет свои особенности и специфические
+                        потребности. Поэтому мы готовы предоставить качественную помощь именно в тех вопросах,
+                        которые важны для вашему бизнесу. Наша команда индивидуально подходит к каждому
+                        клиенту, учитывая его уникальные потребности и цели.
                     </p>
                 </div>
             </div>
         </div>
 
-        <div class="home__compass background-blur">
+        <div class="home__compass background-blur-bordered">
             <h2 class="home__compass-title title-h2">
                 Если вы ищете надежного бизнес юриста, который предоставит вам полный пакет услуг юридического
                 сопровождения — свяжитесь с нами уже сегодня.

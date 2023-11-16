@@ -7,6 +7,7 @@
         &-content {
             display: flex;
             flex-direction: column;
+            position: relative;
             gap: 8.3rem;
 
             @include small-tablet {
@@ -35,26 +36,6 @@
                 flex-direction: column;
                 max-width: 93.7rem;
                 gap: 1.2rem;
-
-                &::after {
-                    @include pseudo {
-                        background-image: url('../img/main/photo.webp');
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                        z-index: -10;
-                        width: 140.2626rem;
-                        height: 119.3rem;
-                        right: -77.68rem;
-                        top: -63.8rem;
-
-                        @include small-tablet {
-                            width: 93.1rem;
-                            height: 94.3rem;
-                            top: -68.6rem;
-                            right: 12rem;
-                        }
-                    }
-                }
 
                 &-benefits {
                     padding: 4.2rem;
@@ -203,6 +184,21 @@
                     a {
                         text-decoration-line: underline;
                     }
+                }
+            }
+            &-image {
+                position: absolute;
+                z-index: -10;
+                width: 140.2626rem;
+                height: 119.3rem;
+                right: -6.1rem;
+                bottom: -22.4rem;
+
+                @include small-tablet {
+                    width: 93.1rem;
+                    height: 94.3rem;
+                    bottom: 38rem;
+                    right: 0rem;
                 }
             }
         }
@@ -355,6 +351,7 @@
                     justify-content: center;
                     align-items: center;
                     white-space: nowrap;
+                    min-width: max-content;
                     flex: 1;
 
                     min-height: 10.1rem;
@@ -364,6 +361,8 @@
 
                     span {
                         padding: 3.6rem 6.4rem;
+                        width: 100%;
+                        display: block;
                     }
 
                     &_blue {

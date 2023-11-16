@@ -2172,6 +2172,7 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
   gap: 8.3rem;
 }
 
@@ -2203,19 +2204,6 @@ section {
           flex-direction: column;
   max-width: 93.7rem;
   gap: 1.2rem;
-}
-
-.home__hero-content-blocks::after {
-  content: "";
-  position: absolute;
-  background-image: url("../img/main/photo.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -10;
-  width: 140.2626rem;
-  height: 119.3rem;
-  right: -77.68rem;
-  top: -63.8rem;
 }
 
 .home__hero-content-blocks-benefits {
@@ -2330,6 +2318,15 @@ section {
 .home__hero-content-blocks-copyright a {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+}
+
+.home__hero-content-image {
+  position: absolute;
+  z-index: -10;
+  width: 140.2626rem;
+  height: 119.3rem;
+  right: -6.1rem;
+  bottom: -22.4rem;
 }
 
 .home__credit-holidays {
@@ -2455,6 +2452,9 @@ section {
       -ms-flex-align: center;
           align-items: center;
   white-space: nowrap;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -2467,6 +2467,8 @@ section {
 
 .home__businesses-needs-abilities-list-item span {
   padding: 3.6rem 6.4rem;
+  width: 100%;
+  display: block;
 }
 
 .home__businesses-needs-abilities-list-item_blue {
@@ -3986,6 +3988,8 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
+  overflow: hidden;
   gap: 3.8rem;
   margin-bottom: 18rem;
 }
@@ -3999,12 +4003,7 @@ section {
   max-width: 53.9rem;
 }
 
-.business-areas__hero-button {
-  max-width: 36.6rem;
-}
-
-.business-areas__hero::after {
-  content: "";
+.business-areas__hero-image {
   position: absolute;
   background-image: url("../img//business-areas/sphere.webp");
   background-repeat: no-repeat;
@@ -4012,8 +4011,12 @@ section {
   z-index: -10;
   width: 125.8013rem;
   height: 107rem;
-  top: 0;
+  bottom: -35rem;
   right: 0;
+}
+
+.business-areas__hero-button {
+  max-width: 36.6rem;
 }
 
 .business-areas__benefits,
@@ -4110,12 +4113,18 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
   gap: 4.8rem;
 }
 
 .business-areas__spheres-card-image {
-  width: 61.2rem;
-  height: 22rem;
+  overflow: hidden;
+  border-radius: 2rem;
+  max-width: 61.2rem;
+  max-height: 22rem;
 }
 
 .business-areas__spheres-card-text {
@@ -4175,10 +4184,10 @@ section {
   min-height: 9.8rem;
   border: 0.1rem solid #fff;
   border-radius: 4rem;
+  padding: 1.3rem;
 }
 
 .business-areas__spheres-card-icon img {
-  width: auto;
   height: auto;
 }
 
@@ -4205,10 +4214,78 @@ section {
 
 .business-areas__request-social {
   margin-top: 0;
+  min-width: 81.4rem;
 }
 
 .business-areas__request-button {
   padding: 3.3rem 8.9rem;
+}
+
+.business-areas__links {
+  margin-bottom: 22.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4.4rem;
+}
+
+.business-areas__links-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.business-areas__links-list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  gap: 4.4rem;
+}
+
+.business-areas__links-list-item-image {
+  display: block;
+  max-height: 22rem;
+  width: 100%;
+  height: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 2rem;
+}
+
+.business-areas__links-list-item-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.4rem;
+}
+
+.business-areas__article {
+  margin-bottom: 8rem;
+}
+
+.business-areas__article-image-bird {
+  background-image: url("../img/business-areas/bird.webp");
+}
+
+.business-areas__article-image-mountains {
+  background-image: url("../img/business-areas/mountains.webp");
 }
 
 @media (min-width: 48.01em) {
@@ -5000,13 +5077,6 @@ section {
     gap: 1.6rem;
   }
 
-  .home__hero-content-blocks::after {
-    width: 93.1rem;
-    height: 94.3rem;
-    top: -68.6rem;
-    right: 12rem;
-  }
-
   .home__hero-content-blocks-benefits {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -5091,6 +5161,13 @@ section {
   .home__hero-content-blocks-copyright {
     margin-left: 7.6rem;
     font-size: 2.4rem;
+  }
+
+  .home__hero-content-image {
+    width: 93.1rem;
+    height: 94.3rem;
+    bottom: 38rem;
+    right: 0rem;
   }
 
   .home__credit-holidays {
@@ -6041,14 +6118,21 @@ section {
     max-width: unset;
   }
 
+  .business-areas__hero-image {
+    width: 88.973rem;
+    height: 75.676rem;
+    bottom: 12rem;
+    right: -5rem;
+  }
+
   .business-areas__hero-button {
     max-width: unset;
   }
 
-  .business-areas__hero::after {
-    width: 444.865px;
-    height: 378.379px;
-    top: 55rem;
+  .business-areas__spheres {
+    padding: 3.2rem;
+    padding-top: 5.2rem;
+    gap: 2.8rem;
   }
 
   .business-areas__spheres-cards {
@@ -6061,10 +6145,121 @@ section {
             flex-direction: column;
   }
 
+  .business-areas__spheres-card {
+    padding: 3.2rem;
+  }
+
+  .business-areas__spheres-card-title {
+    position: unset;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    -webkit-writing-mode: unset;
+        -ms-writing-mode: unset;
+            writing-mode: unset;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+
+  .business-areas__spheres-card-content-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2.4rem;
+  }
+
+  .business-areas__spheres-card-image {
+    border-radius: 3.2rem;
+    min-width: 20rem;
+    min-height: 20rem;
+    max-width: 20rem;
+    max-height: 20rem;
+  }
+
+  .business-areas__spheres-card-text-list {
+    padding: 3.2rem;
+  }
+
+  .business-areas__spheres-card-text-list-item {
+    font-size: 3.2rem;
+  }
+
+  .business-areas__spheres-card-icons {
+    gap: 1.6rem;
+  }
+
+  .business-areas__spheres-card-icon {
+    min-width: 13.2rem;
+    min-height: 9.6rem;
+    padding: 2.6rem;
+  }
+
+  .business-areas__spheres-card-icon img {
+    width: -webkit-fill-available;
+  }
+
+  .business-areas__request {
+    padding-top: 4.8rem;
+  }
+
   .business-areas__request-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+
+  .business-areas__request-social {
+    border-radius: 50rem;
+    border: 0.1rem solid #fff;
+    padding: 1rem;
+    padding-left: 4.8rem;
+    min-width: unset;
+    margin-left: 0;
+  }
+
+  .business-areas__request-social-text {
+    font-size: 2.8rem;
+  }
+
+  .business-areas__request-social-icons-item {
+    width: 11rem;
+    height: 11rem;
+  }
+
+  .business-areas__request-social-icons-item.--telegramm a {
+    padding: 3.4rem 3.6rem 3.4rem 2.6rem;
+  }
+
+  .business-areas__request-social-icons-item.--whatsapp a {
+    padding: 3.4rem;
+  }
+
+  .business-areas__links {
+    gap: 4.8rem;
+    margin-bottom: 16rem;
+    padding: 3.2rem;
+    padding-top: 5.2rem;
+  }
+
+  .business-areas__links-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  .business-areas__links-list-item {
+    padding: 3.2rem;
+    gap: 4.8rem;
+  }
+
+  .business-areas__links-list-item-image {
+    max-height: 30rem;
+  }
+
+  .business-areas__links-list-item-text {
+    gap: 4.8rem;
   }
 }
