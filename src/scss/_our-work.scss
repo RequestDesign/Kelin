@@ -1,0 +1,178 @@
+.work {
+    &__hero {
+        @include small-tablet {
+            margin-bottom: 8rem;
+        }
+        &-title {
+            max-width: 85rem;
+
+            @include small-tablet {
+                max-width: unset;
+            }
+        }
+        &-description {
+            color: rgba(67, 78, 88, 0.75);
+            max-width: 54.9rem;
+
+            @include small-tablet {
+                margin-bottom: 61.4rem;
+                max-width: unset;
+            }
+        }
+        &-image {
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -10;
+            width: 125.8013rem;
+            height: 107rem;
+            bottom: -35rem;
+            right: 0;
+
+            @include small-tablet {
+                width: 99rem;
+                height: 84.2rem;
+                bottom: 0rem;
+                right: -10rem;
+            }
+        }
+        &-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 33.1rem;
+
+            @include small-tablet {
+                max-width: unset;
+            }
+        }
+    }
+    &__benefits {
+        &-item {
+            @include small-tablet {
+                gap: 2.4rem;
+            }
+        }
+        &-arrow-link {
+            @include small-tablet {
+                img {
+                    width: 7.2rem;
+                    height: 3.13rem;
+                }
+                span {
+                    font-size: 3.2rem;
+                }
+            }
+        }
+    }
+    &__details {
+        display: flex;
+        flex-direction: column;
+        gap: 4.4rem;
+        margin-bottom: 16rem;
+
+        @include small-tablet {
+            padding: 3.6rem;
+            gap: 8rem;
+        }
+
+        &-card {
+            gap: 0;
+            justify-content: space-between;
+        }
+
+        &-description {
+            max-width: 57.2244rem;
+        }
+        &-benefits {
+            margin: 0;
+        }
+    }
+
+    &__reviews {
+        display: flex;
+        gap: 1.2rem;
+
+        @include small-tablet {
+            flex-direction: column;
+            gap: 1.6rem;
+        }
+        &-item {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            gap: 2rem;
+            &-content {
+                display: flex;
+                flex-direction: column;
+                gap: 3.4rem;
+            }
+            &-title {
+                max-width: 68.6rem;
+            }
+        }
+    }
+    &__marquee {
+        overflow-x: hidden;
+
+        &-container {
+            position: relative;
+            display: flex;
+            gap: 1.6rem;
+        }
+        &-list {
+            display: flex;
+            gap: 1.6rem;
+
+            @include small-tablet {
+                gap: 3.2rem;
+            }
+            &-item {
+                display: flex;
+                align-items: center;
+                gap: 1.6rem;
+                white-space: nowrap;
+
+                @include small-tablet {
+                    gap: 3.2rem;
+                }
+
+                &::after {
+                    @include pseudo {
+                        position: relative;
+                        width: 0.8rem;
+                        height: 0.8rem;
+                        border-radius: 50%;
+                        background-color: $blue;
+                    }
+                    @include small-tablet {
+                        width: 1.6rem;
+                        height: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+    &__clients-list {
+        @include small-tablet {
+            flex-direction: column;
+            gap: 1.6rem;
+        }
+
+        &-item {
+            @include small-tablet {
+                max-width: unset;
+            }
+        }
+    }
+
+    &__links {
+        margin-bottom: 16rem;
+    }
+    &__article-image-stars {
+        background-image: url('../img/our-work/stars.webp');
+    }
+    &__article-image-pyramids {
+        background-image: url('../img/our-work/pyramids.webp');
+    }
+}

@@ -3,11 +3,12 @@
         display: flex;
         flex-direction: column;
         position: relative;
-        overflow: hidden;
+        
         gap: 3.8rem;
         margin-bottom: 18rem;
 
         @include small-tablet {
+        overflow-x: hidden;
             gap: 1.6rem;
         }
         &-title {
@@ -28,7 +29,6 @@
         }
         &-image {
             position: absolute;
-            background-image: url('../img//business-areas/sphere.webp');
             background-repeat: no-repeat;
             background-size: cover;
             z-index: -10;

@@ -225,4 +225,30 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     videoPlayerPlay('.home__video-player', '.home__video-player-button');
+
+    //marquee
+    const marquee = (marqueeElem, textElem) => {
+        const widthText =
+                textElem.offsetWidth +
+                parseInt(window.getComputedStyle(marqueeElem, null).getPropertyValue('gap')),
+            content = textElem.cloneNode(true);
+
+        marqueeElem.appendChild(content);
+        marqueeElem.animate([{ left: '0px' }, { left: `-${widthText}px` }], {
+            duration: 25000,
+            iterations: Infinity
+        });
+    };
+
+    function marqueeCheck(marqueeSelector, textSelector) {
+        if (document.querySelector(marqueeSelector)) {
+            let marqueeElems = document.querySelectorAll(marqueeSelector);
+            marqueeElems.forEach((marqueeElem) => {
+                const text = marqueeElem.querySelector(textSelector);
+                marquee(marqueeElem, text);
+            });
+        }
+    }
+
+    marqueeCheck('.work__marquee-container', '.work__marquee-list');
 });

@@ -1813,11 +1813,18 @@
     &__item {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+
         gap: 2rem;
 
         @include small-tablet {
             padding: 3.2rem;
             gap: 1.6rem;
+        }
+
+        &-text {
+            padding: 5rem;
+            text-align: center;
         }
 
         &-top {
@@ -1826,12 +1833,26 @@
             gap: 2rem;
         }
         &-icon {
+            min-width: 7.6rem;
+            min-height: 8rem;
             width: 7.6rem;
             height: 8rem;
+            mix-blend-mode: darken;
 
             @include small-tablet {
+                min-width: 9.5rem;
+                min-height: 10rem;
                 width: 9.5rem;
                 height: 10rem;
+            }
+            &-person-mark {
+                min-width: 9rem;
+                min-height: 8rem;
+
+                @include small-tablet {
+                    min-width: 11rem;
+                    min-height: 10rem;
+                }
             }
         }
         &-title {
@@ -2042,7 +2063,6 @@
 
         @include small-tablet {
             margin-bottom: 4.8rem;
-            color: $blue;
         }
     }
     &__list {
