@@ -81,4 +81,33 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     marqueeCheck('.work__marquee-container', '.work__marquee-list');
+
+
+    //burger
+    const burgerMenuButton = document.querySelector('.header__mobile-burger');
+    const closeBurgerButton = document.querySelector('.header__mobile-burger-menu .close');
+
+    burgerMenuButton.addEventListener('click', () => {
+        $('.header__mobile-burger-menu').addClass('--active');
+        $('body').addClass('locked');
+    });
+
+    closeBurgerButton.addEventListener('click', () => {
+        $('.header__mobile-burger-menu').removeClass('--active');
+        $('body').removeClass('locked');
+    });
+
+    const burgerMenuDropdown = document.querySelectorAll('.header__mobile-burger-menu-item');
+
+    burgerMenuDropdown.forEach((dropdown) => {
+        dropdown.addEventListener('click', () => {
+            const arrow = dropdown.querySelector('.header__mobile-burger-menu-item-title');
+            const list = dropdown.querySelector('.header__mobile-burger-menu-dropdown-list');
+
+            if (!list) return;
+
+            $(list).slideToggle('slow').css('display', 'flex');
+            $(arrow).toggleClass('--active');
+        });
+    });
 });
