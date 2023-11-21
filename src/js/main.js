@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     videoPlayerPlay('.home__video-player', '.home__video-player-button');
+    videoPlayerPlay('.about-us__video-player', '.about-us__video-player-button');
 
     //marquee
     const marquee = (marqueeElem, textElem) => {
@@ -81,7 +82,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     marqueeCheck('.work__marquee-container', '.work__marquee-list');
-
 
     //burger
     const burgerMenuButton = document.querySelector('.header__mobile-burger');

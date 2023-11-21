@@ -44,6 +44,10 @@
     @extend .title-h2 !optional;
     color: $blue;
 }
+.title-h2-lite {
+    @extend .title-h2 !optional;
+    color: $white;
+}
 
 .title-h3 {
     color: $text-primary;
@@ -112,7 +116,7 @@
 }
 
 .background-blur {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 14.39%, rgba(255, 255, 255, 0) 182.55%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 14.39%, rgba(255, 255, 255, 0) 182.55%);
     backdrop-filter: blur(5rem);
     padding: 5rem;
     border-radius: 4rem;
