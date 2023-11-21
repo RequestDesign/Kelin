@@ -4,6 +4,12 @@
 .home {
     &__hero {
         margin-bottom: 8rem;
+
+        &-input-field {
+            background: none;
+            border: none;
+            backdrop-filter: unset;
+        }
         &-content {
             display: flex;
             flex-direction: column;
@@ -1717,12 +1723,8 @@
             min-width: 72.9rem;
             background-size: cover;
             background-position: center;
-
-            &-ballon {
-                background-image: url('../img/balloon.webp');
-            }
-            &-ship {
-                background-image: url('../img/ship.webp');
+            img {
+                position: absolute;
             }
 
             @include small-tablet {
@@ -1776,10 +1778,10 @@
                 background-image: url('../img/main/compass.webp');
                 background-repeat: no-repeat;
                 background-size: contain;
-                width: 71.4rem;
-                height: 37.3rem;
-                bottom: 0;
-                right: 0;
+                width: 65.4rem;
+                height: 34.3rem;
+                bottom: -0.6rem;
+                right: -6.5rem;
             }
             @include small-tablet {
                 width: 76.8rem;
@@ -1789,7 +1791,7 @@
             }
         }
         &-title {
-            max-width: 68rem;
+            max-width: 87rem;
         }
         &-description {
             max-width: 53.4rem;
