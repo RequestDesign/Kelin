@@ -75,16 +75,13 @@
                 align-items: center;
                 gap: 1.2rem;
                 padding-right: 0.6rem;
-
-                span {
-                    color: $blue;
-                    font-size: 1.6rem;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: normal;
-                    letter-spacing: 0.16rem;
-                    text-transform: uppercase;
-                }
+                color: $blue;
+                font-size: 1.6rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                letter-spacing: 0.16rem;
+                text-transform: uppercase;
 
                 @include small-tablet {
                     gap: 0.5rem;
@@ -351,12 +348,14 @@
                     rgba(255, 255, 255, 0.8) 14.39%,
                     rgba(255, 255, 255, 0) 182.55%
                 );
-                backdrop-filter: blur(1rem);
+                backdrop-filter: blur(10rem);
                 opacity: 0;
                 user-select: none;
                 pointer-events: none;
                 @include transition($property: opacity transform);
                 transform: translateY(-20%);
+                height: 100%;
+                overflow-x: auto;
 
                 .close {
                     margin-left: auto;

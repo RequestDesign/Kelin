@@ -112,7 +112,15 @@
 }
 
 .button-white {
-    @include button(3rem, 3.3rem, $white);
+    @include button(3rem, 3.3rem, $white) {
+        color: $blue;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.16rem;
+        text-transform: uppercase;
+    };
 }
 
 .background-blur {

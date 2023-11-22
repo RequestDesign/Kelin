@@ -175,7 +175,7 @@
                 </ul>
             </nav>
 
-            <button class="header__button button desktop">Задать вопрос юристу</button>
+            <button class="header__button button desktop success-button">Задать вопрос юристу</button>
 
             <a href="tel: +7 (495) 487-70-07" class="header__subheader-right-phone mobile">
                 <svg
@@ -808,11 +808,24 @@
         <!-- Footer -->
         <footer class="footer">
     <div class="container">
-        <div class="footer__content">
-
-        </div>
+        <div class="footer__content"></div>
     </div>
 </footer>
+
+<div class="modal__wrapper" id="success-modal">
+    <div class="modal">
+        <div class="modal__close">
+            <img src="../img/modal-close-icon.svg" alt="" />
+        </div>
+        <h2 class="modal__title">Ваша заявка <span>успешно отправлена</span></h2>
+        <div class="modal__body">
+            <button class="modal__button button-white close-modal-button">
+                Вернуться на сайт
+            </button>
+        </div>
+    </div>
+</div>
+
     </body>
 
     <script src="./js/scripts.min.js"></script>

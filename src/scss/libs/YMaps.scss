@@ -5,10 +5,6 @@
     display: none !important;
 }
 
-.map [class*='ground-pane'] {
-    filter: grayscale(1);
-}
-
 .map [class*='inner-panes'] {
     border-radius: 5rem;
 

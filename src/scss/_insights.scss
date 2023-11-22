@@ -2,6 +2,10 @@
 @import 'mixins';
 
 .insights {
+    @include small-tablet{
+        overflow-x: hidden;
+    }
+
     &__title {
         margin-bottom: 7rem;
         max-width: 124.4rem;
@@ -17,9 +21,13 @@
             flex-wrap: wrap;
             gap: 2.4rem 1.2rem;
             margin-bottom: 5rem;
+
             @include small-tablet {
                 flex-wrap: nowrap;
+                margin-right: -2rem;
+                padding-right: 2rem;
                 overflow-x: scroll;
+
                 &::-webkit-scrollbar{
                     display: none;
                 }
@@ -94,8 +102,7 @@
     }
 
     &__article {
-        padding: 5rem;
-        padding-left: 11.3rem;
+        padding: 5rem 5rem 5rem 11.3rem;
         border-radius: 5rem;
         position: relative;
         display: flex;
@@ -107,6 +114,12 @@
         @include small-tablet {
             padding-left: 15rem;
             flex-direction: column;
+        }
+
+        &-link {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
         }
 
         &-date {
@@ -122,6 +135,7 @@
             transform: rotate(180deg);
             top: 5rem;
             left: 5rem;
+            user-select: none;
 
             @include small-tablet {
                 font-size: 4rem;
@@ -167,6 +181,7 @@
                 font-size: 2.3rem;
                 font-weight: 700;
                 line-height: 2.875rem;
+                width: max-content;
 
                 @include small-tablet {
                     order: 1;

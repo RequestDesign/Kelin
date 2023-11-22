@@ -14,6 +14,10 @@ html {
     line-height: 1.2;
     margin: 0;
     padding: 0;
+    //additional
+    scroll-behavior: smooth;
+    overflow-anchor: none;
+    scrollbar-gutter: stable;
 }
 
 body {
@@ -24,10 +28,7 @@ body {
     margin: 0;
     padding: 0;
     color: $text-primary; // цвет по умолчанию текста по сайту
-    //additional
-    scrollbar-gutter: stable;
-    scroll-behavior: smooth;
-    overflow-anchor: none;
+
     background: url("../img/background.svg") repeat, $bg-primary;
     background-size: cover;
 }

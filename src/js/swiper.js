@@ -11,7 +11,7 @@ const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
         }
     };
 
-    const cheker = function () {
+    const checker = function () {
         if (breakpoint.matches) {
             return enableSwiper(swiperClass, swiperSettings);
         } else {
@@ -20,8 +20,8 @@ const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
         }
     };
 
-    breakpoint.addEventListener('change', cheker);
-    cheker();
+    breakpoint.addEventListener('change', checker);
+    checker();
 };
 const rem = function (rem) {
     if ($(window).width() > 768) {
