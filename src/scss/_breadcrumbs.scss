@@ -13,6 +13,20 @@
         align-items: center;
         gap: 4.4rem;
         flex-wrap: wrap;
+
+        @include small-tablet {
+            flex-wrap: nowrap;
+            overflow-x: scroll;
+            white-space: nowrap;
+            gap: 6.4rem;
+            margin-right: -2rem;
+            padding-right: 2rem;
+            scrollbar-width: none; /* For Firefox */
+            -ms-overflow-style: none; /* For Internet Explorer and Edge */
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
     }
 
     &__item {
@@ -23,13 +37,14 @@
             font-size: 2.3rem;
             font-weight: 400;
             line-height: 2.875rem;
+
+            @include small-tablet {
+                font-size: 3.6rem;
+                line-height: 4.5rem;
+            }
         }
 
         &:not(:first-child) {
-            a {
-                font-weight: 700;
-            }
-
             &::after {
                 @include pseudo {
                     width: 2.4rem;
@@ -38,7 +53,18 @@
                     left: -3.4rem;
                     top: 50%;
                     transform: translateY(-50%);
+
+                    @include small-tablet {
+                        width: 3.2rem;
+                        left: -4.8rem;
+                    }
                 }
+            }
+        }
+
+        &:last-child {
+            a {
+                font-weight: 700;
             }
         }
     }
