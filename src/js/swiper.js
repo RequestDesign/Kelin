@@ -132,3 +132,21 @@ resizableSwiper('(max-width: 100vw)', '.home__category-list-swiper', {
         }
     }
 });
+
+resizableSwiper('(max-width: 100vw)', '.about-us__reviews-swiper', {
+    loop: true,
+    speed: 1200,
+    grabCursor: true,
+    spaceBetween: rem(0.8),
+    slidesPerView: 1,
+    navigation: {
+        nextEl: '.about-us__reviews-button-next',
+        prevEl: '.about-us__reviews-button-prev'
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+            spaceBetween: rem(1.2)
+        }
+    }
+});

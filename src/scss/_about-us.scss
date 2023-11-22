@@ -143,6 +143,12 @@
         }
     }
     &__team {
+        margin-bottom: 16rem;
+
+        @include small-tablet {
+            padding: 3.2rem;
+            padding-top: 5.2rem;
+        }
         &-title {
             margin-bottom: 4.4rem;
         }
@@ -151,6 +157,12 @@
             grid-template-columns: repeat(3, 1fr);
             grid-template-columns: repeat(3, 1fr);
             gap: 1.2rem;
+
+            @include small-tablet {
+                display: flex;
+                flex-direction: column;
+                gap: 1.6rem;
+            }
             &-item {
                 &-content {
                     overflow: hidden;
@@ -196,6 +208,10 @@
                         display: flex;
                         flex-direction: column;
                         gap: 2.4rem;
+
+                        @include small-tablet {
+                            gap: 4.8rem;
+                        }
                     }
                     &-button {
                         color: $blue;
@@ -203,9 +219,74 @@
                         justify-content: center;
                         align-items: center;
                         width: fit-content;
+
+                        @include small-tablet {
+                            width: 100%;
+                        }
                     }
                 }
             }
         }
+    }
+    &__reviews {
+        margin-bottom: 16rem;
+
+        @include small-tablet {
+            padding: 3.2rem;
+            padding-top: 5.2rem;
+        }
+        &-title {
+            text-align: center;
+            margin-bottom: 4.4rem;
+
+            @include small-tablet {
+                text-align: unset;
+                margin-bottom: 4.8rem;
+            }
+        }
+        &-content {
+            display: flex;
+            align-items: center;
+            gap: 3.6rem;
+        }
+        &-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 8.5rem;
+            height: 8.5rem;
+            padding: 0 2.6103rem 0 2.5897rem;
+
+            border-radius: 5rem;
+            border: 0.2rem solid $white;
+
+            &:hover {
+                border: 0.2rem solid $blue;
+
+                svg {
+                    path {
+                        stroke: $blue;
+                    }
+                }
+            }
+        }
+        &-item {
+            display: flex;
+            flex-direction: column;
+            gap: 3.4rem;
+            height: auto;
+
+            &-title {
+                display: flex;
+                gap: 0.8rem;
+
+                @include small-tablet {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+    &__links {
+        margin-bottom: 16rem;
     }
 }
