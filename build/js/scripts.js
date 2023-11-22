@@ -46,7 +46,7 @@ const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
         }
     };
 
-    const cheker = function () {
+    const checker = function () {
         if (breakpoint.matches) {
             return enableSwiper(swiperClass, swiperSettings);
         } else {
@@ -55,8 +55,8 @@ const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
         }
     };
 
-    breakpoint.addEventListener('change', cheker);
-    cheker();
+    breakpoint.addEventListener('change', checker);
+    checker();
 };
 const rem = function (rem) {
     if ($(window).width() > 768) {
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const phoneInputs = document.querySelectorAll('input[type="tel"]');
 
         phoneInputs.forEach((phoneInput) => {
-            const im = new Inputmask('+ 7 (999) 999-99-99');
+            const im = new Inputmask('+ 7 ( 999 ) 999-99-99', { placeholder: '+ 7 ( 999 ) 999-99-99' });
             im.mask(phoneInput);
         });
     }
@@ -298,4 +298,49 @@ document.addEventListener('DOMContentLoaded', function () {
             $(arrow).toggleClass('--active');
         });
     });
+    //modal
+    function bindModal(trigger, modal, close, callback = () => null) {
+        (modal = document.querySelector(modal)), (close = document.querySelector(close));
+
+        const body = document.body;
+        const modalBody = modal.querySelector('.modal');
+
+        if (!$(trigger) || !modal || !close || !modalBody) return;
+
+        $(trigger).each(function () {
+            $(this).on('click', (e) => {
+                e.preventDefault();
+                modal.classList.add('--active');
+                modalBody.classList.add('--active');
+                body.classList.add('locked');
+            });
+        });
+        $(close).on('click', () => {
+            modalBody.classList.remove('--active');
+            modal.classList.remove('--active');
+            body.classList.remove('locked');
+        });
+        $(modal).on('click', (e) => {
+            if (e.target === modal) {
+                modalBody.classList.remove('--active');
+                modal.classList.remove('--active');
+                body.classList.remove('locked');
+            }
+        });
+
+        callback();
+    }
+
+    bindModal('.success-button', '#success-modal', '#success-modal .modal__close', closeModalOnButtonClick);
+
+    function closeModalOnButtonClick() {
+        const button = $('.close-modal-button');
+
+        button.on('click', () => {
+            $('#success-modal').removeClass('--active');
+            $('#success-modal .modal').removeClass('--active');
+            $('body').removeClass('locked');
+        });
+    }
 });
+

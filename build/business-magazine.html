@@ -175,7 +175,7 @@
                 </ul>
             </nav>
 
-            <button class="header__button button desktop">Задать вопрос юристу</button>
+            <button class="header__button button desktop success-button">Задать вопрос юристу</button>
 
             <a href="tel: +7 (495) 487-70-07" class="header__subheader-right-phone mobile">
                 <svg
@@ -355,10 +355,15 @@
 
             <div class="insights__articles">
                 <article class="insights__article background-blur-bordered">
+                    <a class="insights__article-link" href="#"></a>
+
                     <time datetime="2001-12-20" class="insights__article-date"> 10.04.2023 </time>
 
                     <a href="#" class="insights__article-image image-scale">
-                        <img src="../img/business-magazine/business-1.webp" alt="" />
+                        <picture>
+                            <source srcset="../img/business-magazine/business-1.webp" type="image/webp" />
+                            <img loading="lazy" src="../img/business-magazine/business-1.webp" alt="" />
+                        </picture>
                     </a>
 
                     <div class="insights__article-info">
@@ -372,18 +377,18 @@
                             <img src="../img/clock.svg" alt="" />
                             5 минут
                         </div>
-
-                        <a href="#" class="insights__article-info-link arrow-link">
-                            <img src="../img/article-right-arrow.svg" alt="" />
-                            <span> Читать статью </span>
-                        </a>
                     </div>
                 </article>
                 <article class="insights__article background-blur-bordered">
+                    <a class="insights__article-link" href="#"></a>
+
                     <time datetime="2001-12-20" class="insights__article-date"> 10.04.2023 </time>
 
                     <a href="#" class="insights__article-image image-scale">
-                        <img src="../img/business-magazine/business-2.webp" alt="" />
+                        <picture>
+                            <source srcset="../img/business-magazine/business-2.webp" type="image/webp" />
+                            <img loading="lazy" src="../img/business-magazine/business-1.webp" alt="" />
+                        </picture>
                     </a>
 
                     <div class="insights__article-info">
@@ -397,18 +402,18 @@
                             <img src="../img/clock.svg" alt="" />
                             5 минут
                         </div>
-
-                        <a href="#" class="insights__article-info-link arrow-link">
-                            <img src="../img/article-right-arrow.svg" alt="" />
-                            <span> Читать статью </span>
-                        </a>
                     </div>
                 </article>
                 <article class="insights__article background-blur-bordered">
+                    <a class="insights__article-link" href="#"></a>
+
                     <time datetime="2001-12-20" class="insights__article-date"> 10.04.2023 </time>
 
                     <a href="#" class="insights__article-image image-scale">
-                        <img src="../img/business-magazine/business-3.webp" alt="" />
+                        <picture>
+                            <source srcset="../img/business-magazine/business-3.webp" type="image/webp" />
+                            <img loading="lazy" src="../img/business-magazine/business-3.webp" alt="" />
+                        </picture>
                     </a>
 
                     <div class="insights__article-info">
@@ -422,18 +427,18 @@
                             <img src="../img/clock.svg" alt="" />
                             5 минут
                         </div>
-
-                        <a href="#" class="insights__article-info-link arrow-link">
-                            <img src="../img/article-right-arrow.svg" alt="" />
-                            <span> Читать статью </span>
-                        </a>
                     </div>
                 </article>
                 <article class="insights__article background-blur-bordered">
+                    <a class="insights__article-link" href="#"></a>
+
                     <time datetime="2001-12-20" class="insights__article-date"> 10.04.2023 </time>
 
                     <a href="#" class="insights__article-image image-scale">
-                        <img src="../img/business-magazine/business-4.webp" alt="" />
+                        <picture>
+                            <source srcset="../img/business-magazine/business-4.webp" type="image/webp" />
+                            <img loading="lazy" src="../img/business-magazine/business-4.webp" alt="" />
+                        </picture>
                     </a>
 
                     <div class="insights__article-info">
@@ -447,18 +452,18 @@
                             <img src="../img/clock.svg" alt="" />
                             5 минут
                         </div>
-
-                        <a href="#" class="insights__article-info-link arrow-link">
-                            <img src="../img/article-right-arrow.svg" alt="" />
-                            <span> Читать статью </span>
-                        </a>
                     </div>
                 </article>
                 <article class="insights__article background-blur-bordered">
+                    <a class="insights__article-link" href="#"></a>
+
                     <time datetime="2001-12-20" class="insights__article-date"> 10.04.2023 </time>
 
                     <a href="#" class="insights__article-image image-scale">
-                        <img src="../img/business-magazine/business-5.webp" alt="" />
+                        <picture>
+                            <source srcset="../img/business-magazine/business-5.webp" type="image/webp" />
+                            <img loading="lazy" src="../img/business-magazine/business-5.webp" alt="" />
+                        </picture>
                     </a>
 
                     <div class="insights__article-info">
@@ -472,18 +477,11 @@
                             <img src="../img/clock.svg" alt="" />
                             5 минут
                         </div>
-
-                        <a href="#" class="insights__article-info-link arrow-link">
-                            <img src="../img/article-right-arrow.svg" alt="" />
-                            <span> Читать статью </span>
-                        </a>
                     </div>
                 </article>
             </div>
 
-            <button class="button-outlined insights__articles-button">
-                Показать ещё
-            </button>
+            <button class="button-outlined insights__articles-button">Показать ещё</button>
         </div>
     </div>
 </section>
@@ -636,11 +634,24 @@
         <!-- Footer -->
          <footer class="footer">
     <div class="container">
-        <div class="footer__content">
-
-        </div>
+        <div class="footer__content"></div>
     </div>
 </footer>
+
+<div class="modal__wrapper" id="success-modal">
+    <div class="modal">
+        <div class="modal__close">
+            <img src="../img/modal-close-icon.svg" alt="" />
+        </div>
+        <h2 class="modal__title">Ваша заявка <span>успешно отправлена</span></h2>
+        <div class="modal__body">
+            <button class="modal__button button-white close-modal-button">
+                Вернуться на сайт
+            </button>
+        </div>
+    </div>
+</div>
+
     </body>
 
     <script src="./js/scripts.min.js"></script>
