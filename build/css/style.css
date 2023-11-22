@@ -4430,8 +4430,11 @@ section {
 }
 
 .business-areas__spheres-list-item {
-  background-color: #fff;
   border-radius: 15rem;
+  border: 0.2rem solid #fff;
+  background: lightgray 0% 0%/100px 100px repeat, rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;

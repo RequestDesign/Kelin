@@ -317,7 +317,8 @@
 
 
         <!-- Main Page -->
-        <main><section class="breadcrumbs">
+        <main>
+            <section class="breadcrumbs">
     <div class="container">
         <div class="breadcrumbs__content">
             <ul class="breadcrumbs__list">
@@ -346,7 +347,7 @@
                             <span class="contacts__info-block-item-name">Телефон:</span>
 
                             <a href="tel: +7 (495) 018-34-51" class="contacts__info-block-item-link">
-                                +7 (495) 018-34-51
+                                8 (495) 487-70-07
                             </a>
                         </li>
                         <li class="contacts__info-block-item">
@@ -438,7 +439,8 @@
         </div>
     </div>
 </section>
-</main>
+
+        </main>
 
         <!-- Footer -->
         <footer class="footer">
@@ -458,8 +460,15 @@
 
         function init() {
             let map = new ymaps.Map('contacts-map', {
-                center: [55.708436655963034, 37.4071362641405],
+                center: [55.76251827514453, 37.63556146699713],
                 zoom: 12
+            });
+
+            let placemark = new ymaps.Placemark([55.76251827514453, 37.63556146699713], {
+                balloonContentHeader: 'ООО «КЕЛИН» ИНН 9706007244',
+                balloonContentBody: 'г. Москва, улица Мясницкая, дом 24/7, строение 1'
+            }, {
+                preset: 'islands#redDotIconWithCaption'
             });
 
             map.controls.remove('geolocationControl'); // удаляем геолокацию
@@ -469,6 +478,8 @@
             map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
             map.controls.remove('zoomControl'); // удаляем контрол зуммирования
             map.controls.remove('rulerControl'); // удаляем контрол правил
+
+            map.geoObjects.add(placemark);
         }
     </script>
     <script src="./js/scripts.min.js"></script>
