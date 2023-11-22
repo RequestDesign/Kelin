@@ -1552,28 +1552,17 @@
                 </h1>
                 <div class="home__video-player-box">
                     <video
-                        muted
+                        onloadstart="this.volume=0.3"
                         class="home__video-player"
                         width="100%"
+                        height="100%"
                         height="auto"
                         controls="false"
                         poster="../img/video-poster.webp"
                     >
-                        <source
-                            id="mp4"
-                            src="http://media.w3.org/2010/05/sintel/trailer.mp4"
-                            type="video/mp4"
-                        />
-                        <source
-                            id="webm"
-                            src="http://media.w3.org/2010/05/sintel/trailer.webm"
-                            type="video/webm"
-                        />
-                        <source
-                            id="ogv"
-                            src="http://media.w3.org/2010/05/sintel/trailer.ogv"
-                            type="video/ogg"
-                        />
+                        <source src="../video/kelin.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+                        <source src="../video/kelin.webm" type='video/webm; codecs="vp8, vorbis"' />
+                        <source src="../video/kelin.ogv" type='video/ogg; codecs="theora, vorbis"' />
                     </video>
                 </div>
                 <button class="home__video-player-button"></button>
