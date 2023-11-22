@@ -3831,7 +3831,7 @@ section {
 }
 
 .home__video-player-box {
-  max-height: 69.4743rem;
+  height: 69.4743rem;
   -webkit-mask-image: url("../img/video-mask.svg");
   mask-image: url("../img/video-mask.svg");
   -webkit-mask-repeat: no-repeat;
@@ -6624,11 +6624,6 @@ section {
   .home__video-player-box {
     -webkit-mask-image: url("../img/video-mask-mb.svg");
     mask-image: url("../img/video-mask-mb.svg");
-    width: 64.6rem;
-    height: 39.8rem;
-  }
-
-  .home__video-player-box video {
     width: 64.6rem;
     height: 39.8rem;
   }
