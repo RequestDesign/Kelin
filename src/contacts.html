@@ -13,7 +13,9 @@
         @@include('./html/_header.html')
 
         <!-- Main Page -->
-        <main>@@include('./html/_breadcrumbs.html',{ "page": "Контакты"}) @@include('./html/_contacts.html')</main>
+        <main>
+            @@include('./html/_breadcrumbs.html',{ "page": "Контакты"}) @@include('./html/_contacts.html')
+        </main>
 
         <!-- Footer -->
         @@include('./html/_footer.html')
@@ -27,8 +29,15 @@
 
         function init() {
             let map = new ymaps.Map('contacts-map', {
-                center: [55.708436655963034, 37.4071362641405],
+                center: [55.76251827514453, 37.63556146699713],
                 zoom: 12
+            });
+
+            let placemark = new ymaps.Placemark([55.76251827514453, 37.63556146699713], {
+                balloonContentHeader: 'ООО «КЕЛИН» ИНН 9706007244',
+                balloonContentBody: 'г. Москва, улица Мясницкая, дом 24/7, строение 1'
+            }, {
+                preset: 'islands#redDotIconWithCaption'
             });
 
             map.controls.remove('geolocationControl'); // удаляем геолокацию
@@ -38,6 +47,8 @@
             map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
             map.controls.remove('zoomControl'); // удаляем контрол зуммирования
             map.controls.remove('rulerControl'); // удаляем контрол правил
+
+            map.geoObjects.add(placemark);
         }
     </script>
     <script src="./js/scripts.min.js"></script>

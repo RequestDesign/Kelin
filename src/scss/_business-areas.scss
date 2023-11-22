@@ -82,8 +82,13 @@
             gap: 1.2rem;
 
             &-item {
-                background-color: $white;
                 border-radius: 15rem;
+                border: 0.2rem solid $white;
+                background:
+                    lightgray 0% 0% / 100px 100px repeat,
+                    rgba(255, 255, 255, 0.8);
+                backdrop-filter: blur(25px);
+
                 flex: 1;
                 white-space: nowrap;
                 transition: background-color 0.3s ease-in-out;
