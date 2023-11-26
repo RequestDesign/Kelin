@@ -40,7 +40,7 @@ resizableSwiper('(max-width: 768px)', '.abilities-swiper', {
     spaceBetween: rem(0.8)
 });
 
-resizableSwiper('(max-width: 100vw)', ' .home__industry-swiper', {
+resizableSwiper('(max-width: 100vw)', ' .skills-industry__industry-swiper', {
     loop: true,
     speed: 1200,
     direction: 'horizontal',
@@ -48,7 +48,7 @@ resizableSwiper('(max-width: 100vw)', ' .home__industry-swiper', {
     spaceBetween: rem(0.8),
     grabCursor: true,
     navigation: {
-        nextEl: '.home__industry-swiper-button-next'
+        nextEl: '.skills-industry__industry-swiper-button-next'
     },
     breakpoints: {
         768: {
@@ -67,26 +67,26 @@ resizableSwiper('(max-width: 768px)', '.clients-swiper', {
     spaceBetween: rem(0.8)
 });
 
-resizableSwiper('(max-width: 100vw)', '.home__protection-swiper', {
+resizableSwiper('(max-width: 100vw)', '.protection-swiper', {
     loop: true,
     speed: 1200,
     grabCursor: true,
     spaceBetween: rem(2),
     navigation: {
-        nextEl: '.home__protection-swiper-button-next',
-        prevEl: '.home__protection-swiper-button-prev'
+        nextEl: '.protection-swiper-button-next',
+        prevEl: '.protection-swiper-button-prev'
     }
 });
 
-resizableSwiper('(max-width: 100vw)', '.home__tu-letters-swiper', {
+resizableSwiper('(max-width: 100vw)', '.tu-letters-swiper', {
     loop: true,
     speed: 1200,
     grabCursor: true,
     spaceBetween: rem(1.2),
     slidesPerView: 1.2,
     navigation: {
-        nextEl: '.home__tu-letters-swiper-button-next',
-        prevEl: '.home__tu-letters-swiper-button-prev'
+        nextEl: '.tu-letters-swiper-button-next',
+        prevEl: '.tu-letters-swiper-button-prev'
     },
     breakpoints: {
         768: {
@@ -104,7 +104,7 @@ resizableSwiper('(max-width: 768px)', '.talents-swiper', {
     spaceBetween: rem(0.8)
 });
 
-resizableSwiper('(max-width: 100vw)', '.home__individual-calc-swiper', {
+resizableSwiper('(max-width: 100vw)', '.individual-calc-swiper', {
     loop: true,
     speed: 1200,
     grabCursor: true,
@@ -119,7 +119,7 @@ resizableSwiper('(max-width: 100vw)', '.home__individual-calc-swiper', {
     }
 });
 
-resizableSwiper('(max-width: 100vw)', '.home__category-list-swiper', {
+resizableSwiper('(max-width: 100vw)', '.category-list-swiper', {
     loop: true,
     speed: 1200,
     grabCursor: true,
@@ -133,15 +133,15 @@ resizableSwiper('(max-width: 100vw)', '.home__category-list-swiper', {
     }
 });
 
-resizableSwiper('(max-width: 100vw)', '.about-us__reviews-swiper', {
+resizableSwiper('(max-width: 100vw)', '.reviews-swiper', {
     loop: true,
     speed: 1200,
     grabCursor: true,
     spaceBetween: rem(0.8),
     slidesPerView: 1,
     navigation: {
-        nextEl: '.about-us__reviews-button-next',
-        prevEl: '.about-us__reviews-button-prev'
+        nextEl: '.reviews-button-next',
+        prevEl: '.reviews-button-prev'
     },
     breakpoints: {
         768: {

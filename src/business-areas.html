@@ -8,14 +8,18 @@
         <link rel="stylesheet" href="./css/style.min.css" />
     </head>
 
-    <body class="main__body">
+    <body class="main__body body_background-business-areas-page">
         <!-- Header -->
         @@include('./html/_header.html')
 
         <!-- Main Page -->
         <main>
             @@include('./html/_breadcrumbs.html',{ "page": "Сферы бизнеса"})
-            @@include('./html/_business-areas.html') @@include('./html/_insights-form.html')
+           
+            @@include('./html/_business-areas.html')
+            @@include('./html/_compass.html')
+
+            @@include('./html/_insights-form.html')
         </main>
 
         <!-- Footer -->

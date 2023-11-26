@@ -399,7 +399,12 @@
             padding: 0;
             background: none;
         }
-
+        &__content {
+            @include small-tablet {
+                padding: 3.2rem;
+                padding-top: 5.2rem;
+            }
+        }
         &-info {
             display: flex;
             justify-content: space-between;

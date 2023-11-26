@@ -1,0 +1,215 @@
+.processes {
+    &__title {
+        margin-bottom: 4.4rem;
+
+        @include small-tablet {
+            margin-bottom: 4.8rem;
+        }
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 3.2rem 4.4rem;
+        padding-left: 4.4rem;
+        min-height: 12.4rem;
+        gap: 7.1rem;
+        margin-bottom: 5rem;
+
+        @include small-tablet {
+            flex-wrap: wrap;
+            gap: 0;
+        }
+
+        &::after {
+            @include pseudo {
+                height: 5rem;
+                width: 0.2rem;
+                background-color: rgba(0, 88, 155, 0.5);
+                background: linear-gradient(
+                    0deg,
+                    rgba(0, 88, 155, 0.5) 0%,
+                    rgba(0, 88, 155, 0.5) 50%,
+                    rgba(255, 0, 0, 0) 50%,
+                    rgba(255, 0, 0, 0) 100%
+                );
+                background-size: 0.2rem 0.8rem;
+                background-repeat: repeat-y;
+                bottom: 0;
+                left: 6.5rem;
+                transform: translateY(100%);
+            }
+            @include small-tablet {
+                width: 0.4rem;
+                background-size: 0.4rem 1.6rem;
+            }
+        }
+
+        &-image {
+            width: 5rem;
+            height: 5.9524rem;
+        }
+        &-title {
+            width: 39.4rem;
+
+            @include small-tablet {
+                color: $blue;
+                margin-left: 4.8rem;
+            }
+        }
+        &-description {
+            max-width: 64.9rem;
+            @include small-tablet {
+                margin-top: 2.4rem;
+            }
+        }
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 4.4rem;
+
+        &::before {
+            @include pseudo {
+                z-index: -1;
+                width: 100rem;
+                height: 0.2rem;
+                background-color: rgba(205, 227, 245, 1);
+                background: linear-gradient(
+                    90deg,
+                    rgba(205, 227, 245, 1) 0%,
+                    rgba(205, 227, 245, 1) 50%,
+                    rgba(255, 0, 0, 0) 50%,
+                    rgba(255, 0, 0, 0) 100%
+                );
+                background-size: 0.8rem 0.2rem;
+                background-repeat: repeat-x;
+                top: 3.2rem;
+                left: 6.8rem;
+            }
+
+            @include small-tablet {
+                display: none;
+            }
+        }
+
+        &-container {
+            display: flex;
+            gap: 12.4rem;
+            margin-bottom: 5rem;
+
+            @include small-tablet {
+                flex-direction: column;
+                gap: 1.6rem;
+            }
+        }
+        &-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+            position: relative;
+
+            @include small-tablet {
+                gap: 1.6rem;
+            }
+
+            &::after {
+                @include pseudo {
+                    z-index: -1;
+                    height: 20.3rem;
+                    width: 0.2rem;
+                    background-color: rgba(205, 227, 245, 1);
+                    background: linear-gradient(
+                        0deg,
+                        rgba(205, 227, 245, 1) 0%,
+                        rgba(205, 227, 245, 1) 50%,
+                        rgba(255, 0, 0, 0) 50%,
+                        rgba(255, 0, 0, 0) 100%
+                    );
+                    background-size: 0.2rem 0.8rem;
+                    background-repeat: repeat-y;
+                    top: -1.6rem;
+                    left: 1.5rem;
+                }
+                @include small-tablet {
+                    display: none;
+                }
+            }
+
+            &:first-child {
+                &::after {
+                    height: 32.8rem;
+                    top: -5.8rem;
+                }
+                @include small-tablet {
+                    &::after {
+                        display: block;
+                        z-index: -1;
+                        height: 82.25rem;
+                        width: 0.4rem;
+                        background-color: rgba(205, 227, 245, 1);
+                        background: linear-gradient(
+                            0deg,
+                            rgba(205, 227, 245, 1) 0%,
+                            rgba(205, 227, 245, 1) 50%,
+                            rgba(255, 0, 0, 0) 50%,
+                            rgba(255, 0, 0, 0) 100%
+                        );
+                        background-size: 0.4rem 1.6rem;
+                        background-repeat: repeat-y;
+                        top: -4.6rem;
+                        left: 1.5rem;
+                    }
+                }
+            }
+
+            &-text {
+                display: flex;
+                gap: 2rem;
+
+                @include small-tablet {
+                    flex-direction: column;
+                    margin-left: 3.2rem;
+                    gap: 1.6rem;
+                }
+
+                span {
+                    @include small-tablet {
+                        font-weight: 400;
+                    }
+                }
+
+                &::before {
+                    @include pseudo {
+                        position: relative;
+                        width: 3.6rem;
+                        height: 3.6rem;
+                        background-image: url('../img/main/tick.svg');
+                        background-repeat: no-repeat;
+                        background-size: 2.4rem;
+                        background-position: center;
+                        background-color: $blue;
+                        border-radius: 50%;
+                    }
+                    @include small-tablet {
+                        display: none;
+                    }
+                }
+            }
+            &-end {
+                @include small-tablet {
+                    padding: 1.6rem;
+                    span {
+                        font-size: 3.6rem;
+                    }
+                    p {
+                        margin: 0;
+                        font-size: 2.4rem;
+                    }
+                }
+            }
+        }
+    }
+}

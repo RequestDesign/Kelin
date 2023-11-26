@@ -1,0 +1,43 @@
+.compass {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        gap: 4.3rem;
+        overflow: hidden;
+
+        @include small-tablet {
+            gap: 1.6rem;
+            padding: 5.2rem 3.2rem;
+            padding-bottom: 45.4rem;
+        }
+        &::after {
+            @include pseudo {
+                background-image: url('../img/main/compass.webp');
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 65.4rem;
+                height: 34.3rem;
+                bottom: -0.6rem;
+                right: -6.5rem;
+            }
+            @include small-tablet {
+                width: 76.8rem;
+                height: 38.8rem;
+                bottom: 0;
+                right: -15rem;
+            }
+        }
+    }
+
+    &__title {
+        max-width: 87rem;
+    }
+    &__description {
+        max-width: 53.4rem;
+
+        @include small-tablet {
+            max-width: unset;
+        }
+    }
+}

@@ -1,62 +1,14 @@
-.business-areas {
-    &__hero {
-        display: flex;
-        flex-direction: column;
-        position: relative;
+.body_background-business-areas-page {
+    background-image: url(../img/business-areas/background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
 
-        gap: 3.8rem;
-        margin-bottom: 18rem;
-
-        @include small-tablet {
-            overflow-x: hidden;
-            gap: 1.6rem;
-        }
-        &-title {
-            max-width: 86rem;
-
-            @include small-tablet {
-                max-width: unset;
-            }
-        }
-        &-description {
-            color: $text-secondary;
-            max-width: 53.9rem;
-
-            @include small-tablet {
-                margin-bottom: 65.8rem;
-                max-width: unset;
-            }
-        }
-        &-image {
-            position: absolute;
-            background-repeat: no-repeat;
-            background-size: cover;
-            z-index: -10;
-            width: 125.8013rem;
-            height: 107rem;
-            bottom: -35rem;
-            right: 0;
-
-            @include small-tablet {
-                width: 88.973rem;
-                height: 75.676rem;
-                bottom: 12rem;
-                right: -5rem;
-            }
-        }
-        &-button {
-            max-width: 36.6rem;
-
-            @include small-tablet {
-                max-width: unset;
-            }
-        }
+    @include small-tablet {
+        background-image: url(../img/business-areas/background-mb.svg);
     }
-    &__benefits,
-    &__planets {
-        margin-bottom: 12rem;
-    }
-    &__spheres {
+}
+.spheres {
+    &__content {
         display: flex;
         flex-direction: column;
         gap: 4.4rem;
@@ -67,340 +19,172 @@
             padding-top: 5.2rem;
             gap: 2.8rem;
         }
+    }
 
-        &-title {
-            max-width: 105.8rem;
+    &-title {
+        max-width: 105.8rem;
 
-            @include small-tablet {
-                max-width: 44rem;
-            }
+        @include small-tablet {
+            max-width: 44rem;
         }
+    }
 
-        &-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.2rem;
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.2rem;
 
-            &-item {
-                border-radius: 15rem;
-                border: 0.2rem solid $white;
-                background:
-                    lightgray 0% 0% / 100px 100px repeat,
-                    rgba(255, 255, 255, 0.8);
-                backdrop-filter: blur(25px);
+        &-item {
+            border-radius: 15rem;
+            border: 0.2rem solid $white;
+            background:
+                lightgray 0% 0% / 100px 100px repeat,
+                rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(25px);
 
-                flex: 1;
-                white-space: nowrap;
-                transition: background-color 0.3s ease-in-out;
+            flex: 1;
+            white-space: nowrap;
+            transition: background-color 0.3s ease-in-out;
 
-                a {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 100%;
-                    height: 100%;
-                    padding: 2.8rem 5rem;
-                }
-            }
-            &-item:hover {
-                background-color: $blue;
-                a {
-                    color: $white;
-                }
-            }
-        }
-        &-cards {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(3, 1fr);
-            gap: 1.2rem;
-
-            @include small-tablet {
-                display: flex;
-                flex-direction: column;
-            }
-        }
-        &-card {
-            position: relative;
-            padding: 5rem;
-            padding-left: 11.3rem;
-
-            @include small-tablet {
-                padding: 3.2rem;
-            }
-
-            &-title {
-                position: absolute;
-                transform: rotate(180deg);
-                writing-mode: vertical-lr;
-                top: 5rem;
-                left: 5rem;
-
-                @include small-tablet {
-                    position: unset;
-                    transform: none;
-                    writing-mode: unset;
-                    align-self: center;
-                }
-            }
-            &-content {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                height: 100%;
-                gap: 4.8rem;
-
-                &-top {
-                    @include small-tablet {
-                        display: flex;
-                        gap: 2.4rem;
-                    }
-                }
-            }
-            &-image {
-                overflow: hidden;
-                border-radius: 2rem;
-                max-width: 61.2rem;
-                max-height: 22rem;
-
-                @include small-tablet {
-                    border-radius: 3.2rem;
-                    min-width: 20rem;
-                    min-height: 20rem;
-                    max-width: 20rem;
-                    max-height: 20rem;
-                }
-            }
-            &-text {
-                display: flex;
-                flex-direction: column;
-                gap: 3.2rem;
-
-                &-list {
-                    display: flex;
-                    flex-direction: column;
-                    border: 0.1rem solid $white;
-                    border-radius: 5rem;
-                    gap: 1.6rem;
-                    padding: 3.2rem 7rem 3.2rem 2.859rem;
-
-                    @include small-tablet {
-                        padding: 3.2rem;
-                    }
-
-                    &-item {
-                        font-size: 1.8rem;
-                        font-weight: 700;
-
-                        @include small-tablet {
-                            font-size: 3.2rem;
-                        }
-                    }
-                }
-            }
-
-            &-icons {
-                display: flex;
-                justify-content: space-between;
-                gap: 1.8rem;
-
-                @include small-tablet {
-                    gap: 1.6rem;
-                }
-            }
-            &-icon {
-                flex: 1;
+            a {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                min-width: 14.4rem;
-                min-height: 9.8rem;
-                border: 0.1rem solid $white;
-                border-radius: 4rem;
-                padding: 1.3rem;
-
-                @include small-tablet {
-                    min-width: 13.2rem;
-                    min-height: 9.6rem;
-                    padding: 2.6rem;
-                }
-
-                img {
-                    height: auto;
-
-                    @include small-tablet {
-                        width: -webkit-fill-available;
-                    }
-                }
+                width: 100%;
+                height: 100%;
+                padding: 2.8rem 5rem;
+            }
+        }
+        &-item:hover {
+            background-color: $blue;
+            a {
+                color: $white;
             }
         }
     }
-    &__request {
-        flex-direction: column;
-        gap: 4rem;
+    &-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 1.2rem;
 
         @include small-tablet {
-            padding-top: 4.8rem;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &-card {
+        position: relative;
+        padding: 5rem;
+        padding-left: 11.3rem;
+
+        @include small-tablet {
+            padding: 3.2rem;
         }
 
         &-title {
-            max-width: 103.2rem;
+            position: absolute;
+            transform: rotate(180deg);
+            writing-mode: vertical-lr;
+            top: 5rem;
+            left: 5rem;
+
+            @include small-tablet {
+                position: unset;
+                transform: none;
+                writing-mode: unset;
+                align-self: center;
+            }
         }
-        &-container {
+        &-content {
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
-
-            @include small-tablet {
-                flex-direction: column;
-            }
-        }
-        &-social {
-            margin-top: 0;
-            min-width: 81.4rem;
-
-            @include small-tablet {
-                border-radius: 50rem;
-                border: 0.1rem solid #fff;
-                padding: 1rem;
-                padding-left: 4.8rem;
-                min-width: unset;
-                margin-left: 0;
-            }
-
-            &-text {
-                @include small-tablet {
-                    font-size: 2.8rem;
-                }
-            }
-            &-icons-item {
-                @include small-tablet {
-                    width: 11rem;
-                    height: 11rem;
-
-                    &.--telegramm a {
-                        padding: 3.4rem 3.6rem 3.4rem 2.6rem;
-                    }
-                    &.--whatsapp a {
-                        padding: 3.4rem;
-                    }
-                }
-            }
-        }
-        &-button {
-            padding: 3.3rem 8.9rem;
-        }
-    }
-    &__links {
-        margin-bottom: 22.6rem;
-        display: flex;
-        flex-direction: column;
-        gap: 4.4rem;
-
-        @include small-tablet {
+            height: 100%;
             gap: 4.8rem;
-            margin-bottom: 16rem;
-            padding: 3.2rem;
-            padding-top: 5.2rem;
+
+            &-top {
+                @include small-tablet {
+                    display: flex;
+                    gap: 2.4rem;
+                }
+            }
         }
-        &-list {
-            display: flex;
-            gap: 1.2rem;
+        &-image {
+            overflow: hidden;
+            border-radius: 2rem;
+            max-width: 61.2rem;
+            max-height: 22rem;
 
             @include small-tablet {
-                flex-direction: column;
-                gap: 1.6rem;
+                border-radius: 3.2rem;
+                min-width: 20rem;
+                min-height: 20rem;
+                max-width: 20rem;
+                max-height: 20rem;
             }
+        }
+        &-text {
+            display: flex;
+            flex-direction: column;
+            gap: 3.2rem;
 
-            &-item {
+            &-list {
                 display: flex;
                 flex-direction: column;
-                flex: 1;
-                gap: 4.4rem;
+                border: 0.1rem solid $white;
+                border-radius: 5rem;
+                gap: 1.6rem;
+                padding: 3.2rem 7rem 3.2rem 2.859rem;
 
                 @include small-tablet {
                     padding: 3.2rem;
-                    gap: 4.8rem;
                 }
-                &-image {
-                    display: block;
-                    max-height: 22rem;
-                    width: 100%;
-                    height: 100%;
-                    width: fit-content;
-                    border-radius: 2rem;
+
+                &-item {
+                    font-size: 1.8rem;
+                    font-weight: 700;
 
                     @include small-tablet {
-                        max-height: 30rem;
-                    }
-                }
-                &-text {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 2.4rem;
-
-                    @include small-tablet {
-                        gap: 4.8rem;
-                    }
-                }
-                &-row {
-                    display: flex;
-                    align-items: center;
-                    position: relative;
-                    overflow: hidden;
-
-                    @include small-tablet {
-                        flex-direction: column;
-                        padding: 3.2rem;
-                        gap: 4.8rem;
-                    }
-
-                    &-background {
-                        position: absolute;
-
-                        z-index: -1;
-
-                        width: 63.2rem;
-                        height: 35.6rem;
-                        top: -1.1rem;
-                        right: 10.9rem;
-                    }
-                    &-image {
-                        flex: 1;
-                        margin-right: 5.7rem;
-
-                        @include small-tablet {
-                            margin: 0;
-                        }
-                    }
-                    &-text {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 3.2rem;
-                        max-width: 49.1rem;
-                        margin-right: 20.6rem;
-
-                        @include small-tablet {
-                            max-width: unset;
-                            margin: 0;
-                            gap: 4.8rem;
-                        }
-                    }
-                    &-button {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        min-width: 37.2rem;
-
-                        @include small-tablet {
-                            width: 100%;
-                        }
+                        font-size: 3.2rem;
                     }
                 }
             }
         }
-    }
 
-    &__article {
-        margin-bottom: 8rem;
+        &-icons {
+            display: flex;
+            justify-content: space-between;
+            gap: 1.8rem;
+
+            @include small-tablet {
+                gap: 1.6rem;
+            }
+        }
+        &-icon {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 14.4rem;
+            min-height: 9.8rem;
+            border: 0.1rem solid $white;
+            border-radius: 4rem;
+            padding: 1.3rem;
+
+            @include small-tablet {
+                min-width: 13.2rem;
+                min-height: 9.6rem;
+                padding: 2.6rem;
+            }
+
+            img {
+                height: auto;
+
+                @include small-tablet {
+                    width: -webkit-fill-available;
+                }
+            }
+        }
     }
 }
