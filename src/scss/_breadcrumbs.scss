@@ -1,6 +1,12 @@
 @import 'vars';
 @import 'mixins';
 
+.center-breadcrumbs {
+    margin-bottom: 4rem;
+    &-list {
+        justify-content: center;
+    }
+}
 .breadcrumbs {
     // margin-bottom: 3.8rem;
     margin-bottom: 6rem;

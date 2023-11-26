@@ -12,6 +12,9 @@
     span {
         color: $blue;
     }
+    &.mw-100 {
+        max-width: 100rem;
+    }
 }
 
 .section-title-lite {
@@ -120,7 +123,7 @@
         line-height: normal;
         letter-spacing: 0.16rem;
         text-transform: uppercase;
-    };
+    }
 }
 
 .background-blur {
@@ -140,7 +143,15 @@
     border-radius: 4rem;
     backdrop-filter: blur(50px);
 }
-
+.mb-12 {
+    margin-bottom: 12rem;
+}
+.mb-8 {
+    margin-bottom: 8rem;
+}
+.mb-4 {
+    margin-bottom: 4.4rem;
+}
 .arrow-link {
     display: flex;
     align-items: center;

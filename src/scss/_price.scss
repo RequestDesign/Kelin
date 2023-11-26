@@ -1,0 +1,13 @@
+.price {
+    &__content {
+        @include small-tablet {
+            padding: 3.2rem;
+            padding-top: 5.2rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 4.4rem;
+        max-width: 104.2rem;
+    }
+}

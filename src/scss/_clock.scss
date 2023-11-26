@@ -1,0 +1,65 @@
+.clock {
+    &__content {
+        position: relative;
+
+        @include small-tablet {
+            padding-bottom: 35.6rem;
+        }
+
+        &::after {
+            @include pseudo {
+                background-image: url('../img/main/clock.webp');
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 86.4rem;
+                height: 69.2rem;
+                bottom: -17.5rem;
+                right: 2rem;
+
+                @include small-tablet {
+                    width: 51.6rem;
+                    height: 41.2rem;
+                    right: 11.6rem;
+                    bottom: -2rem;
+                }
+            }
+        }
+    }
+    &__text {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 80.8rem;
+
+        @include small-tablet {
+            justify-content: center;
+            text-align: center;
+        }
+    }
+    &__title {
+        margin-bottom: 4rem;
+
+        @include small-tablet {
+            margin-bottom: 1.6rem;
+        }
+    }
+    &__description {
+        max-width: 47.2rem;
+
+        @include small-tablet {
+            order: 1;
+            max-width: none;
+            margin-bottom: 4.8rem;
+        }
+
+        span {
+            font-weight: 700;
+        }
+    }
+    &__button {
+        @include small-tablet {
+            order: 2;
+        }
+    }
+}

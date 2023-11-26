@@ -1,53 +1,9 @@
-.protection {
-    &__title {
-        max-width: 102.2rem;
-        margin-bottom: 4.4rem;
-        @include small-tablet {
-            max-width: unset;
-            margin-bottom: 4.8rem;
-        }
-    }
-    &__benefits-360 {
-        margin-bottom: 16rem;
+.body_background-360-page {
+    background-image: url(../img/business-360/background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
 
-        @include small-tablet {
-            padding: 3.2rem;
-            padding-top: 5.2rem;
-        }
-
-        &-title {
-            @include small-tablet {
-                max-width: 45rem;
-                margin-bottom: 4.8rem;
-            }
-        }
-
-        &-content {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, 1fr);
-            gap: 1.2rem;
-            @include small-tablet {
-                display: flex;
-                flex-direction: column;
-                gap: 1.6rem;
-            }
-        }
-    }
-    &__request {
-        margin-bottom: 16rem;
-    }
-    &__talents {
-        margin-bottom: 16rem;
-        &-list-wrapper {
-            @include small-tablet {
-                display: flex;
-                flex-direction: column;
-                gap: 1.6rem;
-            }
-        }
-    }
-    &__links {
-        margin-bottom: 16rem;
+    @include small-tablet {
+        background-image: url(../img/business-360/background-mb.svg);
     }
 }

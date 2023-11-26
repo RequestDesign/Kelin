@@ -1,0 +1,46 @@
+.radar {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        gap: 4rem;
+
+        @include small-tablet {
+            gap: 1.6rem;
+            padding: 5.2rem 3.2rem;
+            padding-bottom: 36.8rem;
+        }
+        &::after {
+            @include pseudo {
+                background-image: url('../img/main/radar.webp');
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 38.5rem;
+                height: 31.9rem;
+                bottom: 2.6rem;
+                right: 9.9rem;
+            }
+            @include small-tablet {
+                width: 28.966rem;
+                height: 24rem;
+                bottom: 6.6rem;
+                right: 22.434rem;
+            }
+        }
+    }
+
+    &-title {
+        max-width: 96.8rem;
+
+        @include small-tablet {
+            text-align: center;
+        }
+    }
+    &-description {
+        max-width: 87.7rem;
+
+        @include small-tablet {
+            text-align: center;
+        }
+    }
+}

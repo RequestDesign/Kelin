@@ -1,0 +1,169 @@
+.request {
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        padding: 5rem;
+
+        @include small-tablet {
+            flex-direction: column;
+            padding: 3.2rem;
+            padding-top: 5.2rem;
+            gap: 4.8rem;
+        }
+
+        &-column {
+            flex-direction: column;
+        }
+    }
+    &__title {
+        max-width: 106.9rem;
+
+        @include small-tablet {
+            max-width: unset;
+        }
+    }
+    &__text-container {
+        display: flex;
+        flex-direction: column;
+        gap: 3.4rem;
+        max-width: 66.6rem;
+
+        @include small-tablet {
+            gap: 1.6rem;
+        }
+    }
+    &__form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 1.2rem;
+        grid-row-gap: 2.6rem;
+        width: 100%;
+        max-width: 81.4rem;
+
+        @include small-tablet {
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+        }
+        label {
+            width: 100%;
+            input {
+                @include small-tablet {
+                    padding: 4.6rem 6.4rem;
+                }
+            }
+            input,
+            input::placeholder {
+                @include small-tablet {
+                    font-size: 3.2rem;
+                }
+            }
+        }
+        label[for='tel'] {
+            @include small-tablet {
+                margin-bottom: 0.8rem;
+            }
+        }
+        &-fields {
+            display: flex;
+            gap: 1.2rem;
+        }
+        &-field {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 3.5rem 4rem 3.1rem 4rem;
+        }
+        &-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $blue;
+            min-width: 36.5rem;
+
+            @include small-tablet {
+                min-width: none;
+            }
+        }
+        &-copyright {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 2.7rem;
+            color: #cde3f5;
+            font-size: 1.4rem;
+            font-weight: 400;
+
+            @include small-tablet {
+                display: block;
+                margin: 0;
+                font-size: 2.4rem;
+            }
+
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__social {
+        grid-area: 3 / 1 / 4 / 3;
+        margin: 0;
+        min-width: 81.4rem;
+
+        @include small-tablet {
+            border: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            min-width: unset;
+        }
+        &-mt-3 {
+            margin-top: 3.2rem;
+        }
+        &-text {
+            margin-left: 4rem;
+            color: $white;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+
+            @include small-tablet {
+                margin: 0;
+                font-size: 3.2rem;
+            }
+        }
+
+        &-icons {
+            gap: 0.8rem;
+            &-item {
+                @include small-tablet {
+                    width: 13rem;
+                    height: 13rem;
+                }
+
+                &.--telegramm a {
+                    @include small-tablet {
+                        padding: 4rem 4.2rem 4rem 3rem;
+                    }
+                }
+                &.--whatsapp a {
+                    @include small-tablet {
+                        padding: 4rem;
+                    }
+                }
+            }
+        }
+    }
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 4rem;
+
+        @include small-tablet {
+            gap: 2.4rem;
+            flex-direction: column;
+            margin-top: 0;
+        }
+    }
+}

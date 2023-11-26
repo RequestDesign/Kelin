@@ -55,6 +55,9 @@
             line-height: 4.5rem;
             margin-bottom: 1.5rem;
         }
+        &_max-width-583{
+            max-width: 58.3rem;
+        }
     }
 
     &__button {
@@ -80,6 +83,13 @@
             max-width: 100%;
             height: 54rem;
             margin-left: 3rem;
+        }
+
+        &_business-areas-page{
+            top: -28.4rem;
+            right: -10rem;
+            max-width: 125.8rem;
+            height: 107rem;
         }
     }
 }

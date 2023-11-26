@@ -8,15 +8,15 @@
         <link rel="stylesheet" href="./css/style.min.css" />
     </head>
 
-    <body class="main__body">
+    <body class="main__body body_background-360-page">
         <!-- Header -->
         @@include('./html/_header.html')
 
         <!-- Main Page -->
         <main>
             @@include('./html/_breadcrumbs.html',{ "page": "Защита бизнеса 360°"})
-            @@include('./html/_business-360.html')
-             @@include('./html/_insights-form.html')
+            @@include('./html/_business-360.html') @@include('./html/_compass.html')
+            @@include('./html/_insights-form.html')
         </main>
 
         <!-- Footer -->

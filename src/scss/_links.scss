@@ -1,0 +1,110 @@
+.links {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 4.4rem;
+
+        @include small-tablet {
+            gap: 4.8rem;
+            margin-bottom: 16rem;
+            padding: 3.2rem;
+            padding-top: 5.2rem;
+        }
+    }
+    &__list {
+        display: flex;
+        gap: 1.2rem;
+
+        @include small-tablet {
+            flex-direction: column;
+            gap: 1.6rem;
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            gap: 4.4rem;
+
+            @include small-tablet {
+                padding: 3.2rem;
+                gap: 4.8rem;
+            }
+            &-image {
+                display: block;
+                max-height: 22rem;
+                width: 100%;
+                height: 100%;
+                width: fit-content;
+                border-radius: 2rem;
+
+                @include small-tablet {
+                    max-height: 30rem;
+                }
+            }
+            &-text {
+                display: flex;
+                flex-direction: column;
+                gap: 2.4rem;
+
+                @include small-tablet {
+                    gap: 4.8rem;
+                }
+            }
+            &-row {
+                display: flex;
+                align-items: center;
+                position: relative;
+                overflow: hidden;
+
+                @include small-tablet {
+                    flex-direction: column;
+                    padding: 3.2rem;
+                    gap: 4.8rem;
+                }
+
+                &-background {
+                    position: absolute;
+
+                    z-index: -1;
+
+                    width: 63.2rem;
+                    height: 35.6rem;
+                    top: -1.1rem;
+                    right: 10.9rem;
+                }
+                &-image {
+                    flex: 1;
+                    margin-right: 5.7rem;
+
+                    @include small-tablet {
+                        margin: 0;
+                    }
+                }
+                &-text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 3.2rem;
+                    max-width: 49.1rem;
+                    margin-right: 20.6rem;
+
+                    @include small-tablet {
+                        max-width: unset;
+                        margin: 0;
+                        gap: 4.8rem;
+                    }
+                }
+                &-button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-width: 37.2rem;
+
+                    @include small-tablet {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

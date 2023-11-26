@@ -8,14 +8,17 @@
         <link rel="stylesheet" href="./css/style.min.css" />
     </head>
 
-    <body class="main__body">
+    <body class="main__body body_background-our-work-page">
         <!-- Header -->
         @@include('./html/_header.html')
 
         <!-- Main Page -->
         <main>
             @@include('./html/_breadcrumbs.html',{ "page": "Как мы работаем"})
+
             @@include('./html/_our-work.html')
+            @@include('./html/_compass.html')
+
             @@include('./html/_insights-form.html')
         </main>
 

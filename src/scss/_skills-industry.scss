@@ -1,0 +1,263 @@
+.skills-industry {
+    &__content {
+        position: relative;
+        display: flex;
+        gap: 1.2rem;
+
+        @include small-tablet {
+            flex-direction: column;
+            gap: 1.6rem;
+        }
+    }
+    &__skills {
+        padding: 1.6rem;
+
+        @include small-tablet {
+            padding: 0;
+        }
+
+        &-title {
+            margin-top: 3.4rem;
+            margin-left: 3.4rem;
+            max-width: 96.9rem;
+
+            @include small-tablet {
+                margin: 5.2rem 3.2rem 0rem 3.2rem;
+            }
+        }
+        &-line {
+            position: relative;
+            width: 74.4rem;
+            height: 0.1rem;
+            background-color: $icons;
+            margin-bottom: 2.8rem;
+            margin-top: 1.6rem;
+
+            @include small-tablet {
+                margin-right: 3.2rem;
+                margin-left: 3.2rem;
+                width: auto;
+            }
+        }
+        &-description {
+            margin-left: 3.4rem;
+            max-width: 74.3rem;
+            color: $text-secondary;
+            margin-bottom: 3.6rem;
+
+            @include small-tablet {
+                color: $text-primary;
+                margin-right: 3.2rem;
+                margin-left: 3.2rem;
+            }
+        }
+        &-info {
+            padding: 0;
+            padding-top: 4.6rem;
+            padding-left: 3.4rem;
+            padding-right: 3.4rem;
+
+            @include small-tablet {
+                padding: 0;
+                background: unset;
+                backdrop-filter: none;
+            }
+
+            &-text-container {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 7.316rem;
+            }
+            &-description {
+                color: $text-secondary;
+                max-width: 37.7rem;
+            }
+            &-link {
+                align-items: flex-start;
+
+                span {
+                    max-width: 25.1rem;
+
+                    @include small-tablet {
+                        max-width: unset;
+                        color: $white;
+                        font-size: 3.2rem;
+                        text-align: end;
+                        max-width: 42.8rem;
+                    }
+                }
+                img {
+                    @include small-tablet {
+                        width: 9.2rem;
+                        height: 4rem;
+
+                        svg {
+                            fill: $white;
+                        }
+                    }
+                }
+            }
+
+            &-list {
+                display: flex;
+                justify-content: center;
+
+                @include small-tablet {
+                    flex-direction: column;
+                    gap: 4.8rem;
+                    background-image: url('../img/main/bg-item-mb.svg');
+                    background-position: top;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    border-radius: 4rem;
+                    padding: 3.2rem;
+                    padding-top: 7.2rem;
+                }
+
+                &-item {
+                    min-width: 34.5rem;
+                    min-height: 24.5rem;
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    padding-left: 6.7rem;
+
+                    @include small-tablet {
+                        padding: 0;
+                        min-height: unset;
+                    }
+                    &:nth-child(1) {
+                        max-width: 21.1rem;
+                        background-image: url('../img/main/bg-item1.svg');
+                        background-position: top;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+
+                        @include small-tablet {
+                            background: none;
+                            max-width: 42.2rem;
+                        }
+                    }
+                    &:nth-child(2) {
+                        max-width: 23.2rem;
+                        background-image: url('../img/main/bg-item2.svg');
+                        background-position: top;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+
+                        @include small-tablet {
+                            background: none;
+                            max-width: 42.2rem;
+                        }
+                    }
+                    &:nth-child(3) {
+                        max-width: 13.3rem;
+                        background-image: url('../img/main/bg-item3.svg');
+                        background-position: top;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+
+                        @include small-tablet {
+                            background: none;
+                            max-width: 42.2rem;
+                        }
+                    }
+
+                    &-title {
+                        color: $white;
+
+                        @include small-tablet {
+                            font-size: 6rem;
+                        }
+                    }
+                    &-description {
+                        color: $white;
+                        font-size: 1.8rem;
+                        font-weight: 700;
+
+                        @include small-tablet {
+                            font-size: 3.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__industry {
+        position: relative;
+
+        &-swiper {
+            max-height: 74.6rem;
+            overflow: hidden;
+            -webkit-mask-image: linear-gradient(
+                0deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 1) 10%,
+                rgba(255, 255, 255, 1) 90%,
+                rgba(254, 254, 254, 0) 100%
+            );
+
+            @include small-tablet {
+                -webkit-mask-image: unset;
+            }
+
+            &-button-next {
+                z-index: 3;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                bottom: -4rem;
+                right: 23.3rem;
+                width: 8.5rem;
+                height: 8.5rem;
+                border-radius: 5rem;
+                border: 0.2rem solid $white;
+                transition: 0.3s all ease-out;
+
+                &:hover {
+                    border: 0.2rem solid $blue;
+
+                    svg {
+                        path {
+                            stroke: $blue;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include small-tablet {
+            flex-direction: row;
+            overflow-x: hidden;
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            gap: 2.8rem;
+            padding-top: 6.1rem;
+            padding-bottom: 6rem;
+
+            @include small-tablet {
+                height: auto;
+                padding: 3.2rem;
+            }
+
+            &-title {
+                font-family: $font-family-URW;
+                font-size: 3.2rem;
+                font-weight: 400;
+                letter-spacing: 0.064rem;
+                text-transform: uppercase;
+
+                @include small-tablet {
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+}

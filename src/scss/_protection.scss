@@ -1,0 +1,183 @@
+.protection {
+    &__content {
+        @include small-tablet {
+            padding: 3.2rem;
+            padding-top: 5.2rem;
+        }
+    }
+
+    &__text {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-bottom: 4.4rem;
+
+        @include small-tablet {
+            flex-direction: column;
+        }
+    }
+    &__title {
+        max-width: 66.6rem;
+    }
+    &__description {
+        display: flex;
+        flex-direction: column;
+        max-width: 66.7rem;
+        text-align: right;
+
+        @include small-tablet {
+            text-align: start;
+            flex-direction: column-reverse;
+        }
+        &::after {
+            @include pseudo {
+                position: relative;
+                margin-top: 2.4rem;
+                height: 0.1rem;
+                width: 100%;
+                background-color: $white;
+            }
+            @include small-tablet {
+                width: 100%;
+                margin-bottom: 1.6rem;
+                margin-top: 1.6rem;
+            }
+        }
+    }
+    &__block {
+        display: flex;
+        align-items: center;
+        gap: 3.6rem;
+
+        @include small-tablet {
+            flex-wrap: wrap;
+        }
+    }
+    &-swiper {
+        order: 1;
+        max-width: 134.2rem;
+
+        @include small-tablet {
+            order: 0;
+        }
+
+        &-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 8.5rem;
+            height: 8.5rem;
+            border-radius: 50%;
+            border: 0.2rem solid $white;
+            transition: all 0.3s ease-in-out;
+
+            @include small-tablet {
+                width: 9rem;
+                height: 9rem;
+                svg {
+                    width: 4.4rem;
+                    height: 3.2rem;
+                }
+            }
+
+            &:hover {
+                border: 0.2rem solid $blue;
+
+                svg {
+                    path {
+                        stroke: $blue;
+                    }
+                }
+            }
+
+            &-next {
+                order: 2;
+            }
+            &-prev {
+                order: 0;
+                @include small-tablet {
+                    order: 1;
+                }
+            }
+        }
+        &-slide {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+
+            @include small-tablet {
+                padding: 3.2rem;
+                flex-direction: column;
+                gap: 2.4rem;
+            }
+
+            &-title {
+                font-family: $font-family-URW;
+                font-size: 3.2rem;
+                font-weight: 400;
+                letter-spacing: 0.064rem;
+                text-transform: uppercase;
+                margin-bottom: 4.4rem;
+
+                @include small-tablet {
+                    font-size: 4rem;
+                }
+            }
+            &-reviewer {
+                margin-bottom: 3.1rem;
+
+                &-name {
+                    color: $blue;
+                    font-weight: 700;
+                    margin-bottom: 3.1rem;
+                }
+                &-company {
+                    color: $blue;
+                }
+            }
+
+            &-review {
+                color: $text-secondary;
+            }
+            &-cards {
+                display: flex;
+                flex-direction: column;
+                gap: 1.2rem;
+
+                &-item {
+                    width: 35.6rem;
+                    height: 12.9rem;
+                    padding: 3.2rem 2.8rem;
+
+                    @include small-tablet {
+                        width: 100%;
+                        height: auto;
+                    }
+
+                    &-title {
+                        color: $blue;
+                        font-family: $font-family-URW;
+                        font-size: 3.2rem;
+                        font-weight: 400;
+                        letter-spacing: 0.064rem;
+                        text-transform: uppercase;
+
+                        @include small-tablet {
+                            font-size: 4rem;
+                        }
+                    }
+                    &-description {
+                        color: $text-secondary;
+                        font-size: 1.8rem;
+                        font-weight: 700;
+
+                        @include small-tablet {
+                            font-size: 3.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

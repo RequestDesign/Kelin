@@ -1,0 +1,47 @@
+.planets {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        gap: 4.3rem;
+        overflow: hidden;
+
+        @include small-tablet {
+            gap: 1.6rem;
+            padding: 5.2rem 3.2rem;
+            padding-bottom: 45.4rem;
+        }
+        &::after {
+            @include pseudo {
+                background-image: url('../img/main/planets.webp');
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 102.1rem;
+                height: 54.9rem;
+                bottom: -8rem;
+                right: 0;
+            }
+            @include small-tablet {
+                width: 100rem;
+                height: 55rem;
+                bottom: -3rem;
+                right: -3rem;
+            }
+        }
+    }
+    &__title {
+        max-width: 68rem;
+
+        @include small-tablet {
+            text-align: center;
+        }
+    }
+    &__description {
+        max-width: 53.4rem;
+
+        @include small-tablet {
+            max-width: unset;
+            text-align: center;
+        }
+    }
+}
