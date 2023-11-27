@@ -131,6 +131,7 @@
     backdrop-filter: blur(5rem);
     padding: 5rem;
     border-radius: 4rem;
+    will-change: backdrop-filter;
 }
 
 .background-blur-bordered {
