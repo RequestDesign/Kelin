@@ -150,3 +150,26 @@ resizableSwiper('(max-width: 100vw)', '.reviews-swiper', {
         }
     }
 });
+
+new Swiper('.cases-swiper', {
+    speed: 1200,
+    grabCursor: true,
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+            spaceBetween: rem(2.4)
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: rem(1.2),
+            grid: {
+                rows: 2,
+                fill: 'row'
+            }
+        }
+    },
+    navigation: {
+        nextEl: '.cases-next',
+        prevEl: '.cases-prev'
+    }
+});

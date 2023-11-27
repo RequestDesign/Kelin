@@ -60,3 +60,24 @@
 
     @content;
 }
+
+@mixin swiper-controls() {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    right: 0;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+
+    @content;
+
+    @include small-tablet {
+        position: static;
+        justify-content: center;
+        gap: 3.2rem;
+        transform: none;
+        margin-top: 4.8rem;
+    }
+}
