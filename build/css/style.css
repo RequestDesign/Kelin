@@ -361,6 +361,7 @@ section {
           backdrop-filter: blur(5rem);
   padding: 5rem;
   border-radius: 4rem;
+  will-change: backdrop-filter;
 }
 
 .background-blur-bordered {
@@ -3852,7 +3853,7 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 5rem;
+  padding: 7.8rem 8.4rem;
 }
 
 .request__content-column {
@@ -3863,7 +3864,7 @@ section {
 }
 
 .request__title {
-  max-width: 106.9rem;
+  max-width: 90%;
 }
 
 .request__text-container {
@@ -3916,7 +3917,10 @@ section {
       -ms-flex-pack: center;
           justify-content: center;
   color: #00589b;
-  min-width: 36.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 3.3rem 7.05rem;
 }
 
 .request__form-copyright {
@@ -3941,9 +3945,17 @@ section {
 }
 
 .request__social {
-  grid-area: 3/1/4/3;
-  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   min-width: 81.4rem;
+  margin-top: 0;
 }
 
 .request__social-mt-3 {
@@ -3957,10 +3969,57 @@ section {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  max-width: 51.8rem;
+  width: 100%;
 }
 
 .request__social-icons {
-  gap: 0.8rem;
+  display: grid;
+  grid-template-columns: repeat(2, 6.58rem);
+  gap: 0.4rem;
+}
+
+.request__social-icons-item {
+  width: 100%;
+  height: 6.58rem;
+}
+
+.request__social-icons-item.--telegramm a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+}
+
+.request__social-icons-item.--telegramm a svg {
+  max-width: 2.7rem;
+  width: 100%;
+  height: 2.4rem;
+}
+
+.request__social-icons-item.--whatsapp a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+}
+
+.request__social-icons-item.--whatsapp a svg {
+  max-width: 2.4rem;
+  width: 100%;
+  height: 2.4rem;
 }
 
 .request__box {
@@ -3970,7 +4029,7 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 4rem;
+  margin-top: 5rem;
 }
 
 .clients__title {
@@ -5304,6 +5363,119 @@ section {
   height: 107rem;
 }
 
+.helping {
+  margin-top: 5rem;
+}
+
+.helping__content {
+  padding: 5rem;
+}
+
+.helping__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 4.4rem;
+}
+
+.helping__heading-text {
+  max-width: 96.6rem;
+  width: 100%;
+}
+
+.helping__heading-info {
+  max-width: 61.6rem;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(14.39%, rgba(255, 255, 255, 0.8)), color-stop(182.55%, rgba(255, 255, 255, 0)));
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.8) 14.39%, rgba(255, 255, 255, 0) 182.55%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 14.39%, rgba(255, 255, 255, 0) 182.55%);
+  border: 0.1rem solid #fff;
+  -webkit-backdrop-filter: blur(5rem);
+          backdrop-filter: blur(5rem);
+  border-radius: 5rem;
+  padding: 6rem 5rem 9.5rem 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.helping__heading-info-wave {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.helping__heading-info-description {
+  color: #1e2328;
+  font-size: 2.3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.875rem;
+  max-width: 34.3rem;
+  width: 100%;
+}
+
+.helping__heading-title {
+  margin-bottom: 4.4rem;
+}
+
+.helping__heading-description {
+  color: #1e2328;
+  font-size: 2.3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.875rem;
+}
+
+.helping__heading-description:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.helping__benefits-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(52rem, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 4.4rem;
+}
+
+.helping__benefits-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5rem;
+  gap: 2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.helping__benefits-item-icon {
+  max-width: 7.7rem;
+  width: 100%;
+  height: auto;
+}
+
+.helping__benefits-item-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.helping__benefits-item-description {
+  color: #1e2328;
+  font-size: 2.3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.875rem;
+}
+
 @media (min-width: 48.01em) {
   .mobile {
     display: none;
@@ -5352,6 +5524,7 @@ section {
 @media (max-width: 48em) {
   body {
     background: url("../img/background-mobile.svg") repeat, #cde3f5;
+    background-size: cover;
   }
 
   html {
@@ -6765,7 +6938,6 @@ section {
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 3.2rem;
-    padding-top: 5.2rem;
     gap: 4.8rem;
   }
 
@@ -6818,7 +6990,7 @@ section {
   }
 
   .request__form-button {
-    min-width: none;
+    text-align: center;
   }
 
   .request__form-copyright {
@@ -6828,29 +7000,46 @@ section {
   }
 
   .request__social {
-    border: none;
-    padding: 0;
+    padding: 1rem 1rem 1rem 4.8rem;
     margin: 0;
     width: 100%;
     min-width: unset;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .request__social-text {
     margin: 0;
-    font-size: 3.2rem;
+    color: var(--white, #fff);
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 25rem;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .request__social-icons {
+    grid-template-columns: repeat(2, 11rem);
+    gap: 0.8rem;
   }
 
   .request__social-icons-item {
-    width: 13rem;
-    height: 13rem;
+    height: 11rem;
   }
 
-  .request__social-icons-item.--telegramm a {
-    padding: 4rem 4.2rem 4rem 3rem;
+  .request__social-icons-item.--telegramm a svg {
+    max-width: 4.8rem;
+    height: 4rem;
   }
 
-  .request__social-icons-item.--whatsapp a {
-    padding: 4rem;
+  .request__social-icons-item.--whatsapp a svg {
+    max-width: 4rem;
+    height: 4rem;
   }
 
   .request__box {
@@ -7563,5 +7752,80 @@ section {
     max-width: 100%;
     height: 54rem;
     margin-left: 3rem;
+  }
+
+  .helping__content {
+    padding: 5.2rem 3.2rem;
+  }
+
+  .helping__heading {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 6rem;
+    margin-bottom: 8rem;
+  }
+
+  .helping__heading-text {
+    max-width: 100%;
+  }
+
+  .helping__heading-info {
+    max-width: 100%;
+    padding: 3.2rem 9.4rem 15.8rem 3.2rem;
+  }
+
+  .helping__heading-info-wave {
+    right: -14rem;
+    width: 100%;
+    height: 100%;
+  }
+
+  .helping__heading-info-description {
+    font-size: 3.6rem;
+    line-height: 4.5rem;
+    max-width: 100%;
+  }
+
+  .helping__heading-title {
+    margin-bottom: 1.6rem;
+  }
+
+  .helping__heading-description {
+    font-size: 3.6rem;
+    line-height: 4.5rem;
+  }
+
+  .helping__heading-description:not(:first-child) {
+    margin-top: 1.6rem;
+  }
+
+  .helping__benefits-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  .helping__benefits-item {
+    gap: 4rem;
+    padding: 5.5rem 3.2rem;
+    -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
+  }
+
+  .helping__benefits-item-icon {
+    max-width: 8.8rem;
+  }
+
+  .helping__benefits-item-description {
+    font-size: 3.6rem;
+    line-height: 4.5rem;
   }
 }

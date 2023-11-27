@@ -2,12 +2,11 @@
     &__content {
         display: flex;
         justify-content: space-between;
-        padding: 5rem;
+        padding: 7.8rem 8.4rem;
 
         @include small-tablet {
             flex-direction: column;
             padding: 3.2rem;
-            padding-top: 5.2rem;
             gap: 4.8rem;
         }
 
@@ -16,7 +15,7 @@
         }
     }
     &__title {
-        max-width: 106.9rem;
+        max-width: 90%;
 
         @include small-tablet {
             max-width: unset;
@@ -79,10 +78,11 @@
             align-items: center;
             justify-content: center;
             color: $blue;
-            min-width: 36.5rem;
+            width: fit-content;
+            padding: 3.3rem 7.05rem;
 
             @include small-tablet {
-                min-width: none;
+                text-align: center;
             }
         }
         &-copyright {
@@ -106,16 +106,18 @@
         }
     }
     &__social {
-        grid-area: 3 / 1 / 4 / 3;
-        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         min-width: 81.4rem;
+        margin-top: 0;
 
         @include small-tablet {
-            border: none;
-            padding: 0;
+            padding: 1rem 1rem 1rem 4.8rem;
             margin: 0;
             width: 100%;
             min-width: unset;
+            justify-content: space-between;
         }
         &-mt-3 {
             margin-top: 3.2rem;
@@ -127,30 +129,72 @@
             font-style: normal;
             font-weight: 700;
             line-height: normal;
+            max-width: 51.8rem;
+            width: 100%;
 
             @include small-tablet {
                 margin: 0;
-                font-size: 3.2rem;
+                color: var(--white, #fff);
+                font-size: 2.4rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                max-width: 25rem;
+                width: 100%;
+                justify-content: space-between;
             }
         }
 
         &-icons {
-            gap: 0.8rem;
+            display: grid;
+            grid-template-columns: repeat(2, 6.58rem);
+            gap: 0.4rem;
+
+            @include small-tablet {
+                grid-template-columns: repeat(2, 11rem);
+                gap: 0.8rem;
+            }
+
             &-item {
+                width: 100%;
+                height: 6.58rem;
+
                 @include small-tablet {
-                    width: 13rem;
-                    height: 13rem;
+                    height: 11rem;
                 }
 
                 &.--telegramm a {
-                    @include small-tablet {
-                        padding: 4rem 4.2rem 4rem 3rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    svg {
+                        max-width: 2.7rem;
+                        width: 100%;
+                        height: 2.4rem;
+
+                        @include small-tablet {
+                            max-width: 4.8rem;
+                            height: 4rem;
+                        }
                     }
+                    padding: 0;
                 }
                 &.--whatsapp a {
-                    @include small-tablet {
-                        padding: 4rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    svg {
+                        max-width: 2.4rem;
+                        width: 100%;
+                        height: 2.4rem;
+
+                        @include small-tablet {
+                            max-width: 4rem;
+                            height: 4rem;
+                        }
                     }
+                    padding: 0;
                 }
             }
         }
@@ -158,7 +202,7 @@
     &__box {
         display: flex;
         justify-content: space-between;
-        margin-top: 4rem;
+        margin-top: 5rem;
 
         @include small-tablet {
             gap: 2.4rem;
