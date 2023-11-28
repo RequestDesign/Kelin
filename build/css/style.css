@@ -3479,12 +3479,22 @@ section {
   max-width: 5.2rem;
   width: 100%;
   height: 5.2rem;
+  z-index: 5;
 }
 
 .modal__wrapper .modal__button {
   display: block;
   margin: 0 auto;
   text-align: center;
+}
+
+#question-modal .modal {
+  max-width: 168.4rem;
+  padding: 7.8rem 8.4rem;
+}
+
+#question-modal .request__content {
+  padding: 0;
 }
 
 .hero-input-field {
@@ -6954,6 +6964,10 @@ section {
   .modal__wrapper .modal__button {
     margin: initial;
     width: 100%;
+  }
+
+  #question-modal .modal {
+    padding: 5.2rem 3.2rem;
   }
 
   .hero__content {

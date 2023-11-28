@@ -148,7 +148,7 @@
                     <li class="header__navbar-item">
                         <a href="#"> Как мы работаем </a>
                     </li>
-                    <li class="header__navbar-item">
+                    <li class="header__navbar-item question-modal">
                         <a href="#">
                             <div class="header__navbar-item-left-icon">
                                 <svg
@@ -175,7 +175,7 @@
                 </ul>
             </nav>
 
-            <button class="header__button button desktop success-button">Задать вопрос юристу</button>
+            <button class="header__button button desktop question-button">Задать вопрос юристу</button>
 
             <a href="tel: +8 (495) 487-70-07" class="header__subheader-right-phone mobile">
                 <svg
@@ -931,9 +931,94 @@
         </div>
         <h2 class="modal__title">Ваша заявка <span>успешно отправлена</span></h2>
         <div class="modal__body">
-            <button class="modal__button button-white close-modal-button">
-                Вернуться на сайт
-            </button>
+            <button class="modal__button button-white close-modal-button">Вернуться на сайт</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal__wrapper" id="question-modal">
+    <div class="modal">
+        <div class="modal__close">
+            <img src="../img/modal-close-icon.svg" alt="" />
+        </div>
+        <div class="modal__body">
+            <div class="request">
+                <div class="request__content --big background-blue">
+                    <div class="request__text-container">
+                        <h1 class="request__title section-title-lite">
+                            <span>Задайте любой вопрос</span> нашему юристу
+                        </h1>
+                        <p class="request__description text-regular-lite">
+                            Давайте обсудим ваши задачи и пожелания и сформируем индивидуальные условия работы. Оставьте номер телефона и мы свяжемся с вами в ближайшее время.
+                        </p>
+                    </div>
+                    <form class="request__form">
+                        <label for="name">
+                            <input
+                                class="request__form-field input-field"
+                                type="text"
+                                id="name"
+                                placeholder="Ваше имя"
+                            />
+                        </label>
+                        <label for="tel">
+                            <input
+                                class="request__form-field input-field"
+                                type="tel"
+                                id="tel"
+                                placeholder="+ 7 ( ___ )  ___  -  ___  -  ___"
+                            />
+                        </label>
+
+                        <button type="submit" class="request__form-button button-white">
+                            Начать бесплатно
+                        </button>
+                        <div class="request__form-copyright">
+                            Отправляя заявку, вы соглашаетесь с
+                            <a href="#"> политикой обработки персональных данных </a>
+                        </div>
+                        <div class="request__social request__social-mt-3 article__share">
+                            <p class="request__social-text">
+                                <span>Вместо заявки можно сразу написать нам в мессенджеры </span>
+                            </p>
+                            <ul class="request__social-icons article__share-icons">
+                                <li class="request__social-icons-item article__share-icons-item --telegramm">
+                                    <a href="#">
+                                        <svg
+                                            width="33"
+                                            height="30"
+                                            viewBox="0 0 33 30"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M32.4898 1.91374L27.4457 27.9111C27.4457 27.9111 26.74 29.7136 24.8012 28.8491L13.1632 19.7263L13.1092 19.6994C14.6813 18.2563 26.8714 7.05095 27.4042 6.54303C28.229 5.75639 27.717 5.28809 26.7594 5.88231L8.75294 17.573L1.80611 15.1833C1.80611 15.1833 0.712886 14.7858 0.607715 13.9213C0.50116 13.0555 1.84209 12.5871 1.84209 12.5871L30.1622 1.22897C30.1622 1.22897 32.4898 0.183414 32.4898 1.91374Z"
+                                                fill="#00589B"
+                                            ></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="request__social-icons-item article__share-icons-item --whatsapp">
+                                    <a href="#">
+                                        <svg
+                                            width="30"
+                                            height="30"
+                                            viewBox="0 0 30 30"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M24.9617 5.0237C22.3118 2.38297 18.7785 0.915894 15.049 0.915894C7.29549 0.915894 1.01416 7.17541 1.01416 14.902C1.01416 17.3471 1.70118 19.7923 2.87893 21.8462L0.916016 29.0837L8.37509 27.1276C10.4362 28.2035 12.6935 28.7903 15.049 28.7903C22.8025 28.7903 29.0838 22.5308 29.0838 14.8042C28.9857 11.1854 27.6117 7.66444 24.9617 5.0237ZM21.8211 19.8901C21.5266 20.6725 20.1526 21.4549 19.4656 21.5527C18.8767 21.6505 18.0915 21.6505 17.3064 21.4549C16.8156 21.2593 16.1286 21.0637 15.3434 20.6725C11.8102 19.2054 9.55284 15.6844 9.35655 15.391C9.16026 15.1954 7.88437 13.5327 7.88437 11.7722C7.88437 10.0118 8.76767 9.22931 9.06211 8.8381C9.35655 8.44688 9.74913 8.44688 10.0436 8.44688C10.2399 8.44688 10.5343 8.44688 10.7306 8.44688C10.9269 8.44688 11.2213 8.34907 11.5158 9.03371C11.8102 9.71834 12.4972 11.4788 12.5954 11.5766C12.6935 11.7722 12.6935 11.9679 12.5954 12.1635C12.4972 12.3591 12.3991 12.5547 12.2028 12.7503C12.0065 12.9459 11.8102 13.2393 11.712 13.3371C11.5158 13.5327 11.3195 13.7283 11.5158 14.0218C11.712 14.413 12.3991 15.4888 13.4787 16.4669C14.8527 17.6405 15.9323 18.0318 16.3249 18.2274C16.7175 18.423 16.9138 18.3252 17.1101 18.1296C17.3064 17.934 17.9934 17.1515 18.1897 16.7603C18.386 16.3691 18.6804 16.4669 18.9748 16.5647C19.2693 16.6625 21.0359 17.5427 21.3303 17.7383C21.7229 17.934 21.9192 18.0318 22.0173 18.1296C22.1155 18.423 22.1155 19.1076 21.8211 19.8901Z"
+                                                fill="#00589B"
+                                            ></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </div>
