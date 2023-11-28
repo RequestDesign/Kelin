@@ -4,6 +4,14 @@
         justify-content: space-between;
         padding: 7.8rem 8.4rem;
 
+        &.--big {
+            padding: 5rem;
+
+            .request__form-button {
+                width: 100%;
+            }
+        }
+
         @include small-tablet {
             flex-direction: column;
             padding: 3.2rem;
