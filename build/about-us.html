@@ -356,20 +356,19 @@
             <div class="hero-video__video-container">
                 <div class="hero-video__video background-blur">
                     <div class="hero-video__video-player-box">
-                        <video
-                            onloadstart="this.volume=0.3"
-                            class="hero-video__video-player"
-                            width="100%"
-                            height="auto"
-                            controls="false"
-                            poster="../img/video-poster.webp"
-                        >
-                            <source src="../video/kelin.mp4" type="video/mp4" />
-                            <source id="webm" src="../video//kelin.webm" type="video/webm" />
-                            <source id="ogv" src="../video/kelin.ogv" type="video/ogg" />
-                        </video>
+                        <img src="../img/video-poster.webp" alt="" />
                     </div>
-                    <button class="hero-video__video-player-button"></button>
+                    <a class="hero-video__video-player-button" data-fslightbox href="../video/kelin.mp4">
+                        <svg
+                            width="30"
+                            height="43"
+                            viewBox="0 0 30 43"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M30 21.5L0.749998 42.7176L0.75 0.282376L30 21.5Z" fill="white" />
+                        </svg>
+                    </a>
                     <div class="hero-video__video-text">
                         <h2 class="hero-video__video-text-title title-h2">Дмитрий Келин</h2>
                         <p class="hero-video__video-text-description text-regular">
@@ -467,7 +466,9 @@
 <section class="team">
     <div class="container">
         <div class="team__content background-blur-bordered">
-            <h1 class="team__title section-title"><span>Лучшая команда</span> по&nbsp;защите вашего бизнеса</h1>
+            <h1 class="team__title section-title">
+                <span>Лучшая команда</span> по&nbsp;защите вашего бизнеса
+            </h1>
 
             <div class="team__list">
                 <div class="team__list-item background-blur-bordered">
@@ -834,7 +835,7 @@
                     </h2>
 
                     <span class="insights__form-info-subtitle">
-                        Запустим первую задачу бесплатно в этот же день
+                        Запустим первую задачу бесплатно в&nbsp;этот же день
                     </span>
 
                     <ul class="insights__form-info-clarification">
