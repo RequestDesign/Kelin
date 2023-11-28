@@ -1301,6 +1301,8 @@ section {
   -webkit-transition-timing-function: ease-out;
        -o-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
+  width: 100%;
+  height: 100%;
 }
 
 .header__mobile-burger-menu-dropdown-list {
@@ -5815,9 +5817,9 @@ section {
   }
 
   .header__subheader-right-phone svg {
-    max-width: 6rem;
+    max-width: 5.5rem;
     width: 100%;
-    height: 6rem;
+    height: 5.5rem;
   }
 
   .header__content {
@@ -5825,7 +5827,7 @@ section {
   }
 
   .header__logo {
-    width: auto;
+    width: 21rem;
     height: 6.8rem;
   }
 
@@ -5841,6 +5843,10 @@ section {
   .header__navbar-item-left-icon {
     max-width: 4.8rem;
     height: 4.8rem;
+  }
+
+  .header__mobile-burger-menu-item {
+    width: 100%;
   }
 
   .breadcrumbs {
