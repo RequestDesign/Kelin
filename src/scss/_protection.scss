@@ -80,16 +80,6 @@
                 }
             }
 
-            &:hover {
-                border: 0.2rem solid $blue;
-
-                svg {
-                    path {
-                        stroke: $blue;
-                    }
-                }
-            }
-
             &-next {
                 order: 2;
             }

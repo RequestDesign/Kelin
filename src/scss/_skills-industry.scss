@@ -216,17 +216,6 @@
                 height: 8.5rem;
                 border-radius: 5rem;
                 border: 0.2rem solid $white;
-                transition: 0.3s all ease-out;
-
-                &:hover {
-                    border: 0.2rem solid $blue;
-
-                    svg {
-                        path {
-                            stroke: $blue;
-                        }
-                    }
-                }
             }
         }
 

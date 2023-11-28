@@ -70,6 +70,7 @@ resizableSwiper('(max-width: 768px)', '.clients-swiper', {
 resizableSwiper('(max-width: 100vw)', '.protection-swiper', {
     loop: true,
     speed: 1200,
+    slidesPerView: 1,
     grabCursor: true,
     spaceBetween: rem(2),
     navigation: {

@@ -67,16 +67,6 @@
                 }
             }
 
-            &:hover {
-                border: 0.2rem solid $blue;
-
-                svg {
-                    path {
-                        stroke: $blue;
-                    }
-                }
-            }
-
             &-next {
                 position: absolute;
                 top: 13.8rem;
