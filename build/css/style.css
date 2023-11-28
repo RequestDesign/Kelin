@@ -4025,6 +4025,7 @@ section {
           justify-content: space-between;
   min-width: 81.4rem;
   margin-top: 0;
+  grid-area: 3/1/4/3;
 }
 
 .request__social-mt-3 {
