@@ -16,7 +16,6 @@ html {
   padding: 0;
   scroll-behavior: smooth;
   overflow-anchor: none;
-  scrollbar-gutter: stable;
 }
 
 body {
@@ -4012,6 +4011,7 @@ section {
 }
 
 .request__social {
+  grid-area: 3/1/4/3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4097,6 +4097,11 @@ section {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 5rem;
+}
+
+.clients__content {
+  padding: 3.2rem;
+  padding-top: 5.2rem;
 }
 
 .clients__title {
@@ -4262,14 +4267,6 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-.protection-swiper-button:hover {
-  border: 0.2rem solid #00589b;
-}
-
-.protection-swiper-button:hover svg path {
-  stroke: #00589b;
-}
-
 .protection-swiper-button-next {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
@@ -4407,14 +4404,6 @@ section {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-}
-
-.tu-letters-swiper-button:hover {
-  border: 0.2rem solid #00589b;
-}
-
-.tu-letters-swiper-button:hover svg path {
-  stroke: #00589b;
 }
 
 .tu-letters-swiper-button-next {
@@ -4586,17 +4575,6 @@ section {
   height: 8.5rem;
   border-radius: 5rem;
   border: 0.2rem solid #fff;
-  -webkit-transition: 0.3s all ease-out;
-  -o-transition: 0.3s all ease-out;
-  transition: 0.3s all ease-out;
-}
-
-.skills-industry__industry-swiper-button-next:hover {
-  border: 0.2rem solid #00589b;
-}
-
-.skills-industry__industry-swiper-button-next:hover svg path {
-  stroke: #00589b;
 }
 
 .skills-industry__industry-item {
@@ -7085,7 +7063,7 @@ section {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    max-width: none;
+    max-width: 50rem;
     margin-bottom: 4.8rem;
   }
 
