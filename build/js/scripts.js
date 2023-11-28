@@ -307,19 +307,19 @@ document.addEventListener('DOMContentLoaded', function () {
                 e.preventDefault();
                 modal.classList.add('--active');
                 modalBody.classList.add('--active');
-                body.classList.add('locked');
+                $('body').width($(document).width()).addClass('locked');
             });
         });
         $(close).on('click', () => {
             modalBody.classList.remove('--active');
             modal.classList.remove('--active');
-            body.classList.remove('locked');
+            $('body').width('').removeClass('locked');
         });
         $(modal).on('click', (e) => {
             if (e.target === modal) {
                 modalBody.classList.remove('--active');
                 modal.classList.remove('--active');
-                body.classList.remove('locked');
+                $('body').width('').removeClass('locked');
             }
         });
 
@@ -327,6 +327,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     bindModal('.success-button', '#success-modal', '#success-modal .modal__close', closeModalOnButtonClick);
+    bindModal('.question-button', '#question-modal', '#question-modal .modal__close', closeModalOnButtonClick);
 
     function closeModalOnButtonClick() {
         const button = $('.close-modal-button');
