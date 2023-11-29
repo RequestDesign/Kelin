@@ -354,21 +354,37 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     //header fixed
-    const header = document.querySelector('.header'),
-        headerContent = document.querySelector('.header__content'),
-        content = document.querySelector('main'),
-        headerHeight = header.offsetHeight + parseInt(getComputedStyle(header).marginBottom),
-        sticky = headerContent.offsetTop;
+    function fixedHeader() {
+        const header = document.querySelector('.header'),
+            headerContent = document.querySelector('.header__content'),
+            content = document.querySelector('main'),
+            headerHeight = header.offsetHeight + parseInt(getComputedStyle(header).marginBottom),
+            sticky = headerContent.offsetTop;
 
-    window.onscroll = function () {
-        console.log(headerHeight);
+        window.onscroll = function () {
+            if (window.scrollY > sticky) {
+                header.classList.add('fixed');
+                content.style.paddingTop = headerHeight + 'px';
+            } else {
+                header.classList.remove('fixed');
+                content.style.paddingTop = '0px';
+            }
+        };
+    }
+    fixedHeader();
 
-        if (window.scrollY > sticky) {
-            header.classList.add('fixed');
-            content.style.paddingTop = headerHeight + 'px';
+    const dropdownFooter = document.querySelector('.footer__nav__dropdown-list'),
+        dropdownFooteerBtn = document.querySelector('.footer__nav-list-item-dropdown'),
+        dropdownFooteerArrow = document.querySelector('.footer__nav__dropdown-list-icon');
+
+    dropdownFooteerBtn.addEventListener('click', function () {
+        $(dropdownFooter).toggleClass('open');
+        if ($(dropdownFooter).hasClass('open')) {
+            $(dropdownFooteerArrow).addClass('rotate');
+            $(dropdownFooter).show('slow');
         } else {
-            header.classList.remove('fixed');
-            content.style.paddingTop = '0px';
+            $(dropdownFooteerArrow).removeClass('rotate');
+            $(dropdownFooter).hide('slow');
         }
-    };
+    });
 });
