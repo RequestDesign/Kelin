@@ -4,9 +4,23 @@
 .header {
     margin-bottom: 4.8rem;
     padding-top: 1rem;
+    padding-bottom: 1rem;
 
     @include small-tablet {
         margin-bottom: 3.2rem;
+    }
+
+    &.fixed {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backdrop-filter: blur(10rem);
+
+        .header__subheader {
+            display: none;
+        }
     }
 
     &__subheader {
@@ -380,7 +394,7 @@
                     flex-direction: column;
                     width: max-content;
 
-                    @include small-tablet{
+                    @include small-tablet {
                         width: 100%;
                     }
 

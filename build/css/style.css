@@ -820,6 +820,21 @@ section {
 .header {
   margin-bottom: 4.8rem;
   padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.header.fixed {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-backdrop-filter: blur(10rem);
+          backdrop-filter: blur(10rem);
+}
+
+.header.fixed .header__subheader {
+  display: none;
 }
 
 .header__subheader {
