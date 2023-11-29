@@ -3229,13 +3229,45 @@ section {
   background-size: cover;
 }
 
+.card-rotate {
+  width: 100%;
+  min-height: 52rem;
+  position: relative;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  -o-transition: transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.card-rotate.is-flipped {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card-rotate__front,
+.card-rotate__back {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.card-rotate__back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
 .team__title {
   margin-bottom: 4.4rem;
 }
 
 .team__list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
   gap: 1.2rem;
 }
@@ -3247,8 +3279,22 @@ section {
   border-radius: 2rem;
 }
 
-.team__list-item-content img {
-  position: absolute;
+.team__list-item-content-back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2.4rem;
+}
+
+.team__list-item-content-back-img-circle {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 10rem;
 }
 
 .team__list-item-text {
@@ -3277,6 +3323,7 @@ section {
 }
 
 .team__list-item-text-title {
+  font-weight: 900;
   text-transform: unset;
 }
 
@@ -3342,31 +3389,6 @@ section {
       -ms-flex-align: center;
           align-items: center;
   gap: 3.6rem;
-}
-
-.reviews__button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 8.5rem;
-  height: 8.5rem;
-  padding: 0 2.6103rem 0 2.5897rem;
-  border-radius: 5rem;
-  border: 0.2rem solid #fff;
-}
-
-.reviews__button:hover {
-  border: 0.2rem solid #00589b;
-}
-
-.reviews__button:hover svg path {
-  stroke: #00589b;
 }
 
 .reviews__item {
@@ -5469,6 +5491,7 @@ section {
 }
 
 .intro__poster {
+  z-index: -1;
   position: absolute;
   right: -3rem;
   top: -5rem;

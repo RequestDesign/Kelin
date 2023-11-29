@@ -127,3 +127,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+//card rotate
+const cards = document.querySelectorAll('.card-rotate');
+
+[...cards].forEach((card)=>{
+  card.addEventListener( 'click', function() {
+    card.classList.toggle('is-flipped');
+  });
+});
