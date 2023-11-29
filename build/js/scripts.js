@@ -327,7 +327,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     bindModal('.success-button', '#success-modal', '#success-modal .modal__close', closeModalOnButtonClick);
-    bindModal('.question-button', '#question-modal', '#question-modal .modal__close', closeModalOnButtonClick);
+    bindModal(
+        '.question-button',
+        '#question-modal',
+        '#question-modal .modal__close',
+        closeModalOnButtonClick
+    );
 
     function closeModalOnButtonClick() {
         const button = $('.close-modal-button');
@@ -338,13 +343,32 @@ document.addEventListener('DOMContentLoaded', function () {
             $('body').removeClass('locked');
         });
     }
-});
 
-//card rotate
-const cards = document.querySelectorAll('.card-rotate');
+    //card rotate
+    const cards = document.querySelectorAll('.card-rotate');
 
-[...cards].forEach((card)=>{
-  card.addEventListener( 'click', function() {
-    card.classList.toggle('is-flipped');
-  });
+    [...cards].forEach((card) => {
+        card.addEventListener('click', function () {
+            card.classList.toggle('is-flipped');
+        });
+    });
+
+    //header fixed
+    const header = document.querySelector('.header'),
+        headerContent = document.querySelector('.header__content'),
+        content = document.querySelector('main'),
+        headerHeight = header.offsetHeight + parseInt(getComputedStyle(header).marginBottom),
+        sticky = headerContent.offsetTop;
+
+    window.onscroll = function () {
+        console.log(headerHeight);
+
+        if (window.scrollY > sticky) {
+            header.classList.add('fixed');
+            content.style.paddingTop = headerHeight + 'px';
+        } else {
+            header.classList.remove('fixed');
+            content.style.paddingTop = '0px';
+        }
+    };
 });
