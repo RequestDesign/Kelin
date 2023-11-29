@@ -1,6 +1,26 @@
 .intro {
     padding-top: 1.8rem;
 
+    &.--sanctions {
+        .intro__poster {
+            right: 0rem;
+            top: -2rem;
+            max-width: 83rem;
+            height: 69rem;
+
+            @include small-tablet{
+                max-width: 66rem;
+                height: 60rem;
+            }
+        }
+
+        .intro__button {
+            @include small-tablet{
+                transform: translateY(-6rem);
+            }
+        }
+    }
+
     @include small-tablet {
         padding-top: 0;
         overflow: hidden;
@@ -55,7 +75,7 @@
             line-height: 4.5rem;
             margin-bottom: 1.5rem;
         }
-        &_max-width-583{
+        &_max-width-583 {
             max-width: 58.3rem;
         }
     }
@@ -72,7 +92,7 @@
 
     &__poster {
         z-index: -1;
-        
+
         position: absolute;
         right: -3rem;
         top: -5rem;
@@ -87,7 +107,7 @@
             margin-left: 3rem;
         }
 
-        &_business-areas-page{
+        &_business-areas-page {
             top: -28.4rem;
             right: -10rem;
             max-width: 125.8rem;
