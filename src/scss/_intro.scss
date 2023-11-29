@@ -71,6 +71,8 @@
     }
 
     &__poster {
+        z-index: -1;
+        
         position: absolute;
         right: -3rem;
         top: -5rem;
