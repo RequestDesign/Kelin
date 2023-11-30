@@ -16,7 +16,8 @@
         top: 0;
         left: 0;
         width: 100%;
-        backdrop-filter: blur(10rem);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 14.39%, rgba(255, 255, 255, 0) 182.55%);
+        backdrop-filter: blur(5rem);
 
         .header__subheader {
             display: none;
