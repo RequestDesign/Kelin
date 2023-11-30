@@ -829,8 +829,11 @@ section {
   top: 0;
   left: 0;
   width: 100%;
-  -webkit-backdrop-filter: blur(10rem);
-          backdrop-filter: blur(10rem);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(14.39%, rgba(255, 255, 255, 0.8)), color-stop(182.55%, rgba(255, 255, 255, 0)));
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.8) 14.39%, rgba(255, 255, 255, 0) 182.55%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 14.39%, rgba(255, 255, 255, 0) 182.55%);
+  -webkit-backdrop-filter: blur(5rem);
+          backdrop-filter: blur(5rem);
 }
 
 .header.fixed .header__subheader {
