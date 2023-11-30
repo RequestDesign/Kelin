@@ -5589,6 +5589,7 @@ section {
 }
 
 .intro {
+  overflow-x: clip;
   padding-top: 1.8rem;
 }
 
@@ -5597,6 +5598,13 @@ section {
   top: -2rem;
   max-width: 83rem;
   height: 69rem;
+}
+
+.intro.--corporate .intro__poster {
+  right: -11rem;
+  top: -12.2rem;
+  max-width: 100rem;
+  height: 73.3rem;
 }
 
 .intro__content {
@@ -8273,6 +8281,12 @@ section {
     -webkit-transform: translateY(-6rem);
         -ms-transform: translateY(-6rem);
             transform: translateY(-6rem);
+  }
+
+  .intro.--corporate .intro__poster {
+    max-width: 60.8rem;
+    height: 44.4rem;
+    margin-left: 12.1rem;
   }
 
   .intro {

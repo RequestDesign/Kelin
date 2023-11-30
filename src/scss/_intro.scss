@@ -1,4 +1,5 @@
 .intro {
+    overflow-x: clip;
     padding-top: 1.8rem;
 
     &.--sanctions {
@@ -8,15 +9,29 @@
             max-width: 83rem;
             height: 69rem;
 
-            @include small-tablet{
+            @include small-tablet {
                 max-width: 66rem;
                 height: 60rem;
             }
         }
 
         .intro__button {
-            @include small-tablet{
+            @include small-tablet {
                 transform: translateY(-6rem);
+            }
+        }
+    }
+    &.--corporate {
+        .intro__poster {
+            right: -11rem;
+            top: -12.2rem;
+            max-width: 100rem;
+            height: 73.3rem;
+
+            @include small-tablet {
+                max-width: 60.8rem;
+                height: 44.4rem;
+                margin-left: 12.1rem;
             }
         }
     }
