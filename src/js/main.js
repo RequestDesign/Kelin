@@ -82,7 +82,6 @@ document.addEventListener('DOMContentLoaded', function () {
         $('.header__mobile-burger-menu').addClass('--active');
         $('body').addClass('locked');
         $('.header').css({
-            // inset: '0',
             height: "100vh"
         });
     });
@@ -91,7 +90,6 @@ document.addEventListener('DOMContentLoaded', function () {
         $('.header__mobile-burger-menu').removeClass('--active');
         $('body').removeClass('locked');
         $('.header').css({
-            // inset: 'unset',
             height: "auto"
         });
     });
