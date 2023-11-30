@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function () {
         $('.header__mobile-burger-menu').addClass('--active');
         $('body').addClass('locked');
         $('.header').css({
-            height: "100vh"
+            height: '100vh'
         });
     });
 
@@ -302,7 +302,7 @@ document.addEventListener('DOMContentLoaded', function () {
         $('.header__mobile-burger-menu').removeClass('--active');
         $('body').removeClass('locked');
         $('.header').css({
-            height: "auto"
+            height: 'auto'
         });
     });
 
@@ -380,18 +380,23 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
     //footer dropdown
-    const dropdownFooter = document.querySelector('.footer__nav__dropdown-list'),
-        dropdownFooteerBtn = document.querySelector('.footer__nav-list-item-dropdown'),
-        dropdownFooteerArrow = document.querySelector('.footer__nav__dropdown-list-icon');
 
-    dropdownFooteerBtn.addEventListener('click', function () {
-        $(dropdownFooter).toggleClass('open');
-        if ($(dropdownFooter).hasClass('open')) {
-            $(dropdownFooteerArrow).addClass('rotate');
-            $(dropdownFooter).show('slow');
-        } else {
-            $(dropdownFooteerArrow).removeClass('rotate');
-            $(dropdownFooter).hide('slow');
-        }
+    const footerItems = document.querySelectorAll('.footer__nav-list-item-dropdown');
+
+    footerItems.forEach((item) => {
+        item.addEventListener('click', function () {
+            const dropdownFooter = item.closest('.footer__nav-list-item').querySelector('.footer__nav__dropdown-list'),
+                dropdownFooterArrow = item.querySelector('.footer__nav__dropdown-list-icon');
+            console.log(item);
+            $(dropdownFooter).toggleClass('open');
+
+            if ($(dropdownFooter).hasClass('open')) {
+                $(dropdownFooterArrow).addClass('rotate');
+                $(dropdownFooter).slideDown('slow');
+            } else {
+                $(dropdownFooterArrow).removeClass('rotate');
+                $(dropdownFooter).slideUp('slow');
+            }
+        });
     });
 });

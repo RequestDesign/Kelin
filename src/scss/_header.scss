@@ -260,10 +260,11 @@
                         rgba(255, 255, 255, 0.8) 14.39%,
                         rgba(255, 255, 255, 0) 182.55%
                     );
-                    backdrop-filter: blur(5rem);
                     opacity: 0;
                     pointer-events: none;
                     user-select: none;
+                    backdrop-filter: blur(5rem);
+                    will-change: backdrop-filter;
 
                     &::before {
                         @include pseudo {
@@ -363,7 +364,7 @@
                     rgba(255, 255, 255, 0.8) 14.39%,
                     rgba(255, 255, 255, 0) 182.55%
                 );
-                backdrop-filter: blur(10rem);
+                backdrop-filter: blur(5rem);
                 opacity: 0;
                 user-select: none;
                 pointer-events: none;

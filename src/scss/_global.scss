@@ -76,3 +76,33 @@ section {
         }
     }
 }
+
+.working-authorities-background {
+    @include small-tablet{
+        background: url("../img/background-pages/working-authorities.svg") no-repeat;
+    }
+}
+
+.sanctions-background {
+    @include small-tablet{
+        background: url("../img/background-pages/sanctions.svg") no-repeat;
+    }
+}
+
+.financial-background {
+    @include small-tablet{
+        background: url("../img/background-pages/financial.svg") no-repeat;
+    }
+}
+
+.intellectual-background {
+    @include small-tablet{
+        background: url("../img/background-pages/intellectual.svg") no-repeat;
+    }
+}
+
+.judical-background {
+    @include small-tablet{
+        background: url("../img/background-pages/judical.svg") no-repeat;
+    }
+}
