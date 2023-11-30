@@ -2,6 +2,10 @@
     overflow-x: clip;
     padding-top: 1.8rem;
 
+    @include small-tablet{
+        margin-bottom: 8rem;
+    }
+
     &.--sanctions {
         .intro__poster {
             right: 0rem;
@@ -35,6 +39,70 @@
             }
         }
     }
+    &.--financial {
+        .intro__poster {
+            right: -12rem;
+            max-width: 111rem;
+            top: -20rem;
+            height: 98rem;
+
+            @include small-tablet {
+                max-width: 59rem;
+                height: 53rem;
+                margin: -4rem auto 0;
+            }
+        }
+
+        .intro__button {
+            @include small-tablet {
+                margin-top: 0;
+            }
+        }
+    }
+    &.--intellectual {
+        .intro__poster {
+            z-index: -1;
+            right: 13rem;
+            top: -5rem;
+            max-width: 52rem;
+            width: 100%;
+            height: 77rem;
+
+            @include small-tablet {
+                max-width: 37rem;
+                height: 58rem;
+                margin: 2rem auto 0;
+            }
+        }
+
+        .intro__button {
+            @include small-tablet {
+                transform: translateY(-6rem);
+            }
+        }
+    }
+    &.--judical {
+        .intro__poster {
+            z-index: -1;
+            right: -15rem;
+            top: -10rem;
+            max-width: 105rem;
+            width: 100%;
+            height: 77rem;
+
+            @include small-tablet {
+                max-width: 75rem;
+                height: 61rem;
+                margin: 0rem auto 0 7rem;
+            }
+        }
+
+        .intro__button {
+            @include small-tablet {
+                transform: translateY(-6rem);
+            }
+        }
+    }
 
     @include small-tablet {
         padding-top: 0;
@@ -61,6 +129,10 @@
         max-width: 110rem;
         width: 100%;
         height: 150rem;
+
+        @include small-tablet{
+            height: 130rem;
+        }
     }
 
     &__info {

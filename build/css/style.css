@@ -409,13 +409,8 @@ section {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(14.39%, rgba(255, 255, 255, 0.5)), color-stop(182.55%, rgba(255, 255, 255, 0)));
   background: -o-linear-gradient(top, rgba(255, 255, 255, 0.5) 14.39%, rgba(255, 255, 255, 0) 182.55%);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 14.39%, rgba(255, 255, 255, 0) 182.55%);
-  -webkit-backdrop-filter: blur(5rem);
-          backdrop-filter: blur(5rem);
   padding: 5rem;
   border-radius: 4rem;
-  will-change: backdrop-filter;
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
 }
 
 .background-blur-bordered {
@@ -425,8 +420,6 @@ section {
 .background-blue {
   background: #00589b;
   border-radius: 4rem;
-  -webkit-backdrop-filter: blur(50px);
-          backdrop-filter: blur(50px);
 }
 
 .mb-12 {
@@ -1077,14 +1070,15 @@ section {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(14.39%, rgba(255, 255, 255, 0.8)), color-stop(182.55%, rgba(255, 255, 255, 0)));
   background: -o-linear-gradient(top, rgba(255, 255, 255, 0.8) 14.39%, rgba(255, 255, 255, 0) 182.55%);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 14.39%, rgba(255, 255, 255, 0) 182.55%);
-  -webkit-backdrop-filter: blur(5rem);
-          backdrop-filter: blur(5rem);
   opacity: 0;
   pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-backdrop-filter: blur(5rem);
+          backdrop-filter: blur(5rem);
+  will-change: backdrop-filter;
   -webkit-transition-property: opacity;
   -o-transition-property: opacity;
   transition-property: opacity;
@@ -1200,8 +1194,8 @@ section {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(14.39%, rgba(255, 255, 255, 0.8)), color-stop(182.55%, rgba(255, 255, 255, 0)));
   background: -o-linear-gradient(top, rgba(255, 255, 255, 0.8) 14.39%, rgba(255, 255, 255, 0) 182.55%);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 14.39%, rgba(255, 255, 255, 0) 182.55%);
-  -webkit-backdrop-filter: blur(10rem);
-          backdrop-filter: blur(10rem);
+  -webkit-backdrop-filter: blur(5rem);
+          backdrop-filter: blur(5rem);
   opacity: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1461,8 +1455,6 @@ section {
   border-radius: 5rem;
   border: 0.2rem solid #fff;
   background: 0 0/10rem 10rem repeat, rgba(255, 255, 255, 0.8);
-  -webkit-backdrop-filter: blur(2.5rem);
-          backdrop-filter: blur(2.5rem);
   white-space: nowrap;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3589,8 +3581,10 @@ section {
        -o-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
   background: rgba(0, 0, 0, 0.15);
-  -webkit-backdrop-filter: blur(15px);
-          backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(1.5rem);
+          backdrop-filter: blur(1.5rem);
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 
 .modal__wrapper.--active {
@@ -3608,10 +3602,8 @@ section {
   -webkit-transform: scale(1.15);
       -ms-transform: scale(1.15);
           transform: scale(1.15);
-  will-change: transform, backdrop-filter;
+  will-change: transform;
   background: #00589b;
-  -webkit-backdrop-filter: blur(5rem);
-          backdrop-filter: blur(5rem);
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
   -o-transition-property: transform;
@@ -4005,9 +3997,9 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   gap: 2rem;
 }
 
@@ -5432,8 +5424,6 @@ section {
   padding: 3.2rem 4.8rem 3.1rem 4.8rem;
   border-radius: 5.8rem;
   background: rgba(255, 255, 255, 0.65);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
   color: #00589b;
   font-size: 1.8rem;
   font-weight: 700;
@@ -5607,6 +5597,31 @@ section {
   height: 73.3rem;
 }
 
+.intro.--financial .intro__poster {
+  right: -12rem;
+  max-width: 111rem;
+  top: -20rem;
+  height: 98rem;
+}
+
+.intro.--intellectual .intro__poster {
+  z-index: -1;
+  right: 13rem;
+  top: -5rem;
+  max-width: 52rem;
+  width: 100%;
+  height: 77rem;
+}
+
+.intro.--judical .intro__poster {
+  z-index: -1;
+  right: -15rem;
+  top: -10rem;
+  max-width: 105rem;
+  width: 100%;
+  height: 77rem;
+}
+
 .intro__content {
   position: relative;
 }
@@ -5677,10 +5692,19 @@ section {
 
 .helping {
   margin-top: 5rem;
+  position: relative;
+}
+
+.helping::after {
+  content: "";
+  position: absolute;
 }
 
 .helping__content {
   padding: 5rem;
+  border-radius: 5rem;
+  -webkit-backdrop-filter: blur(5rem);
+          backdrop-filter: blur(5rem);
 }
 
 .helping__heading {
@@ -5763,9 +5787,9 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   padding: 5rem;
   gap: 2rem;
   -webkit-box-pack: justify;
@@ -5853,8 +5877,8 @@ section {
 
 .cases__item-image {
   height: 100%;
+  min-width: 16rem;
   max-width: 16rem;
-  width: 100%;
   border-radius: 2rem;
 }
 
@@ -5882,6 +5906,10 @@ section {
   line-height: normal;
   letter-spacing: 0.044rem;
   text-transform: uppercase;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .cases__item-description {
@@ -5891,6 +5919,10 @@ section {
   font-weight: 400;
   line-height: 2.875rem;
   margin-top: auto;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .cases__slider {
@@ -5914,7 +5946,6 @@ section {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   position: absolute;
-  z-index: 5;
   right: -9rem;
   left: -9rem;
 }
@@ -5974,6 +6005,19 @@ section {
     letter-spacing: 0.044rem;
     text-transform: uppercase;
   }
+
+  .helping::after {
+    background: -o-radial-gradient(30.31% 46.13%, 31.12% 17.8%, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0) 100%), -o-linear-gradient(330deg, rgba(255, 255, 255, 0) 23.03%, rgba(246, 124, 45, 0) 51.13%), -o-linear-gradient(257deg, rgba(248, 246, 246, 0.59) 23.28%, #fdfdfd00 41.01%), -o-linear-gradient(335deg, rgba(234, 240, 245, 0.49) 33.58%, rgba(217, 227, 238, 0.1) 53.79%), -o-linear-gradient(202deg, #d79972 13.09%, rgba(255, 255, 255, 0) 34.9%);
+    background: radial-gradient(31.12% 17.8% at 30.31% 46.13%, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0) 100%), linear-gradient(120deg, rgba(255, 255, 255, 0) 23.03%, rgba(246, 124, 45, 0) 51.13%), linear-gradient(193deg, rgba(248, 246, 246, 0.59) 23.28%, #fdfdfd00 41.01%), linear-gradient(115deg, rgba(234, 240, 245, 0.49) 33.58%, rgba(217, 227, 238, 0.1) 53.79%), linear-gradient(248deg, #d79972 13.09%, rgba(255, 255, 255, 0) 34.9%);
+    -webkit-filter: blur(5rem);
+    filter: blur(5rem);
+    right: 0;
+    top: -11rem;
+    height: 100%;
+    left: auto;
+    width: 50%;
+    z-index: -1;
+  }
 }
 
 @media (min-width: 1920px) {
@@ -6016,6 +6060,26 @@ section {
   .swiper-button-prev svg {
     max-width: 4.4rem;
     height: 3.2rem;
+  }
+
+  .working-authorities-background {
+    background: url("../img/background-pages/working-authorities.svg") no-repeat;
+  }
+
+  .sanctions-background {
+    background: url("../img/background-pages/sanctions.svg") no-repeat;
+  }
+
+  .financial-background {
+    background: url("../img/background-pages/financial.svg") no-repeat;
+  }
+
+  .intellectual-background {
+    background: url("../img/background-pages/intellectual.svg") no-repeat;
+  }
+
+  .judical-background {
+    background: url("../img/background-pages/judical.svg") no-repeat;
   }
 
   .title-h2,
@@ -6112,6 +6176,13 @@ section {
 
   .header__mobile-burger-menu-item {
     width: 100%;
+  }
+
+  .center-breadcrumbs-list {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-left: 4rem;
   }
 
   .breadcrumbs {
@@ -7333,6 +7404,8 @@ section {
 
   .hero-video__video {
     width: 64.6rem;
+    -webkit-backdrop-filter: blur(5rem);
+            backdrop-filter: blur(5rem);
   }
 
   .hero-video__video-player-box {
@@ -8272,6 +8345,10 @@ section {
     height: 1.6rem;
   }
 
+  .intro {
+    margin-bottom: 8rem;
+  }
+
   .intro.--sanctions .intro__poster {
     max-width: 66rem;
     height: 60rem;
@@ -8289,6 +8366,40 @@ section {
     margin-left: 12.1rem;
   }
 
+  .intro.--financial .intro__poster {
+    max-width: 59rem;
+    height: 53rem;
+    margin: -4rem auto 0;
+  }
+
+  .intro.--financial .intro__button {
+    margin-top: 0;
+  }
+
+  .intro.--intellectual .intro__poster {
+    max-width: 37rem;
+    height: 58rem;
+    margin: 2rem auto 0;
+  }
+
+  .intro.--intellectual .intro__button {
+    -webkit-transform: translateY(-6rem);
+        -ms-transform: translateY(-6rem);
+            transform: translateY(-6rem);
+  }
+
+  .intro.--judical .intro__poster {
+    max-width: 75rem;
+    height: 61rem;
+    margin: 0rem auto 0 7rem;
+  }
+
+  .intro.--judical .intro__button {
+    -webkit-transform: translateY(-6rem);
+        -ms-transform: translateY(-6rem);
+            transform: translateY(-6rem);
+  }
+
   .intro {
     padding-top: 0;
     overflow: hidden;
@@ -8296,6 +8407,10 @@ section {
 
   .intro__title {
     margin-bottom: 1.6rem;
+  }
+
+  .intro__sphere {
+    height: 130rem;
   }
 
   .intro__info {
@@ -8362,6 +8477,7 @@ section {
 
   .helping__heading-title {
     margin-bottom: 1.6rem;
+    word-break: break-word;
   }
 
   .helping__heading-description {

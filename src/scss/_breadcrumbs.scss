@@ -5,6 +5,11 @@
     margin-bottom: 4rem;
     &-list {
         justify-content: center;
+
+        @include small-tablet{
+            justify-content: flex-start;
+            padding-left: 4rem;
+        }
     }
 }
 .breadcrumbs {
