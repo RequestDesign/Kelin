@@ -38,7 +38,6 @@
             @include small-tablet {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
                 gap: 1.6rem;
                 max-width: 58rem;
                 padding: 3.2rem;
@@ -80,7 +79,7 @@
                     padding: 4.5rem 2.2rem;
                 }
                 &.lamoda {
-                    padding: 4.8rem 1.9rem;
+                    padding: 4.9rem 1.9rem;
                 }
             }
             &-title {
@@ -108,7 +107,7 @@
     &-swiper {
         width: 100%;
         @include small-tablet {
-            max-height: 38rem;
+            // max-height: 38rem;
         }
     }
 }

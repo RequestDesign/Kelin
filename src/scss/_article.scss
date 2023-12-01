@@ -1,6 +1,15 @@
 @import 'vars';
 @import 'mixins';
 
+.body_background-article-page {
+    background-image: url(../img/article/background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include small-tablet {
+        background-image: url(../img/article/background-mb.svg);
+    }
+}
 .article {
     &__container {
         margin-bottom: 16rem;

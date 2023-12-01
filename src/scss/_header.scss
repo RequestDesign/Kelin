@@ -9,18 +9,27 @@
     @include small-tablet {
         margin-bottom: 3.2rem;
     }
-
     &.fixed {
         position: fixed;
+        width: 100%;
         z-index: 10;
         top: 0;
         left: 0;
-        width: 100%;
+        opacity: 1;
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 14.39%, rgba(255, 255, 255, 0) 182.55%);
         backdrop-filter: blur(5rem);
+        animation: slideDown 0.3s;
 
         .header__subheader {
             display: none;
+        }
+    }
+    @keyframes slideDown {
+        from {
+            transform: translateY(-100%);
+        }
+        to {
+            transform: translateY(0);
         }
     }
 

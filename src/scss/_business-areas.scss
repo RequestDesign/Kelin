@@ -37,11 +37,11 @@
         &-item {
             border-radius: 15rem;
             border: 0.2rem solid $white;
-            background:
-                lightgray 0% 0% / 100px 100px repeat,
-                rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(25px);
-
+            background: linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0.5) 14.39%,
+                rgba(255, 255, 255, 0) 182.55%
+            );
             flex: 1;
             white-space: nowrap;
             transition: background-color 0.3s ease-in-out;
