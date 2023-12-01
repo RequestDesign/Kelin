@@ -187,6 +187,12 @@ body.locked {
   overflow: hidden;
 }
 
+.body_background-law-page {
+  background-image: url(../img/contract-law/background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .hidden {
   display: none;
 }
@@ -818,19 +824,46 @@ section {
 
 .header.fixed {
   position: fixed;
+  width: 100%;
   z-index: 10;
   top: 0;
   left: 0;
-  width: 100%;
+  opacity: 1;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(14.39%, rgba(255, 255, 255, 0.8)), color-stop(182.55%, rgba(255, 255, 255, 0)));
   background: -o-linear-gradient(top, rgba(255, 255, 255, 0.8) 14.39%, rgba(255, 255, 255, 0) 182.55%);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 14.39%, rgba(255, 255, 255, 0) 182.55%);
   -webkit-backdrop-filter: blur(5rem);
           backdrop-filter: blur(5rem);
+  -webkit-animation: slideDown 0.3s;
+          animation: slideDown 0.3s;
 }
 
 .header.fixed .header__subheader {
   display: none;
+}
+
+@-webkit-keyframes slideDown {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 .header__subheader {
@@ -1644,6 +1677,12 @@ section {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+.body_background-article-page {
+  background-image: url(../img/article/background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .article__container {
@@ -2936,9 +2975,9 @@ section {
 .spheres-list-item {
   border-radius: 15rem;
   border: 0.2rem solid #fff;
-  background: lightgray 0% 0%/100px 100px repeat, rgba(255, 255, 255, 0.8);
-  -webkit-backdrop-filter: blur(25px);
-          backdrop-filter: blur(25px);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(14.39%, rgba(255, 255, 255, 0.5)), color-stop(182.55%, rgba(255, 255, 255, 0)));
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.5) 14.39%, rgba(255, 255, 255, 0) 182.55%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 14.39%, rgba(255, 255, 255, 0) 182.55%);
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -4000,6 +4039,8 @@ section {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-backdrop-filter: blur(5rem);
+          backdrop-filter: blur(5rem);
   gap: 2rem;
 }
 
@@ -4411,7 +4452,7 @@ section {
 }
 
 .clients-list__item-image.lamoda {
-  padding: 4.8rem 1.9rem;
+  padding: 4.9rem 1.9rem;
 }
 
 .clients-list__item-title {
@@ -5037,6 +5078,8 @@ section {
 }
 
 .processes__list {
+  position: relative;
+  z-index: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5147,6 +5190,8 @@ section {
           flex: 1;
   gap: 4.3rem;
   padding-right: 28.5rem;
+  -webkit-backdrop-filter: blur(5rem);
+          backdrop-filter: blur(5rem);
 }
 
 .numbered-details__card-list {
@@ -5413,6 +5458,7 @@ section {
   min-width: 72.9rem;
   background-size: cover;
   background-position: center;
+  max-height: 44.5rem;
 }
 
 .section-article__image img {
@@ -5595,6 +5641,20 @@ section {
   top: -12.2rem;
   max-width: 100rem;
   height: 73.3rem;
+}
+
+.intro.--contract .intro__poster {
+  right: -12rem;
+  top: -24.2rem;
+  max-width: 100.8rem;
+  height: 85.2rem;
+}
+
+.intro.--labor .intro__poster {
+  right: -46rem;
+  top: -16.2rem;
+  max-width: 137.5rem;
+  height: 84.4rem;
 }
 
 .intro.--financial .intro__poster {
@@ -5950,6 +6010,19 @@ section {
   left: -9rem;
 }
 
+.cases__caption {
+  margin-top: 4.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 @media (min-width: 48.01em) {
   .mobile {
     display: none;
@@ -6044,6 +6117,10 @@ section {
   .container {
     padding: 0 2rem;
     width: 100%;
+  }
+
+  .body_background-law-page {
+    background-image: url(../img/contract-law/background-mb.svg);
   }
 
   .desktop {
@@ -6317,6 +6394,10 @@ section {
 
   .insights__article-info-link {
     display: none;
+  }
+
+  .body_background-article-page {
+    background-image: url(../img/article/background-mb.svg);
   }
 
   .article__container {
@@ -7278,6 +7359,15 @@ section {
     padding: 5.2rem 3.2rem;
   }
 
+  .hero-input-field {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(14.39%, rgba(255, 255, 255, 0.8)), color-stop(182.55%, rgba(255, 255, 255, 0)));
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.8) 14.39%, rgba(255, 255, 255, 0) 182.55%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 14.39%, rgba(255, 255, 255, 0) 182.55%);
+    border: 0.1rem solid #fff;
+    -webkit-backdrop-filter: blur(5rem);
+            backdrop-filter: blur(5rem);
+  }
+
   .hero__content {
     gap: 57.6rem;
   }
@@ -7697,9 +7787,6 @@ section {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     gap: 1.6rem;
     max-width: 58rem;
     padding: 3.2rem;
@@ -7723,10 +7810,6 @@ section {
     width: -moz-min-content;
     width: min-content;
     font-size: 4rem;
-  }
-
-  .clients-swiper {
-    max-height: 38rem;
   }
 
   .protection__content {
@@ -8366,6 +8449,18 @@ section {
     margin-left: 12.1rem;
   }
 
+  .intro.--contract .intro__poster {
+    max-width: 71.9rem;
+    height: 60.8rem;
+    margin-left: 2rem;
+  }
+
+  .intro.--labor .intro__poster {
+    max-width: 79.4rem;
+    height: 48.7rem;
+    margin-left: 2rem;
+  }
+
   .intro.--financial .intro__poster {
     max-width: 59rem;
     height: 53rem;
@@ -8590,5 +8685,10 @@ section {
         -ms-transform: none;
             transform: none;
     margin-top: 4.8rem;
+  }
+
+  .cases__caption {
+    margin-top: 8rem;
+    padding: 3.2rem;
   }
 }

@@ -15,6 +15,7 @@
         flex: 1;
         gap: 4.3rem;
         padding-right: 28.5rem;
+        backdrop-filter: blur(5rem);
 
         @include small-tablet {
             padding: 3.2rem;
@@ -36,8 +37,6 @@
                     color: $blue;
                 }
             }
-        }
-        &-title {
         }
         &-description {
             &-container {

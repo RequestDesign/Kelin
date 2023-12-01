@@ -173,7 +173,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     footerItems.forEach((item) => {
         item.addEventListener('click', function () {
-            const dropdownFooter = item.closest('.footer__nav-list-item').querySelector('.footer__nav__dropdown-list'),
+            const dropdownFooter = item
+                    .closest('.footer__nav-list-item')
+                    .querySelector('.footer__nav__dropdown-list'),
                 dropdownFooterArrow = item.querySelector('.footer__nav__dropdown-list-icon');
             console.log(item);
             $(dropdownFooter).toggleClass('open');

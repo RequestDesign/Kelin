@@ -169,4 +169,17 @@
             left: -9rem;
         }
     }
+
+    &__caption{
+        margin-top: 4.4rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include small-tablet{
+            margin-top: 8rem;
+            padding: 3.2rem;
+        }
+    }
 }

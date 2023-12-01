@@ -6,7 +6,15 @@ body {
         overflow: hidden;
     }
 }
+.body_background-law-page{
+    background-image: url(../img/contract-law/background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
 
+    @include small-tablet {
+        background-image: url(../img/contract-law/background-mb.svg);
+    }
+}
 @media (min-width: 48.01em) {
     .mobile {
         display: none;
