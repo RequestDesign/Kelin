@@ -2207,6 +2207,8 @@ section {
   max-width: 90.4rem;
   width: 100%;
   margin-left: -4.5rem;
+  -webkit-backdrop-filter: blur(5rem);
+          backdrop-filter: blur(5rem);
 }
 
 .insights__form-info-title {

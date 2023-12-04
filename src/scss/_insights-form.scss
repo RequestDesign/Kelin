@@ -140,6 +140,7 @@
             max-width: 90.4rem;
             width: 100%;
             margin-left: -4.5rem;
+            backdrop-filter: blur(5rem);
 
             @include small-tablet {
                 padding: 3.2rem;
