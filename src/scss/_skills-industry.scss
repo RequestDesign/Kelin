@@ -71,6 +71,10 @@
             &-description {
                 color: $text-secondary;
                 max-width: 37.7rem;
+
+                a {
+                    text-decoration: underline;
+                }
             }
             &-link {
                 align-items: flex-start;
