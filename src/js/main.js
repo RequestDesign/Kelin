@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
         $('.header__mobile-burger-menu').addClass('--active');
         $('body').addClass('locked');
         $('.header').css({
-            height: '100vh'
+            height: '100dvh'
         });
     });
 
