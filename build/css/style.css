@@ -3765,6 +3765,8 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-backdrop-filter: blur(5rem);
+          backdrop-filter: blur(5rem);
 }
 
 .hero__content-blocks-benefits-title {
@@ -4758,6 +4760,10 @@ section {
 .skills-industry__skills-info-description {
   color: rgba(67, 78, 88, 0.75);
   max-width: 37.7rem;
+}
+
+.skills-industry__skills-info-description a {
+  text-decoration: underline;
 }
 
 .skills-industry__skills-info-link {
@@ -8198,7 +8204,7 @@ section {
   }
 
   .processes__list-item-end {
-    padding: 1.6rem;
+    padding: 3.2rem;
   }
 
   .processes__list-item-end span {
