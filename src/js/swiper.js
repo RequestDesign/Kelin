@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
         spaceBetween: rem(0.8)
     });
 
-    resizableSwiper('(max-width: 100vw)', ' .skills-industry__industry-swiper', {
+    resizableSwiper('(min-width: 0px)', ' .skills-industry__industry-swiper', {
         loop: true,
         speed: 1200,
         direction: 'horizontal',
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
         spaceBetween: rem(0.8)
     });
 
-    resizableSwiper('(max-width: 100vw)', '.protection-swiper', {
+    resizableSwiper('(min-width: 0px)', '.protection-swiper', {
         loop: true,
         speed: 1200,
         slidesPerView: 1,
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    resizableSwiper('(max-width: 100vw)', '.tu-letters-swiper', {
+    resizableSwiper('(min-width: 0px)', '.tu-letters-swiper', {
         loop: true,
         speed: 1200,
         grabCursor: true,
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
         spaceBetween: rem(0.8)
     });
 
-    resizableSwiper('(max-width: 100vw)', '.individual-calc-swiper', {
+    resizableSwiper('(min-width: 0px)', '.individual-calc-swiper', {
         loop: true,
         speed: 1200,
         grabCursor: true,
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    resizableSwiper('(max-width: 100vw)', '.category-list-swiper', {
+    resizableSwiper('(min-width: 0px)', '.category-list-swiper', {
         loop: true,
         speed: 1200,
         grabCursor: true,
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    resizableSwiper('(max-width: 100vw)', '.reviews-swiper', {
+    resizableSwiper('(min-width: 0px)', '.reviews-swiper', {
         loop: true,
         speed: 1200,
         grabCursor: true,
