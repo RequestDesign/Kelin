@@ -833,13 +833,23 @@ section {
   top: 0;
   left: 0;
   opacity: 1;
+  -webkit-animation: slideDown 0.3s;
+          animation: slideDown 0.3s;
+}
+
+.header.fixed::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(14.39%, rgba(255, 255, 255, 0.8)), color-stop(182.55%, rgba(255, 255, 255, 0)));
   background: -o-linear-gradient(top, rgba(255, 255, 255, 0.8) 14.39%, rgba(255, 255, 255, 0) 182.55%);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 14.39%, rgba(255, 255, 255, 0) 182.55%);
   -webkit-backdrop-filter: blur(5rem);
           backdrop-filter: blur(5rem);
-  -webkit-animation: slideDown 0.3s;
-          animation: slideDown 0.3s;
+  z-index: -1;
 }
 
 .header.fixed .header__subheader {
@@ -3282,6 +3292,11 @@ section {
   min-height: 5.5rem;
 }
 
+.businesses-needs__benefits-item-image svg {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
 .businesses-needs__benefits-item-description {
   color: #fff;
 }
@@ -3832,6 +3847,12 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.hero__content-blocks-question-form-button {
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
 }
 
 .hero__content-blocks-question-form label {
