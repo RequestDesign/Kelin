@@ -379,8 +379,8 @@ document.addEventListener('DOMContentLoaded', function () {
             card.classList.toggle('is-flipped');
         });
     });
-    //footer dropdown
 
+    //footer dropdown
     const footerItems = document.querySelectorAll('.footer__nav-list-item-dropdown');
 
     footerItems.forEach((item) => {
@@ -401,4 +401,77 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    //vilidation forms
+    const forms = document.querySelectorAll('form');
+
+    forms.forEach((form) => {
+        $(form).submit(function (event) {
+            event.preventDefault();
+
+            if (form.querySelector('input[id="name"]')) {
+                const name = form.querySelector('input[id="name"]'),
+                    nameValue = form.querySelector('input[id="name"]').value;
+                console.log(nameValue);
+                if (!nameValue) {
+                    name.classList.add('error');
+                    // alert('Empty name!');
+                    return;
+                }
+                if (!isValidName(nameValue)) {
+                    name.classList.add('error');
+                    // alert('Not valid name!');
+                    return;
+                }
+                name.classList.remove('error');
+            }
+            if (form.querySelector('input[id="tel"]')) {
+                const phone = form.querySelector('input[id="tel"]'),
+                    phoneValue = phone.value;
+
+                console.log(phoneValue);
+                if (!phoneValue) {
+                    phone.classList.add('error');
+                    // alert('Empty phone!');
+                    return;
+                }
+                if (!isValidPhone(phoneValue)) {
+                    phone.classList.add('error');
+                    // alert('Not valid phone!');
+                    return;
+                }
+                phone.classList.remove('error');
+            }
+
+            const modalSuccess = document.querySelector('#success-modal'),
+                modalQuestion = document.querySelector('#question-modal');
+            modalSuccess.classList.add('--active');
+            modalQuestion.classList.remove('--active');
+            $('body').width($(document).width()).addClass('locked');
+
+            // var formData = $(this).serialize(); // Собираем все данные из формы
+            // $.ajax({
+            //     type: 'POST', // Метод отправки
+            //     url: 'public/script/send.php', // Путь до файла отправителя
+            //     data: formData,
+            //     success: function () {
+            //         // Код в этом блоке выполняется при успешной отправке сообщения
+            //         alert('Ваше сообщение отправлено!');
+            //     }
+            // });
+        });
+    });
+
+    function isValidName(name) {
+        const pattern = /^[а-яА-Я]+$/;
+
+        if (name.length >= 2) {
+            return pattern.test(name);
+        }
+    }
+
+    function isValidPhone(phone) {
+        const pattern = /\+\s7\s\(\s\d{3}\s\)\s\s\d{3}\s-\s\d{2}\s-\s\d{2}/;
+        return pattern.test(phone);
+    }
 });
