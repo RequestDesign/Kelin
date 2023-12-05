@@ -127,7 +127,7 @@ resizableSwiper('(min-width: 0px)', '.tu-letters-swiper', {
     breakpoints: {
         768: {
             spaceBetween: rem(1.6),
-            slidesPerView: 3
+            slidesPerView: 4
         }
     }
 });
