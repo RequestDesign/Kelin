@@ -4118,6 +4118,7 @@ section {
 
 .benefits-item__icon.icon-bg {
   background-image: url("../img/icons/recycling.png");
+  background-size: contain;
 }
 
 .benefits-item__icon.icon-content {
