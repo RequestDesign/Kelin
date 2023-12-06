@@ -4116,6 +4116,19 @@ section {
   mix-blend-mode: darken;
 }
 
+.benefits-item__icon.icon-bg {
+  background-image: url("../img/icons/recycling.png");
+}
+
+.benefits-item__icon.icon-content {
+  content: url("../img/icons/mark.png");
+}
+
+.benefits-item__icon.icon-filter img {
+  -webkit-filter: brightness(150%) contrast(150%) saturate(200%) blur(0rem) opacity(100%);
+          filter: brightness(150%) contrast(150%) saturate(200%) blur(0rem) opacity(100%);
+}
+
 .benefits-item__icon-person-mark {
   min-width: 9rem;
   min-height: 8rem;
