@@ -4,7 +4,7 @@
             display: flex;
             gap: 1.2rem;
 
-            @include small-tablet{
+            @include small-tablet {
                 flex-direction: column;
                 gap: 4.8rem;
             }
@@ -17,7 +17,7 @@
             width: 100%;
             gap: 4.4rem;
 
-            @include small-tablet{
+            @include small-tablet {
                 max-width: 100%;
                 gap: 4.8rem;
             }
@@ -27,7 +27,7 @@
             max-width: 61.8rem;
             width: 100%;
 
-            @include small-tablet{
+            @include small-tablet {
                 max-width: 100%;
             }
         }
@@ -38,21 +38,20 @@
             font-weight: 700;
             line-height: 2.875rem;
 
-            @include small-tablet{
+            @include small-tablet {
                 font-size: 3.6rem;
                 line-height: 4.5rem;
             }
         }
 
         .numbered-details__list-item-number {
-            @include small-tablet{
+            @include small-tablet {
                 min-width: 11rem;
                 min-height: 11rem;
             }
         }
 
         .numbered-details__card {
-
             &-description {
                 color: $text-primary;
                 font-size: 2.3rem;
@@ -60,26 +59,27 @@
                 font-weight: 400;
                 line-height: 2.875rem;
 
-                @include small-tablet{
+                @include small-tablet {
                     font-size: 3.6rem;
                     line-height: 4.5rem;
                 }
             }
 
             &-image {
-                right: -14rem;
-                width: 100%;
-                height: 100%;
                 position: absolute;
+
+                width: 446px;
+                height: 251px;
+                right: -11.3rem;
                 bottom: 0;
                 z-index: -1;
+
                 -webkit-user-select: none;
                 -moz-user-select: none;
                 -ms-user-select: none;
                 user-select: none;
             }
         }
-
 
         @media (min-width: 48em) {
             .benefits-item {

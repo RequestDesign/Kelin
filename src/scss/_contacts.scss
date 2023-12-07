@@ -42,6 +42,7 @@
                 rgba(255, 255, 255, 0.8) 14.39%,
                 rgba(255, 255, 255, 0) 182.55%
             );
+            backdrop-filter: blur(5rem);
 
             @include small-tablet {
                 padding: 5.2rem 3.2rem;

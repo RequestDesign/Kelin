@@ -25,6 +25,16 @@
         flex-wrap: wrap;
         gap: 1.2rem;
 
+        @include small-tablet {
+            flex-wrap: nowrap;
+            overflow-x: scroll;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
         &-item {
             border-radius: 15rem;
             border: 0.2rem solid $white;
@@ -47,7 +57,7 @@
             }
         }
         &-item:hover {
-            background-color: $blue;
+            background: $blue;
             a {
                 color: $white;
             }

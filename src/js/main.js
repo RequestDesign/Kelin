@@ -202,16 +202,16 @@ document.addEventListener('DOMContentLoaded', function () {
                     nameValue = form.querySelector('input[id="name"]').value;
                 console.log(nameValue);
                 if (!nameValue) {
-                    name.classList.add('error');
+                    name.classList.add('not-valid');
                     // alert('Empty name!');
                     return;
                 }
                 if (!isValidName(nameValue)) {
-                    name.classList.add('error');
+                    name.classList.add('not-valid');
                     // alert('Not valid name!');
                     return;
                 }
-                name.classList.remove('error');
+                name.classList.remove('not-valid');
             }
             if (form.querySelector('input[id="tel"]')) {
                 const phone = form.querySelector('input[id="tel"]'),
@@ -219,16 +219,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 console.log(phoneValue);
                 if (!phoneValue) {
-                    phone.classList.add('error');
+                    phone.classList.add('not-valid');
                     // alert('Empty phone!');
                     return;
                 }
                 if (!isValidPhone(phoneValue)) {
-                    phone.classList.add('error');
+                    phone.classList.add('not-valid');
                     // alert('Not valid phone!');
                     return;
                 }
-                phone.classList.remove('error');
+                phone.classList.remove('not-valid');
             }
 
             const modalSuccess = document.querySelector('#success-modal'),
