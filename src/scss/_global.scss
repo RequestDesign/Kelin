@@ -6,15 +6,66 @@ body {
         overflow: hidden;
     }
 }
-.body_background-law-page{
-    background-image: url(../img/contract-law/background.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    @include small-tablet {
-        background-image: url(../img/contract-law/background-mb.svg);
+.background {
+    &__main-page {
+        @include background-image('../img/background-pages/main.svg', '../img/background-pages/main-mb.svg');
+    }
+    &__about-us-page {
+        @include background-image(
+            '../img/background-pages/about-us.svg',
+            '../img/background-pages/about-us-mb.svg'
+        );
+    }
+    &__our-work-page {
+        @include background-image(
+            '../img/background-pages/our-work.svg',
+            '../img/background-pages/our-work-mb.svg'
+        );
+    }
+    &__article-page {
+        @include background-image(
+            '../img/background-pages/article.svg',
+            '../img/background-pages/article-mb.svg'
+        );
+    }
+    &__business-areas-page {
+        @include background-image(
+            '../img/background-pages/business-areas.svg',
+            '../img/background-pages/business-areas-mb.svg'
+        );
+    }
+    &__business-360-page {
+        @include background-image(
+            '../img/background-pages/business-360.svg',
+            '../img/background-pages/business-360-mb.svg'
+        );
+    }
+    &__business-magazine-page {
+        @include background-image(
+            '../img/background-pages/business-magazine.svg',
+            '../img/background-pages/business-magazine-mb.svg'
+        );
+    }
+    &__404-page {
+        @include background-image('../img/background-pages/404.svg', '../img/background-pages/404-mb.svg');
+    }
+    &__privacy-page {
+        @include background-image(
+            '../img/background-pages/privacy.svg',
+            '../img/background-pages/privacy-mb.svg'
+        );
+    }
+    &__contacts-page {
+        @include background-image(
+            '../img/background-pages/contacts.svg',
+            '../img/background-pages/contacts-mb.svg'
+        );
+    }
+    &__law-page {
+        @include background-image('../img/background-pages/law.svg', '../img/background-pages/law-mb.svg');
     }
 }
+
 @media (min-width: 48.01em) {
     .mobile {
         display: none;
@@ -49,7 +100,7 @@ section {
     justify-content: center;
     cursor: pointer;
 
-    @include small-tablet{
+    @include small-tablet {
         max-width: 9rem;
         height: 9rem;
     }
@@ -64,7 +115,7 @@ section {
         width: 100%;
         height: 2.4rem;
 
-        @include small-tablet{
+        @include small-tablet {
             max-width: 4.4rem;
             height: 3.2rem;
         }
@@ -86,31 +137,31 @@ section {
 }
 
 .working-authorities-background {
-    @include small-tablet{
-        background: url("../img/background-pages/working-authorities.svg") no-repeat;
+    @include small-tablet {
+        background: url('../img/background-pages/working-authorities.svg') no-repeat;
     }
 }
 
 .sanctions-background {
-    @include small-tablet{
-        background: url("../img/background-pages/sanctions.svg") no-repeat;
+    @include small-tablet {
+        background: url('../img/background-pages/sanctions.svg') no-repeat;
     }
 }
 
 .financial-background {
-    @include small-tablet{
-        background: url("../img/background-pages/financial.svg") no-repeat;
+    @include small-tablet {
+        background: url('../img/background-pages/financial.svg') no-repeat;
     }
 }
 
 .intellectual-background {
-    @include small-tablet{
-        background: url("../img/background-pages/intellectual.svg") no-repeat;
+    @include small-tablet {
+        background: url('../img/background-pages/intellectual.svg') no-repeat;
     }
 }
 
 .judical-background {
-    @include small-tablet{
-        background: url("../img/background-pages/judical.svg") no-repeat;
+    @include small-tablet {
+        background: url('../img/background-pages/judical.svg') no-repeat;
     }
 }

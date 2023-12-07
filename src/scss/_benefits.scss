@@ -60,21 +60,7 @@
             width: 7.6rem;
             height: 8rem;
             mix-blend-mode: darken;
-
-            &.icon-bg {
-                background-image: url('../img/icons/recycling.png');
-                background-size: contain;
-            }
-
-            &.icon-content {
-                content: url('../img/icons/mark.png');
-            }
-            &.icon-filter {
-                img {
-                    filter: brightness(150%) contrast(150%) saturate(200%) blur(0rem) opacity(100%);
-                }
-            }
-
+            
             @include small-tablet {
                 min-width: 9.5rem;
                 min-height: 10rem;
