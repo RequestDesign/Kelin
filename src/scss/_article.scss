@@ -377,6 +377,11 @@
                         padding: 2.3rem;
                     }
                 }
+                &.--vk {
+                    a {
+                        padding: 2rem;
+                    }
+                }
                 a {
                     display: block;
                     width: 100%;
@@ -467,8 +472,6 @@
         margin-top: 16rem;
 
         @include small-tablet {
-            flex-wrap: wrap;
-            overflow-x: unset;
             li {
                 border-radius: 10rem;
                 a {
