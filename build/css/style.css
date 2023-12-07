@@ -187,8 +187,68 @@ body.locked {
   overflow: hidden;
 }
 
-.body_background-law-page {
-  background-image: url(../img/contract-law/background.svg);
+.background__main-page {
+  background-image: url("../img/background-pages/main.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background__about-us-page {
+  background-image: url("../img/background-pages/about-us.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background__our-work-page {
+  background-image: url("../img/background-pages/our-work.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background__article-page {
+  background-image: url("../img/background-pages/article.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background__business-areas-page {
+  background-image: url("../img/background-pages/business-areas.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background__business-360-page {
+  background-image: url("../img/background-pages/business-360.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background__business-magazine-page {
+  background-image: url("../img/background-pages/business-magazine.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background__404-page {
+  background-image: url("../img/background-pages/404.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background__privacy-page {
+  background-image: url("../img/background-pages/privacy.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background__contacts-page {
+  background-image: url("../img/background-pages/contacts.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background__law-page {
+  background-image: url("../img/background-pages/law.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1693,12 +1753,6 @@ section {
           transform: translateX(-50%);
 }
 
-.body_background-article-page {
-  background-image: url(../img/article/background.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .article__container {
   margin-bottom: 16rem;
   padding: 0 34.4rem;
@@ -2834,12 +2888,6 @@ section {
   gap: 3.6rem;
 }
 
-.body_background-main-page {
-  background-image: url(../img/main/background.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .feature__title {
   max-width: 101.5rem;
   margin-bottom: 4.4rem;
@@ -2955,12 +3003,6 @@ section {
 
 .category-list-swiper {
   margin-bottom: 4.4rem;
-}
-
-.body_background-business-areas-page {
-  background-image: url(../img/business-areas/background.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .spheres__content {
@@ -3301,18 +3343,6 @@ section {
   color: #fff;
 }
 
-.body_background-360-page {
-  background-image: url(../img/business-360/background.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.body_background-our-work-page {
-  background-image: url(../img/our-work/background.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .work-details.--supporting .work-details__heading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3426,12 +3456,6 @@ section {
 
 .work-reviews-item-title {
   max-width: 68.6rem;
-}
-
-.body_background-about-us-page {
-  background-image: url(../img/about-us/background.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .card-rotate {
@@ -4114,20 +4138,6 @@ section {
   width: 7.6rem;
   height: 8rem;
   mix-blend-mode: darken;
-}
-
-.benefits-item__icon.icon-bg {
-  background-image: url("../img/icons/recycling.png");
-  background-size: contain;
-}
-
-.benefits-item__icon.icon-content {
-  content: url("../img/icons/mark.png");
-}
-
-.benefits-item__icon.icon-filter img {
-  -webkit-filter: brightness(150%) contrast(150%) saturate(200%) blur(0rem) opacity(100%);
-          filter: brightness(150%) contrast(150%) saturate(200%) blur(0rem) opacity(100%);
 }
 
 .benefits-item__icon-person-mark {
@@ -6186,8 +6196,48 @@ section {
     width: 100%;
   }
 
-  .body_background-law-page {
-    background-image: url(../img/contract-law/background-mb.svg);
+  .background__main-page {
+    background-image: url("../img/background-pages/main-mb.svg");
+  }
+
+  .background__about-us-page {
+    background-image: url("../img/background-pages/about-us-mb.svg");
+  }
+
+  .background__our-work-page {
+    background-image: url("../img/background-pages/our-work-mb.svg");
+  }
+
+  .background__article-page {
+    background-image: url("../img/background-pages/article-mb.svg");
+  }
+
+  .background__business-areas-page {
+    background-image: url("../img/background-pages/business-areas-mb.svg");
+  }
+
+  .background__business-360-page {
+    background-image: url("../img/background-pages/business-360-mb.svg");
+  }
+
+  .background__business-magazine-page {
+    background-image: url("../img/background-pages/business-magazine-mb.svg");
+  }
+
+  .background__404-page {
+    background-image: url("../img/background-pages/404-mb.svg");
+  }
+
+  .background__privacy-page {
+    background-image: url("../img/background-pages/privacy-mb.svg");
+  }
+
+  .background__contacts-page {
+    background-image: url("../img/background-pages/contacts-mb.svg");
+  }
+
+  .background__law-page {
+    background-image: url("../img/background-pages/law-mb.svg");
   }
 
   .desktop {
@@ -6461,10 +6511,6 @@ section {
 
   .insights__article-info-link {
     display: none;
-  }
-
-  .body_background-article-page {
-    background-image: url(../img/article/background-mb.svg);
   }
 
   .article__container {
@@ -7088,10 +7134,6 @@ section {
     gap: 4.8rem;
   }
 
-  .body_background-main-page {
-    background-image: url(../img/main/background-mb.svg);
-  }
-
   .feature__content {
     padding: 3.2rem;
     padding-top: 5.2rem;
@@ -7136,10 +7178,6 @@ section {
   .video__player-button svg {
     width: 4rem;
     height: 3rem;
-  }
-
-  .body_background-business-areas-page {
-    background-image: url(../img/business-areas/background-mb.svg);
   }
 
   .spheres__content {
@@ -7296,14 +7334,6 @@ section {
     height: 4rem;
   }
 
-  .body_background-360-page {
-    background-image: url(../img/business-360/background-mb.svg);
-  }
-
-  .body_background-our-work-page {
-    background-image: url(../img/our-work/background-mb.svg);
-  }
-
   .work-details.--supporting .work-details__heading {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -7347,10 +7377,6 @@ section {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 1.6rem;
-  }
-
-  .body_background-about-us-page {
-    background-image: url(../img/about-us/background-mb.svg);
   }
 
   .team__content {

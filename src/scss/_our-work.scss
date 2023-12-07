@@ -1,12 +1,3 @@
-.body_background-our-work-page {
-    background-image: url(../img/our-work/background.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    @include small-tablet {
-        background-image: url(../img/our-work/background-mb.svg);
-    }
-}
 .work-details {
     &.--supporting {
         .work-details__heading {

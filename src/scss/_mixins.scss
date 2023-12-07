@@ -88,3 +88,11 @@
     -webkit-line-clamp: $lines;
     overflow: hidden;
 }
+@mixin background-image($bg-d: '../img/background.svg', $bg-mb:'../img/background-mobile.svg') {
+    background-image: url($bg-d);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include small-tablet {
+        background-image:  url($bg-mb);
+    }
+}

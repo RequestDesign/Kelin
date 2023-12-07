@@ -1,9 +1,0 @@
-.body_background-360-page {
-    background-image: url(../img/business-360/background.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    @include small-tablet {
-        background-image: url(../img/business-360/background-mb.svg);
-    }
-}
