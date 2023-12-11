@@ -47,8 +47,12 @@ resizableSwiper('(min-width: 0px)', ' .skills-industry__industry-swiper', {
     slidesPerView: 1.3,
     spaceBetween: rem(0.8),
     grabCursor: true,
+    mousewheel: {
+        releaseOnEdges: true
+    },
     navigation: {
-        nextEl: '.skills-industry__industry-swiper-button-next'
+        nextEl: '.skills-industry__industry-swiper-button-next',
+        prevEl: '.skills-industry__industry-swiper-button-prev',
     },
     breakpoints: {
         768: {
@@ -92,7 +96,7 @@ resizableSwiper('(min-width: 0px)', '.tu-letters-swiper', {
     breakpoints: {
         768: {
             spaceBetween: rem(1.6),
-            slidesPerView: 4,
+            slidesPerView: 4
         }
     }
 });
