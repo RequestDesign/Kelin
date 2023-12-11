@@ -262,4 +262,14 @@ document.addEventListener('DOMContentLoaded', function () {
         const pattern = /\+\s7\s\(\s\d{3}\s\)\s\s\d{3}\s-\s\d{2}\s-\s\d{2}/;
         return pattern.test(phone);
     }
+
+    fsLightbox.props.onOpen = function () {
+        const videos = document.querySelectorAll('video');
+
+        videos.forEach((video) => {
+            if (video) {
+                video.setAttribute('controlsList', 'nodownload');
+            }
+        });
+    };
 });

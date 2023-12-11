@@ -221,6 +221,24 @@
                 border-radius: 5rem;
                 border: 0.2rem solid $white;
             }
+
+            &-button-prev {
+                z-index: 3;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: -4rem;
+                right: 23.3rem;
+                width: 8.5rem;
+                height: 8.5rem;
+                border-radius: 5rem;
+                border: 0.2rem solid $white;
+
+                svg {
+                    transform: rotate(-180deg);
+                }
+            }
         }
 
         @include small-tablet {

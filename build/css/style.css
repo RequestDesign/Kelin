@@ -430,6 +430,22 @@ section {
   border-radius: 5rem;
   background: #00589b;
   padding: 3.3rem 3rem;
+  border: 0.1rem solid transparent;
+  -webkit-transition-property: border-color background color;
+  -o-transition-property: border-color background color;
+  transition-property: border-color background color;
+  -webkit-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+       -o-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+.button:hover {
+  border-color: #00589b;
+  background: #c1cfe4;
+  color: #00589b;
 }
 
 .button-outlined {
@@ -461,6 +477,16 @@ section {
   border-radius: 5rem;
   background: #fff;
   padding: 3.3rem 3rem;
+  border: 0.1rem solid transparent;
+  -webkit-transition-property: border-color background color;
+  -o-transition-property: border-color background color;
+  transition-property: border-color background color;
+  -webkit-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+       -o-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
   color: #00589b;
   font-size: 1.6rem;
   font-style: normal;
@@ -468,6 +494,12 @@ section {
   line-height: normal;
   letter-spacing: 0.16rem;
   text-transform: uppercase;
+}
+
+.button-white:hover {
+  border-color: #00589b;
+  background: #c1cfe4;
+  color: #00589b;
 }
 
 .background-blur,
@@ -2919,18 +2951,19 @@ section {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2.4rem;
+  overflow: hidden;
 }
 
 .feature__item::after {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
   background-image: url("../img/main//line-red.svg");
   background-repeat: no-repeat;
   background-position: center;
+  inset: 0;
+  -webkit-transform: scale(2.5);
+      -ms-transform: scale(2.5);
+          transform: scale(2.5);
 }
 
 .feature__item-title {
@@ -4942,6 +4975,32 @@ section {
   height: 8.5rem;
   border-radius: 5rem;
   border: 0.2rem solid #fff;
+}
+
+.skills-industry__industry-swiper-button-prev {
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: -4rem;
+  right: 23.3rem;
+  width: 8.5rem;
+  height: 8.5rem;
+  border-radius: 5rem;
+  border: 0.2rem solid #fff;
+}
+
+.skills-industry__industry-swiper-button-prev svg {
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
 
 .skills-industry__industry-item {
