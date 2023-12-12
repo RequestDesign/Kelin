@@ -114,6 +114,15 @@
             background-color: $blue;
             bottom: 5rem;
             left: 72.8rem;
+            border: 0.1rem solid transparent;
+
+            &:hover {
+                background-color: $grey;
+                border-color: $blue;
+                path {
+                    fill: $blue;
+                }
+            }
 
             @include small-tablet {
                 width: 12rem;
