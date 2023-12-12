@@ -202,6 +202,8 @@
 }
 
 .input-field {
+    position: relative;
+
     border-radius: 10rem;
     border: 0.1rem solid $white;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 14.39%, rgba(255, 255, 255, 0) 182.55%);
@@ -216,6 +218,37 @@
         font-weight: 600;
     }
     &.not-valid {
-        border: 0.1rem solid red;
+        border: 0.1rem solid $blue;
+    }
+    + .not-valid__mes {
+        z-index: 3;
+        position: absolute;
+        bottom: -65%;
+        left: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: 5rem;
+        background: $white;
+        box-shadow: 0.1rem 0.1rem 1rem 0rem $grey;
+        padding: 2rem;
+        border-radius: 1rem;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+        &::before {
+            @include pseudo {
+            }
+            top: -20%;
+            left: 50%;
+            width: 3rem;
+            height: 3rem;
+            background: $white;
+            transform: rotate(45deg);
+            z-index: -1;
+        }
     }
 }
