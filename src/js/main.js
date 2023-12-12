@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     .closest('.footer__nav-list-item')
                     .querySelector('.footer__nav__dropdown-list'),
                 dropdownFooterArrow = item.querySelector('.footer__nav__dropdown-list-icon');
-            console.log(item);
+            // console.log(item);
             $(dropdownFooter).toggleClass('open');
 
             if ($(dropdownFooter).hasClass('open')) {
@@ -191,6 +191,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     //vilidation forms
+
     const forms = document.querySelectorAll('form');
 
     forms.forEach((form) => {
@@ -200,39 +201,42 @@ document.addEventListener('DOMContentLoaded', function () {
             if (form.querySelector('input[id="name"]')) {
                 const name = form.querySelector('input[id="name"]'),
                     nameValue = form.querySelector('input[id="name"]').value;
-                console.log(nameValue);
+
                 if (!nameValue) {
                     name.classList.add('not-valid');
-                    // alert('Empty name!');
+                    addMess(name, 'Поле должно быть заполнено!');
                     return;
                 }
                 if (!isValidName(nameValue)) {
                     name.classList.add('not-valid');
-                    // alert('Not valid name!');
+                    addMess(name, 'Поле не может содержать эти символы!');
                     return;
                 }
+                removeMess(name);
                 name.classList.remove('not-valid');
             }
             if (form.querySelector('input[id="tel"]')) {
                 const phone = form.querySelector('input[id="tel"]'),
                     phoneValue = phone.value;
 
-                console.log(phoneValue);
                 if (!phoneValue) {
                     phone.classList.add('not-valid');
-                    // alert('Empty phone!');
+                    addMess(phone, 'Поле должно быть заполнено!');
+
                     return;
                 }
                 if (!isValidPhone(phoneValue)) {
                     phone.classList.add('not-valid');
-                    // alert('Not valid phone!');
+                    addMess(phone, 'Поле не может иметь такой вид!');
                     return;
                 }
+                removeMess(phone);
                 phone.classList.remove('not-valid');
             }
 
             const modalSuccess = document.querySelector('#success-modal'),
                 modalQuestion = document.querySelector('#question-modal');
+
             modalSuccess.classList.add('--active');
             modalQuestion.classList.remove('--active');
             $('body').width($(document).width()).addClass('locked');
@@ -250,6 +254,21 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    function addMess(elem, mess) {
+        if ($(elem).next('.not-valid__mes').length) {
+            $(elem).next('.not-valid__mes').text(mess);
+            return;
+        } else {
+            $(elem).after(`<span class="not-valid__mes">${mess}</span>`);
+        }
+    }
+    function removeMess(elem) {
+        if ($(elem).next('.not-valid__mes').length) {
+            $(elem).next('.not-valid__mes').remove();
+        } else {
+            return;
+        }
+    }
     function isValidName(name) {
         const pattern = /^[а-яА-Я]+$/;
 
@@ -257,12 +276,18 @@ document.addEventListener('DOMContentLoaded', function () {
             return pattern.test(name);
         }
     }
-
     function isValidPhone(phone) {
         const pattern = /\+\s7\s\(\s\d{3}\s\)\s\s\d{3}\s-\s\d{2}\s-\s\d{2}/;
-        return pattern.test(phone);
+        if (pattern.test(phone)) {
+            if (!phone.replace(/[^\d]/g, '').match(/123456789/)) {
+                return !phone
+                    .replace(/[^\d]/g, '')
+                    .match(/0{10}|1{10}|2{10}|3{10}|4{10}|5{10}|6{10}|7{10}|8{10}|9{10}/);
+            }
+        }
     }
 
+    //video nodownload
     fsLightbox.props.onOpen = function () {
         const videos = document.querySelectorAll('video');
 
