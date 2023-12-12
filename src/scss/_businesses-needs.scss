@@ -78,11 +78,13 @@
                 white-space: nowrap;
                 min-width: max-content;
                 flex: 1;
+                cursor: pointer;
 
                 min-height: 10.1rem;
                 border-radius: 15rem;
                 background: $white;
                 backdrop-filter: blur(2.5rem);
+                border: 0.1rem solid transparent;
 
                 span {
                     padding: 3.6rem 6.4rem;
@@ -92,9 +94,20 @@
 
                 &_blue {
                     background-color: $blue;
+
+                    &:hover {
+                        span {
+                            color: $blue;
+                        }
+                    }
                     span {
                         color: $white;
                     }
+                }
+                &:hover {
+                    border-color: $blue;
+                    background: $grey;
+                    color: $blue;
                 }
             }
             &-icon {

@@ -70,6 +70,7 @@
                 justify-content: center;
                 background: $white;
                 transition: 0.3s background ease-out;
+                border: 0.2rem solid $white;
 
                 @include small-tablet {
                     width: 13rem;
@@ -77,7 +78,7 @@
                 }
 
                 &:hover {
-                    background: $blue;
+                    background: $grey;
 
                     a {
                         svg {

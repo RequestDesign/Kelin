@@ -1,7 +1,7 @@
 .hero {
     &-input-field {
         background: none;
-        border: 0.1rem solid transparent;
+        border: none;
         backdrop-filter: unset;
 
         @include small-tablet {
@@ -154,7 +154,6 @@
                             width: 100%;
                             padding: 1rem;
                             padding-left: 8rem;
-
                             @include small-tablet {
                                 font-size: 3.2rem;
                                 padding: 4.6rem 6.4rem;
@@ -165,7 +164,6 @@
                                 }
                             }
                         }
-
                     }
                 }
 
@@ -349,6 +347,15 @@
                 background-color: $blue;
                 top: 41.4rem;
                 left: 59.5rem;
+                border: 0.1rem solid transparent;
+
+                &:hover {
+                    background-color: $grey;
+                    border-color: $blue;
+                    path {
+                        fill: $blue;
+                    }
+                }
 
                 @include small-tablet {
                     width: 6.8rem;
