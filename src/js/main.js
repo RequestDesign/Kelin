@@ -191,7 +191,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     //vilidation forms
-
     const forms = document.querySelectorAll('form');
 
     forms.forEach((form) => {
@@ -253,7 +252,6 @@ document.addEventListener('DOMContentLoaded', function () {
             // });
         });
     });
-
     function addMess(elem, mess) {
         if ($(elem).next('.not-valid__mes').length) {
             $(elem).next('.not-valid__mes').text(mess);
@@ -286,6 +284,21 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     }
+
+    //scroll to card
+    $(`.spheres-list-item a`).click(function () {
+        let href = $(this).attr('href');
+        $('html, body').animate(
+            {
+                scrollTop: $(href).offset().top - $('header').outerHeight()
+            },
+            {
+                duration: 0
+            }
+        );
+
+        return false;
+    });
 
     //video nodownload
     fsLightbox.props.onOpen = function () {
