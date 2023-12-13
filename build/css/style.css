@@ -4738,9 +4738,6 @@ label {
   height: 8.5rem;
   border-radius: 50%;
   border: 0.2rem solid #fff;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 .protection-swiper-button-next {
@@ -4877,9 +4874,6 @@ label {
   height: 8.5rem;
   border-radius: 50%;
   border: 0.2rem solid #fff;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 .tu-letters-swiper-button-next {
