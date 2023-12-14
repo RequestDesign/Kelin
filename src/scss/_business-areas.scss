@@ -83,6 +83,25 @@
             padding: 3.2rem;
         }
 
+        &.active {
+            animation: activeCard 3s ease-in-out;
+
+            @keyframes activeCard {
+                0% {
+                    border: 0.1rem solid $blue;
+                    background: $bg-primary;
+                }
+                100% {
+                    background: linear-gradient(
+                        180deg,
+                        rgba(255, 255, 255, 0.5) 14.39%,
+                        rgba(255, 255, 255, 0) 182.55%
+                    );
+                    border: 0.1rem solid $white;
+                }
+            }
+        }
+
         &-title {
             position: absolute;
             transform: rotate(180deg);

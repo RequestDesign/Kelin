@@ -375,15 +375,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    //card rotate
-    const cards = document.querySelectorAll('.card-rotate');
-
-    [...cards].forEach((card) => {
-        card.addEventListener('click', function () {
-            card.classList.toggle('is-flipped');
-        });
-    });
-
     //footer dropdown
     const footerItems = document.querySelectorAll('.footer__nav-list-item-dropdown');
 
@@ -503,6 +494,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //scroll to card
     $(`.spheres-list-item a`).click(function () {
+        $('.spheres-card').removeClass('active');
+
         let href = $(this).attr('href');
         $('html, body').animate(
             {
@@ -512,6 +505,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 duration: 0
             }
         );
+        $(href).addClass('active');
 
         return false;
     });
