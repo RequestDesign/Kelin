@@ -3178,6 +3178,38 @@ label {
   padding-left: 11.3rem;
 }
 
+.spheres-card.active {
+  -webkit-animation: activeCard 3s ease-in-out;
+          animation: activeCard 3s ease-in-out;
+}
+
+@-webkit-keyframes activeCard {
+  0% {
+    border: 0.1rem solid #00589b;
+    background: #cde3f5;
+  }
+
+  100% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(14.39%, rgba(255, 255, 255, 0.5)), color-stop(182.55%, rgba(255, 255, 255, 0)));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 14.39%, rgba(255, 255, 255, 0) 182.55%);
+    border: 0.1rem solid #fff;
+  }
+}
+
+@keyframes activeCard {
+  0% {
+    border: 0.1rem solid #00589b;
+    background: #cde3f5;
+  }
+
+  100% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(14.39%, rgba(255, 255, 255, 0.5)), color-stop(182.55%, rgba(255, 255, 255, 0)));
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.5) 14.39%, rgba(255, 255, 255, 0) 182.55%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 14.39%, rgba(255, 255, 255, 0) 182.55%);
+    border: 0.1rem solid #fff;
+  }
+}
+
 .spheres-card-title {
   position: absolute;
   -webkit-transform: rotate(180deg);
@@ -3567,39 +3599,6 @@ label {
   max-width: 68.6rem;
 }
 
-.card-rotate {
-  width: 100%;
-  min-height: 52rem;
-  position: relative;
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  -o-transition: transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  cursor: pointer;
-}
-
-.card-rotate.is-flipped {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
-.card-rotate__front,
-.card-rotate__back {
-  position: absolute;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  width: 100%;
-  height: 100%;
-}
-
-.card-rotate__back {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
 .team__title {
   margin-bottom: 4.4rem;
 }
@@ -3608,6 +3607,14 @@ label {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.2rem;
+}
+
+.team__list-item {
+  cursor: pointer;
+}
+
+.team__list-item:hover .team__list-item-text {
+  height: 100%;
 }
 
 .team__list-item-content {
@@ -3644,15 +3651,20 @@ label {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
   gap: 1.2rem;
   width: 100%;
   height: 11.4rem;
+  padding-top: 3.2rem;
+  -webkit-transition: height 0.3s ease-in-out;
+  -o-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
   bottom: 0;
   border-radius: 2rem 2rem 0 0;
   background: rgba(255, 255, 255, 0.8);
@@ -3669,6 +3681,12 @@ label {
   color: rgba(67, 78, 88, 0.75);
   font-size: 1.8rem;
   font-weight: 700;
+}
+
+.team__list-item-text-description.--about {
+  padding: 3.2rem;
+  text-align: start;
+  margin-top: 1.2rem;
 }
 
 .team__list-item-blue {
@@ -7525,6 +7543,14 @@ label {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 1.6rem;
+  }
+
+  .team__list-item-text {
+    height: 14.4rem;
+  }
+
+  .team__list-item-text-description {
+    font-size: 2.4rem;
   }
 
   .team__list-item-blue-text {
