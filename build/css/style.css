@@ -649,11 +649,11 @@ label {
   font-weight: 600;
 }
 
-.input-field.not-valid {
+input.not-valid {
   border: 0.1rem solid #00589b;
 }
 
-.input-field + .not-valid__mes {
+input + .not-valid__mes {
   z-index: 3;
   position: absolute;
   bottom: -65%;
@@ -680,7 +680,7 @@ label {
   line-height: normal;
 }
 
-.input-field + .not-valid__mes::before {
+input + .not-valid__mes::before {
   content: "";
   position: absolute;
   top: -20%;
@@ -4628,7 +4628,7 @@ label {
   cursor: pointer;
 }
 
-.request__form label[for=file] span {
+.request__form label[for=file] .file-description {
   cursor: pointer;
   color: #fff;
   font-size: 1.8rem;
@@ -4640,7 +4640,10 @@ label {
 }
 
 .request__form label[for=file] input {
-  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
 }
 
 .request__form-fields {
@@ -8192,7 +8195,7 @@ label {
     margin-bottom: 0.8rem;
   }
 
-  .request__form label[for=file] span {
+  .request__form label[for=file] .file-description {
     font-size: 3.2rem;
   }
 

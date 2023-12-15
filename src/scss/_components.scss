@@ -217,6 +217,8 @@
         font-size: 1.6rem;
         font-weight: 600;
     }
+}
+input {
     &.not-valid {
         border: 0.1rem solid $blue;
     }

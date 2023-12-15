@@ -117,7 +117,7 @@
             svg {
                 cursor: pointer;
             }
-            span {
+            .file-description {
                 cursor: pointer;
 
                 color: $white;
@@ -133,7 +133,10 @@
                 }
             }
             input {
-                display: none;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
             }
         }
         &-fields {
