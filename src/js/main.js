@@ -142,6 +142,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     bindModal('.success-button', '#success-modal', '#success-modal .modal__close', closeModalOnButtonClick);
+    bindModal('.rewiews-button', '#rewiews-modal', '#rewiews-modal .modal__close', closeModalOnButtonClick);
+    bindModal('.resume-button', '#resume-modal', '#resume-modal .modal__close', closeModalOnButtonClick);
+    bindModal('.law-button', '#law-modal', '#law-modal .modal__close', closeModalOnButtonClick);
+    bindModal('.share-button', '#share-modal', '#share-modal .modal__close', closeModalOnButtonClick);
     bindModal(
         '.question-button',
         '#question-modal',
@@ -190,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (form.querySelector('input[id="name"]')) {
                 const name = form.querySelector('input[id="name"]'),
-                    nameValue = form.querySelector('input[id="name"]').value;
+                    nameValue = name.value;
 
                 if (!nameValue) {
                     name.classList.add('not-valid');
@@ -223,12 +227,42 @@ document.addEventListener('DOMContentLoaded', function () {
                 removeMess(phone);
                 phone.classList.remove('not-valid');
             }
+            if (form.querySelector('input[id="email"]')) {
+                const mail = form.querySelector('input[id="email"]'),
+                    mailValue = mail.value;
 
+                if (!mailValue) {
+                    mail.classList.add('not-valid');
+                    addMess(mail, 'Поле должно быть заполнено!');
+                    return;
+                }
+                if (!isValidMail(mailValue)) {
+                    mail.classList.add('not-valid');
+                    addMess(mail, 'Поле не может содержать эти символы!');
+                    return;
+                }
+                removeMess(mail);
+                mail.classList.remove('not-valid');
+            }
+            if (form.querySelector('input[id="comment"]')) {
+                const comment = form.querySelector('input[id="comment"]'),
+                    commentValue = comment.value;
+
+                if (!commentValue) {
+                    comment.classList.add('not-valid');
+                    addMess(comment, 'Поле должно быть заполнено!');
+                    return;
+                }
+
+                removeMess(comment);
+                comment.classList.remove('not-valid');
+            }
             const modalSuccess = document.querySelector('#success-modal'),
-                modalQuestion = document.querySelector('#question-modal');
+                modals = $('[id $="-modal"]');
 
+            $(modals).removeClass('--active');
             modalSuccess.classList.add('--active');
-            modalQuestion.classList.remove('--active');
+
             $('body').width($(document).width()).addClass('locked');
 
             // var formData = $(this).serialize(); // Собираем все данные из формы
@@ -264,6 +298,12 @@ document.addEventListener('DOMContentLoaded', function () {
         if (name.length >= 2) {
             return pattern.test(name);
         }
+    }
+    function isValidMail(mail) {
+        const pattern =
+            /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+
+        return pattern.test(mail);
     }
     function isValidPhone(phone) {
         const pattern = /\+\s7\s\(\s\d{3}\s\)\s\s\d{3}\s-\s\d{2}\s-\s\d{2}/;
