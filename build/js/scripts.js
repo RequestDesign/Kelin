@@ -358,6 +358,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     bindModal('.success-button', '#success-modal', '#success-modal .modal__close', closeModalOnButtonClick);
+    bindModal('.rewiews-button', '#rewiews-modal', '#rewiews-modal .modal__close', closeModalOnButtonClick);
+    bindModal('.resume-button', '#resume-modal', '#resume-modal .modal__close', closeModalOnButtonClick);
+    bindModal('.law-button', '#law-modal', '#law-modal .modal__close', closeModalOnButtonClick);
+    bindModal('.share-button', '#share-modal', '#share-modal .modal__close', closeModalOnButtonClick);
     bindModal(
         '.question-button',
         '#question-modal',
@@ -441,10 +445,11 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             const modalSuccess = document.querySelector('#success-modal'),
-                modalQuestion = document.querySelector('#question-modal');
+                modals = $('[id $="-modal"]');
 
+            $(modals).removeClass('--active');
             modalSuccess.classList.add('--active');
-            modalQuestion.classList.remove('--active');
+
             $('body').width($(document).width()).addClass('locked');
 
             // var formData = $(this).serialize(); // Собираем все данные из формы

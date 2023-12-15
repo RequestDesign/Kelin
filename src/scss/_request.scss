@@ -32,6 +32,7 @@
     &__text-container {
         display: flex;
         flex-direction: column;
+
         gap: 3.4rem;
         max-width: 66.6rem;
 
@@ -41,12 +42,47 @@
     }
     &__form {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
         grid-column-gap: 1.2rem;
         grid-row-gap: 2.6rem;
         width: 100%;
         max-width: 81.4rem;
+
+        &-container {
+            width: 100%;
+            max-width: 81.4rem;
+
+            display: flex;
+            flex-direction: column;
+            gap: 2.8rem;
+        }
+
+        &.--grid-rows-3 {
+            grid-column-gap: 2.9rem;
+            grid-row-gap: 1.2rem;
+
+            @include small-tablet {
+                display: flex;
+                flex-direction: column;
+                gap: 1.6rem;
+            }
+
+            label {
+                grid-column: span 2;
+            }
+            .request__form-button,
+            .request__form-copyright {
+                margin-top: 1.6rem;
+            }
+        }
+        &-theme {
+            color: $white;
+            font-size: 1.6rem;
+            font-weight: 600;
+
+            @include small-tablet {
+                font-size: 3.6rem;
+            }
+        }
 
         @include small-tablet {
             display: flex;
@@ -70,6 +106,34 @@
         label[for='tel'] {
             @include small-tablet {
                 margin-bottom: 0.8rem;
+            }
+        }
+        label[for='file'] {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1.6rem;
+
+            svg {
+                cursor: pointer;
+            }
+            span {
+                cursor: pointer;
+
+                color: $white;
+                font-size: 1.8rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                letter-spacing: 0.18rem;
+                text-transform: uppercase;
+
+                @include small-tablet {
+                    font-size: 3.2rem;
+                }
+            }
+            input {
+                display: none;
             }
         }
         &-fields {
@@ -115,12 +179,16 @@
         }
     }
     &__social {
-        grid-area: 3/1/4/3;
+        grid-column: span 2;
         display: flex;
         align-items: center;
         justify-content: space-between;
         min-width: 81.4rem;
         margin-top: 0;
+
+        &.--min-width-61 {
+            min-width: 61.6rem;
+        }
 
         @include small-tablet {
             padding: 1rem 1rem 1rem 4.8rem;

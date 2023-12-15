@@ -56,7 +56,7 @@
             line-height: 6rem;
             text-align: center;
 
-            @include small-tablet{
+            @include small-tablet {
                 font-size: 6rem;
                 line-height: 6rem;
                 max-width: 90%;
@@ -78,7 +78,7 @@
             height: 5.2rem;
             z-index: 5;
 
-            @include small-tablet{
+            @include small-tablet {
                 right: 3.2rem;
                 top: 3.2rem;
                 max-width: 4.8rem;
@@ -91,25 +91,130 @@
             margin: 0 auto;
             text-align: center;
 
-            @include small-tablet{
+            @include small-tablet {
                 margin: initial;
                 width: 100%;
+            }
+        }
+
+        &__content {
+            display: flex;
+            gap: 8.6rem;
+
+            @include small-tablet {
+                flex-direction: column;
+                margin-top: 3.2rem;
+            }
+
+            &-left {
+                display: flex;
+                flex-direction: column;
+                gap: 4rem;
+
+                @include small-tablet {
+                    gap: 6rem;
+                }
+
+                &-list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.6rem;
+                    margin-left: 2rem;
+
+                    @include small-tablet {
+                        margin-left: 4rem;
+                    }
+
+                    li {
+                        list-style: initial;
+                    }
+                }
+                &-link {
+                    span {
+                        color: $white;
+
+                        @include small-tablet {
+                            font-size: 3.2rem;
+                        }
+                    }
+                }
+            }
+            &-right {
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                gap: 3.2rem;
+
+                max-width: 54rem;
+                padding: 5rem;
+
+                border-radius: 5rem;
+                background: linear-gradient(
+                    180deg,
+                    rgba(255, 255, 255, 0.8) 14.39%,
+                    rgba(255, 255, 255, 0) 182.55%
+                );
+
+                @include small-tablet {
+                    max-width: 100%;
+                }
+                p {
+                    z-index: 1;
+                }
+
+                &-image {
+                    position: absolute;
+                    bottom: 0;
+                    right: -25rem;
+                    height: 100%;
+                }
+            }
+        }
+        &__share-icons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 4rem;
+            margin-bottom: 4.8rem;
+
+            li {
+                width: 13rem;
+                height: 13rem;
+
+                a {
+                    padding: 0;
+                }
             }
         }
     }
 }
 
-#question-modal {
+#question-modal,
+#rewiews-modal,
+#resume-modal,
+#law-modal {
     .modal {
         max-width: 168.4rem;
         padding: 7.8rem 8.4rem;
 
-        @include small-tablet{
+        @include small-tablet {
             padding: 5.2rem 3.2rem;
         }
     }
 
     .request__content {
         padding: 0;
+    }
+}
+#law-modal {
+    .modal {
+        max-width: 134.2rem;
+    }
+}
+#share-modal {
+    .modal__title {
+        text-align: start;
+        margin: 0;
+        margin-bottom: 4.8rem;
     }
 }

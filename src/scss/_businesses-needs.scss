@@ -86,11 +86,7 @@
                 backdrop-filter: blur(2.5rem);
                 border: 0.1rem solid transparent;
 
-                span {
-                    padding: 3.6rem 6.4rem;
-                    width: 100%;
-                    display: block;
-                }
+                transition: background-color 0.3s ease-in-out;
 
                 &_blue {
                     background-color: $blue;
@@ -104,10 +100,37 @@
                         color: $white;
                     }
                 }
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    transition: opacity 0.3s ease-in-out;
+
+                    padding: 3.6rem 6.4rem;
+                    width: 100%;
+
+                    &.--hover-show {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                    }
+                }
                 &:hover {
                     border-color: $blue;
                     background: $grey;
                     color: $blue;
+
+                    span {
+                        &.--hover-show {
+                            opacity: 1;
+                        }
+                        &.--hover-hide {
+                            opacity: 0;
+                        }
+                    }
                 }
             }
             &-icon {
