@@ -163,6 +163,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    $('.law-button').click(function () {
+        console.log($(this).attr('data-index'));
+    });
     //footer dropdown
     const footerItems = document.querySelectorAll('.footer__nav-list-item-dropdown');
 
@@ -293,7 +296,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
     function isValidName(name) {
-        const pattern = /^[а-яА-Я]+$/;
+        const pattern = /^[а-яёА-ЯЁ]+(\s?[а-яёА-ЯЁ]*)*$/;
 
         if (name.length >= 2) {
             return pattern.test(name);

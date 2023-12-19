@@ -3,138 +3,9 @@
     padding-top: 1.8rem;
 
     @include small-tablet {
-        margin-bottom: 8rem;
-    }
-
-    &.--sanctions {
-        .intro__poster {
-            right: 0rem;
-            top: -2rem;
-            max-width: 83rem;
-            height: 69rem;
-
-            @include small-tablet {
-                max-width: 66rem;
-                height: 60rem;
-            }
-        }
-
-        .intro__button {
-            @include small-tablet {
-                transform: translateY(-6rem);
-            }
-        }
-    }
-    &.--corporate {
-        .intro__poster {
-            right: -11rem;
-            top: -12.2rem;
-            max-width: 100rem;
-            height: 73.3rem;
-
-            @include small-tablet {
-                max-width: 60.8rem;
-                height: 44.4rem;
-                margin-left: 12.1rem;
-            }
-        }
-    }
-    &.--contract {
-        .intro__poster {
-            right: -12rem;
-            top: -24.2rem;
-            max-width: 100.8rem;
-            height: 85.2rem;
-
-            @include small-tablet {
-                max-width: 71.9rem;
-                height: 60.8rem;
-                margin-left: 2rem;
-            }
-        }
-    }
-    &.--labor {
-        .intro__poster {
-            right: -46rem;
-            top: -16.2rem;
-            max-width: 137.5rem;
-            height: 84.4rem;
-
-            @include small-tablet {
-                max-width: 79.4rem;
-                height: 48.7rem;
-                margin-left: 2rem;
-            }
-        }
-    }
-    &.--financial {
-        .intro__poster {
-            right: -12rem;
-            max-width: 111rem;
-            top: -20rem;
-            height: 98rem;
-
-            @include small-tablet {
-                max-width: 59rem;
-                height: 53rem;
-                margin: -4rem auto 0;
-            }
-        }
-
-        .intro__button {
-            @include small-tablet {
-                margin-top: 0;
-            }
-        }
-    }
-    &.--intellectual {
-        .intro__poster {
-            z-index: -1;
-            right: 13rem;
-            top: -5rem;
-            max-width: 52rem;
-            width: 100%;
-            height: 77rem;
-
-            @include small-tablet {
-                max-width: 37rem;
-                height: 58rem;
-                margin: 2rem auto 0;
-            }
-        }
-
-        .intro__button {
-            @include small-tablet {
-                transform: translateY(-6rem);
-            }
-        }
-    }
-    &.--judical {
-        .intro__poster {
-            z-index: -1;
-            right: -15rem;
-            top: -10rem;
-            max-width: 105rem;
-            width: 100%;
-            height: 77rem;
-
-            @include small-tablet {
-                max-width: 75rem;
-                height: 61rem;
-                margin: 0rem auto 0 7rem;
-            }
-        }
-
-        .intro__button {
-            @include small-tablet {
-                transform: translateY(-6rem);
-            }
-        }
-    }
-
-    @include small-tablet {
         padding-top: 0;
         overflow: hidden;
+        margin-bottom: 8rem;
     }
 
     &__content {
@@ -200,33 +71,63 @@
 
         @include small-tablet {
             width: 100%;
-            margin-top: -7rem;
             text-align: center;
         }
     }
 
     &__poster {
-        z-index: -1;
-
         position: absolute;
-        right: -3rem;
-        top: -5rem;
-        max-width: 92rem;
-        width: 100%;
-        height: 67rem;
+        z-index: -10;
+        width: 141.2rem;
+        height: 110.7rem;
+        right: -11.8rem;
+        top: -24.5rem;
+        -webkit-mask-image: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0) 0,
+            #fff 50%,
+            #fff 90%,
+            rgba(254, 254, 254, 0) 100%
+        );
 
         @include small-tablet {
-            position: static;
-            max-width: 100%;
-            height: 54rem;
-            margin-left: 3rem;
+            position: unset;
+            width: 100%;
+            height: 58.8rem;
+            // position: relative;
+            // width: 109rem;
+            // height: 86rem;
+            // top: 0;
+            // right: 29.1rem;
+            -webkit-mask-image: linear-gradient(
+                0deg,
+                rgba(255, 255, 255, 0) 0,
+                #fff 50%,
+                #fff 90%,
+                rgba(254, 254, 254, 0) 100%
+            );
         }
+        // z-index: -1;
 
-        &_business-areas-page {
-            top: -28.4rem;
-            right: -10rem;
-            max-width: 125.8rem;
-            height: 107rem;
-        }
+        // position: absolute;
+        // right: -3rem;
+        // top: -5rem;
+        // max-width: 92rem;
+        // width: 100%;
+        // height: 67rem;
+
+        // @include small-tablet {
+        //     position: static;
+        //     max-width: 100%;
+        //     height: 54rem;
+        //     margin-left: 3rem;
+        // }
+
+        // &_business-areas-page {
+        //     top: -28.4rem;
+        //     right: -10rem;
+        //     max-width: 125.8rem;
+        //     height: 107rem;
+        // }
     }
 }

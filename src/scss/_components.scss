@@ -241,6 +241,11 @@ input {
         font-weight: 700;
         line-height: normal;
 
+        @include small-tablet {
+            font-size: 3.2rem;
+            padding: 4rem;
+        }
+
         &::before {
             @include pseudo {
             }
