@@ -540,6 +540,8 @@ document.addEventListener('DOMContentLoaded', function () {
         $('.spheres-card').removeClass('active');
 
         let href = $(this).attr('href');
+        $(href).addClass('active');
+
         $('html, body').animate(
             {
                 scrollTop: $(href).offset().top - $('header').outerHeight()
@@ -548,7 +550,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 duration: 0
             }
         );
-        $(href).addClass('active');
+        setTimeout(function () {
+            $(href).removeClass('active');
+        }, 1200);
 
         return false;
     });

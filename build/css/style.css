@@ -3184,35 +3184,8 @@ input + .not-valid__mes::before {
 }
 
 .spheres-card.active {
-  -webkit-animation: activeCard 3s ease-in-out;
-          animation: activeCard 3s ease-in-out;
-}
-
-@-webkit-keyframes activeCard {
-  0% {
-    border: 0.1rem solid #00589b;
-    background: #cde3f5;
-  }
-
-  100% {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(14.39%, rgba(255, 255, 255, 0.5)), color-stop(182.55%, rgba(255, 255, 255, 0)));
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 14.39%, rgba(255, 255, 255, 0) 182.55%);
-    border: 0.1rem solid #fff;
-  }
-}
-
-@keyframes activeCard {
-  0% {
-    border: 0.1rem solid #00589b;
-    background: #cde3f5;
-  }
-
-  100% {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(14.39%, rgba(255, 255, 255, 0.5)), color-stop(182.55%, rgba(255, 255, 255, 0)));
-    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.5) 14.39%, rgba(255, 255, 255, 0) 182.55%);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 14.39%, rgba(255, 255, 255, 0) 182.55%);
-    border: 0.1rem solid #fff;
-  }
+  border: 0.1rem solid #00589b;
+  background: #cde3f5;
 }
 
 .spheres-card-title {
