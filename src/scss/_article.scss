@@ -19,6 +19,7 @@
     &__info {
         display: flex;
         justify-content: space-between;
+        gap: 2rem;
         margin-bottom: 4.4rem;
 
         @include small-tablet {
@@ -27,10 +28,15 @@
 
         &-left {
             display: flex;
+            align-items: center;
+
             gap: 3.2rem;
 
             @include small-tablet {
                 flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                
                 gap: 1.6rem;
             }
         }
@@ -58,6 +64,7 @@
     &__reading {
         display: flex;
         align-items: center;
+        white-space: nowrap;
         gap: 1rem;
         color: $text-secondary;
         font-size: 2.3rem;
@@ -102,6 +109,8 @@
 
         @include small-tablet {
             font-size: 3.6rem;
+            line-height: 3.875rem;
+            text-align: end;
         }
     }
     &__title {

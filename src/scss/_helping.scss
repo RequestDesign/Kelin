@@ -5,30 +5,6 @@
     margin-top: 5rem;
     position: relative;
 
-    &::after {
-        @include pseudo {
-            @media (min-width: 48em) {
-                background: radial-gradient(
-                        31.12% 17.8% at 30.31% 46.13%,
-                        rgba(255, 255, 255, 0) 0,
-                        rgba(255, 255, 255, 0) 100%
-                    ),
-                    linear-gradient(120deg, rgba(255, 255, 255, 0) 23.03%, rgba(246, 124, 45, 0) 51.13%),
-                    linear-gradient(193deg, rgba(248, 246, 246, 0.59) 23.28%, #fdfdfd00 41.01%),
-                    linear-gradient(115deg, rgba(234, 240, 245, 0.49) 33.58%, rgba(217, 227, 238, 0.1) 53.79%),
-                    linear-gradient(248deg, #d79972 13.09%, rgba(255, 255, 255, 0) 34.9%);
-                -webkit-filter: blur(5rem);
-                filter: blur(5rem);
-                right: 0;
-                top: -11rem;
-                height: 100%;
-                left: auto;
-                width: 50%;
-                z-index: -1;
-            }
-        }
-    }
-
     &__content {
         padding: 5rem;
         border-radius: 5rem;
