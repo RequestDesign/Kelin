@@ -1,5 +1,5 @@
 .clients {
-    &__content{
+    &__content {
         padding: 3.2rem;
         padding-top: 5.2rem;
     }
@@ -90,6 +90,8 @@
                 text-transform: uppercase;
                 max-width: 47.6rem;
 
+                @include clamp-line(1);
+
                 @include small-tablet {
                     width: min-content;
                     font-size: 4rem;
@@ -97,6 +99,13 @@
             }
             &-description {
                 max-width: 58.4rem;
+
+                @include clamp-line(2);
+
+                @include small-tablet {
+                    @include clamp-line(5);
+                }
+
                 &-simple {
                     max-width: 69.2rem;
                 }

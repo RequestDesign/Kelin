@@ -17,15 +17,25 @@
         }
 
         &-slide {
+            height: auto;
+            display: flex;
+            gap: 2rem;
+
             &-title {
+                display: inline;
+                max-height: min-content;
+                text-align: end;
+                @include clamp-line(2);
+
                 font-family: $font-family-URW;
                 font-size: 3.2rem;
                 font-weight: 400;
                 letter-spacing: 0.064rem;
                 text-transform: uppercase;
-                position: absolute;
+
+                // position: absolute;
+
                 writing-mode: vertical-lr;
-                display: block;
                 transform: rotate(180deg);
 
                 @include small-tablet {
@@ -33,8 +43,11 @@
                 }
             }
             &-image {
+                align-self: center;
+
                 width: 22.3282rem;
                 height: 26.488rem;
+
                 border-radius: 2rem;
                 overflow: hidden;
                 float: right;

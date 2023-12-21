@@ -60,7 +60,11 @@
             width: 7.6rem;
             height: 8rem;
             mix-blend-mode: darken;
-            
+
+            img {
+                object-fit: contain;
+            }
+
             @include small-tablet {
                 min-width: 9.5rem;
                 min-height: 10rem;

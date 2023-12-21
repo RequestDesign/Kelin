@@ -265,8 +265,18 @@
                 letter-spacing: 0.064rem;
                 text-transform: uppercase;
 
+                @include clamp-line(1);
+
                 @include small-tablet {
                     font-size: 4rem;
+                    @include clamp-line(2);
+                }
+            }
+            &-description {
+                @include clamp-line(2);
+
+                @include small-tablet {
+                    @include clamp-line(5);
                 }
             }
         }
