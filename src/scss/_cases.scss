@@ -54,6 +54,7 @@
 
     &__item {
         display: flex;
+        height: auto;
         gap: 3.2rem;
         padding: 5rem;
         position: relative;
@@ -91,7 +92,8 @@
         }
 
         &-image {
-            height: 100%;
+            min-height: 16rem;
+            max-height: 16rem;
             min-width: 16rem;
             max-width: 16rem;
             border-radius: 2rem;
@@ -159,7 +161,7 @@
     &__slider {
         position: relative;
 
-        @include small-tablet{
+        @include small-tablet {
         }
     }
 
@@ -170,14 +172,14 @@
         }
     }
 
-    &__caption{
+    &__caption {
         margin-top: 4.4rem;
 
         display: flex;
         align-items: center;
         justify-content: center;
 
-        @include small-tablet{
+        @include small-tablet {
             margin-top: 8rem;
             padding: 3.2rem;
         }

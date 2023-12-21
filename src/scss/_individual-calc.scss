@@ -79,6 +79,8 @@
 
             &-title {
                 max-width: 60rem;
+
+                @include clamp-line(3);
             }
             &-text {
                 display: flex;

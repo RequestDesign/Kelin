@@ -4384,6 +4384,11 @@ input + .not-valid__mes::before {
   mix-blend-mode: darken;
 }
 
+.benefits-item__icon img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .benefits-item__icon-person-mark {
   min-width: 9rem;
   min-height: 8rem;
@@ -4847,10 +4852,18 @@ input + .not-valid__mes::before {
   letter-spacing: 0.064rem;
   text-transform: uppercase;
   max-width: 47.6rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
 }
 
 .clients-list__item-description {
   max-width: 58.4rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 .clients-list__item-description-simple {
@@ -4985,6 +4998,10 @@ input + .not-valid__mes::before {
 
 .protection-swiper-slide-review {
   color: rgba(67, 78, 88, 0.75);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
 }
 
 .protection-swiper-slide-cards {
@@ -5028,23 +5045,40 @@ input + .not-valid__mes::before {
   -webkit-mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, white 10%, white 90%, rgba(254, 254, 254, 0) 100%);
 }
 
+.tu-letters-swiper-slide {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+}
+
 .tu-letters-swiper-slide-title {
+  display: inline;
+  max-height: -webkit-min-content;
+  max-height: -moz-min-content;
+  max-height: min-content;
+  text-align: end;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
   font-family: "URW Geometric Extended", sans-serif;
   font-size: 3.2rem;
   font-weight: 400;
   letter-spacing: 0.064rem;
   text-transform: uppercase;
-  position: absolute;
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
-  display: block;
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
 .tu-letters-swiper-slide-image {
+  -ms-flex-item-align: center;
+      align-self: center;
   width: 22.3282rem;
   height: 26.488rem;
   border-radius: 2rem;
@@ -5289,6 +5323,17 @@ input + .not-valid__mes::before {
   font-weight: 400;
   letter-spacing: 0.064rem;
   text-transform: uppercase;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.skills-industry__industry-item-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 .talents__title {
@@ -5299,6 +5344,20 @@ input + .not-valid__mes::before {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1.2rem;
+}
+
+.talents__list h2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.talents__list p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
 }
 
 .talents__list-item {
@@ -5752,6 +5811,10 @@ input + .not-valid__mes::before {
 
 .individual-calc-swiper-slide-title {
   max-width: 60rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 
 .individual-calc-swiper-slide-text {
@@ -6264,6 +6327,7 @@ input + .not-valid__mes::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: auto;
   gap: 3.2rem;
   padding: 5rem;
   position: relative;
@@ -6288,7 +6352,8 @@ input + .not-valid__mes::before {
 }
 
 .cases__item-image {
-  height: 100%;
+  min-height: 16rem;
+  max-height: 16rem;
   min-width: 16rem;
   max-width: 16rem;
   border-radius: 2rem;
@@ -8223,6 +8288,13 @@ input + .not-valid__mes::before {
     font-size: 4rem;
   }
 
+  .clients-list__item-description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+  }
+
   .protection__content {
     padding: 3.2rem;
     padding-top: 5.2rem;
@@ -8287,6 +8359,13 @@ input + .not-valid__mes::before {
 
   .protection-swiper-slide-title {
     font-size: 4rem;
+  }
+
+  .protection-swiper-slide-review {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 10;
+    overflow: hidden;
   }
 
   .protection-swiper-slide-cards-item {
@@ -8439,6 +8518,17 @@ input + .not-valid__mes::before {
 
   .skills-industry__industry-item-title {
     font-size: 4rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+
+  .skills-industry__industry-item-description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
   }
 
   .talents__content {
