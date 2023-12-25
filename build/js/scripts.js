@@ -548,6 +548,17 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    $('input[type="file"]').on('change', function (e) {
+        $(this).prev('span').html(e.target.files[0].name);
+    });
+
+    $('.--copy-link a').on('click', function () {
+        addMess($('.--copy-link a'), 'ссылка скопирована');
+
+        setTimeout(function () {
+            removeMess($('.--copy-link a'));
+        }, 3000);
+    });
     //scroll to card
     $(`.spheres-list-item a`).click(function () {
         $('.spheres-card').removeClass('active');

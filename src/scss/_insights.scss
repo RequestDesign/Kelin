@@ -2,7 +2,7 @@
 @import 'mixins';
 
 .insights {
-    @include small-tablet{
+    @include small-tablet {
         overflow-x: hidden;
     }
 
@@ -28,7 +28,7 @@
                 padding-right: 2rem;
                 overflow-x: scroll;
 
-                &::-webkit-scrollbar{
+                &::-webkit-scrollbar {
                     display: none;
                 }
             }
@@ -76,8 +76,9 @@
     }
 
     &__articles {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-auto-rows: 1fr;
         gap: 1.2rem;
 
         @include small-tablet {

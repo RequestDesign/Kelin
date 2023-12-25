@@ -653,7 +653,7 @@ input.not-valid {
   border: 0.1rem solid #00589b;
 }
 
-input + .not-valid__mes {
+.not-valid__mes {
   z-index: 3;
   position: absolute;
   bottom: -65%;
@@ -680,7 +680,7 @@ input + .not-valid__mes {
   line-height: normal;
 }
 
-input + .not-valid__mes::before {
+.not-valid__mes::before {
   content: "";
   position: absolute;
   top: -20%;
@@ -1679,13 +1679,9 @@ input + .not-valid__mes::before {
 }
 
 .insights__articles {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-auto-rows: 1fr;
   gap: 1.2rem;
 }
 
@@ -2134,6 +2130,7 @@ input + .not-valid__mes::before {
   -o-transition: 0.3s background ease-out;
   transition: 0.3s background ease-out;
   border: 0.2rem solid #fff;
+  position: relative;
 }
 
 .article__share-icons-item:hover {
@@ -2171,6 +2168,14 @@ input + .not-valid__mes::before {
   -webkit-transition: 0.3s fill ease-out;
   -o-transition: 0.3s fill ease-out;
   transition: 0.3s fill ease-out;
+}
+
+.article__share .not-valid__mes {
+  bottom: -76%;
+  left: -100%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .article__other-articles-info {
@@ -2213,6 +2218,7 @@ input + .not-valid__mes::before {
 .article__other-articles-item {
   max-width: 52rem;
   min-height: 54.1rem;
+  height: auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -4232,6 +4238,7 @@ input + .not-valid__mes::before {
 .hero-video__description {
   color: rgba(67, 78, 88, 0.75);
   max-width: 61.2rem;
+  text-align: center;
 }
 
 .hero-video__video {
@@ -5035,23 +5042,19 @@ input + .not-valid__mes::before {
 }
 
 .tu-letters-swiper-slide-title {
-  display: inline;
-  max-height: -webkit-min-content;
-  max-height: -moz-min-content;
-  max-height: min-content;
+  display: inline-block;
+  max-height: 45rem;
+  max-width: 10rem;
   text-align: end;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
   overflow: hidden;
   font-family: "URW Geometric Extended", sans-serif;
   font-size: 3.2rem;
   font-weight: 400;
   letter-spacing: 0.064rem;
   text-transform: uppercase;
-  -webkit-writing-mode: vertical-lr;
-      -ms-writing-mode: tb-lr;
-          writing-mode: vertical-lr;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -6599,7 +6602,7 @@ input + .not-valid__mes::before {
     border-radius: 10rem;
   }
 
-  input + .not-valid__mes {
+  .not-valid__mes {
     font-size: 3.2rem;
     padding: 4rem;
   }
@@ -7928,6 +7931,7 @@ input + .not-valid__mes::before {
 
   .hero-video__description {
     max-width: unset;
+    text-align: start;
   }
 
   .hero-video__video {
