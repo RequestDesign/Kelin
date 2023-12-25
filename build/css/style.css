@@ -4963,6 +4963,7 @@ input.not-valid {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: auto;
 }
 
 .protection-swiper-slide-title {
@@ -5043,8 +5044,8 @@ input.not-valid {
 
 .tu-letters-swiper-slide-title {
   display: inline-block;
-  max-height: 45rem;
-  max-width: 10rem;
+  max-height: 30rem;
+  max-width: 7rem;
   text-align: end;
   overflow: hidden;
   font-family: "URW Geometric Extended", sans-serif;
@@ -5063,8 +5064,10 @@ input.not-valid {
 .tu-letters-swiper-slide-image {
   -ms-flex-item-align: center;
       align-self: center;
+  max-width: 22.3282rem;
+  min-width: 22.3282rem;
   width: 22.3282rem;
-  height: 26.488rem;
+  height: auto;
   border-radius: 2rem;
   overflow: hidden;
   float: right;
@@ -8358,6 +8361,8 @@ input.not-valid {
 
   .tu-letters-swiper-slide-image {
     width: 38.2rem;
+    min-width: 38.2rem;
+    max-width: 38.2rem;
     height: 45.2rem;
   }
 
