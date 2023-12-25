@@ -22,10 +22,9 @@
             gap: 2rem;
 
             &-title {
-                
                 display: inline-block;
-                max-height: 45rem;
-                max-width: 10rem;
+                max-height: 30rem;
+                max-width: 7rem;
 
                 text-align: end;
                 overflow: hidden;
@@ -47,8 +46,10 @@
             &-image {
                 align-self: center;
 
+                max-width: 22.3282rem;
+                min-width: 22.3282rem;
                 width: 22.3282rem;
-                height: 26.488rem;
+                height: auto;
 
                 border-radius: 2rem;
                 overflow: hidden;
