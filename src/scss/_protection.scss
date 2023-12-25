@@ -94,6 +94,7 @@
             flex-direction: row;
             flex-wrap: nowrap;
             justify-content: space-between;
+            height: auto;
 
             @include small-tablet {
                 padding: 3.2rem;
