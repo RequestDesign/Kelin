@@ -128,11 +128,11 @@
 
             &-review {
                 color: $text-secondary;
-                @include clamp-line(5);
+                // @include clamp-line(5);
 
-                @include small-tablet {
-                    @include clamp-line(10);
-                }
+                // @include small-tablet {
+                //     @include clamp-line(10);
+                // }
             }
             &-cards {
                 display: flex;

@@ -67,19 +67,8 @@
                     width: 12rem;
                     height: 12rem;
                 }
-
-                &.volkswagen {
-                    padding: 2.8rem;
-
-                    @include small-tablet {
-                        padding: 3rem;
-                    }
-                }
-                &.simple {
-                    padding: 4.5rem 2.2rem;
-                }
-                &.lamoda {
-                    padding: 4.9rem 1.9rem;
+                img {
+                    height: auto;
                 }
             }
             &-title {
@@ -90,7 +79,7 @@
                 text-transform: uppercase;
                 max-width: 47.6rem;
 
-                @include clamp-line(1);
+                // @include clamp-line(1);
 
                 @include small-tablet {
                     width: min-content;
@@ -100,11 +89,11 @@
             &-description {
                 max-width: 58.4rem;
 
-                @include clamp-line(2);
+                // @include clamp-line(2);
 
-                @include small-tablet {
-                    @include clamp-line(5);
-                }
+                // @include small-tablet {
+                //     @include clamp-line(5);
+                // }
 
                 &-simple {
                     max-width: 69.2rem;
