@@ -36,7 +36,7 @@
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: flex-start;
-                
+
                 gap: 1.6rem;
             }
         }
@@ -319,7 +319,6 @@
             }
         }
     }
-
     &__share {
         display: flex;
         justify-content: space-between;
@@ -366,6 +365,8 @@
                 transition: 0.3s background ease-out;
                 border: 0.2rem solid $white;
 
+                position: relative;
+
                 &:hover {
                     background: $grey;
 
@@ -408,6 +409,11 @@
                     }
                 }
             }
+        }
+        .not-valid__mes {
+            bottom: -76%;
+            left: -100%;
+            width: max-content;
         }
     }
     &__other-articles {
@@ -453,6 +459,7 @@
         &-item {
             max-width: 52rem;
             min-height: 54.1rem;
+            height: auto;
             flex-direction: column;
 
             @include small-tablet {

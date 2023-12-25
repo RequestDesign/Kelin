@@ -292,9 +292,11 @@
     &__description {
         color: $text-secondary;
         max-width: 61.2rem;
+        text-align: center;
 
         @include small-tablet {
             max-width: unset;
+            text-align: start;
         }
     }
     &__video {
