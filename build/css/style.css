@@ -3256,9 +3256,6 @@ input + .not-valid__mes::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   gap: 1.8rem;
 }
 
@@ -3277,6 +3274,10 @@ input + .not-valid__mes::before {
           align-items: center;
   min-width: 14.4rem;
   min-height: 9.8rem;
+  max-width: 14.4rem;
+  max-height: 9.8rem;
+  width: 14.4rem;
+  height: 9.8rem;
   border: 0.1rem solid #fff;
   border-radius: 4rem;
   padding: 1.3rem;
@@ -4833,16 +4834,8 @@ input + .not-valid__mes::before {
   background-color: #fff;
 }
 
-.clients-list__item-image.volkswagen {
-  padding: 2.8rem;
-}
-
-.clients-list__item-image.simple {
-  padding: 4.5rem 2.2rem;
-}
-
-.clients-list__item-image.lamoda {
-  padding: 4.9rem 1.9rem;
+.clients-list__item-image img {
+  height: auto;
 }
 
 .clients-list__item-title {
@@ -4852,18 +4845,10 @@ input + .not-valid__mes::before {
   letter-spacing: 0.064rem;
   text-transform: uppercase;
   max-width: 47.6rem;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-  overflow: hidden;
 }
 
 .clients-list__item-description {
   max-width: 58.4rem;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
 }
 
 .clients-list__item-description-simple {
@@ -4998,10 +4983,6 @@ input + .not-valid__mes::before {
 
 .protection-swiper-slide-review {
   color: rgba(67, 78, 88, 0.75);
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
-  overflow: hidden;
 }
 
 .protection-swiper-slide-cards {
@@ -8277,22 +8258,11 @@ input + .not-valid__mes::before {
     height: 12rem;
   }
 
-  .clients-list__item-image.volkswagen {
-    padding: 3rem;
-  }
-
   .clients-list__item-title {
     width: -webkit-min-content;
     width: -moz-min-content;
     width: min-content;
     font-size: 4rem;
-  }
-
-  .clients-list__item-description {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
-    overflow: hidden;
   }
 
   .protection__content {
@@ -8359,13 +8329,6 @@ input + .not-valid__mes::before {
 
   .protection-swiper-slide-title {
     font-size: 4rem;
-  }
-
-  .protection-swiper-slide-review {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 10;
-    overflow: hidden;
   }
 
   .protection-swiper-slide-cards-item {

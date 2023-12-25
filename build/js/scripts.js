@@ -378,10 +378,6 @@ document.addEventListener('DOMContentLoaded', function () {
             $('body').removeClass('locked');
         });
     }
-
-    $('.law-button').click(function () {
-        console.log($(this).attr('data-index'));
-    });
     //footer dropdown
     const footerItems = document.querySelectorAll('.footer__nav-list-item-dropdown');
 
@@ -391,7 +387,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     .closest('.footer__nav-list-item')
                     .querySelector('.footer__nav__dropdown-list'),
                 dropdownFooterArrow = item.querySelector('.footer__nav__dropdown-list-icon');
-            // console.log(item);
             $(dropdownFooter).toggleClass('open');
 
             if ($(dropdownFooter).hasClass('open')) {
@@ -403,99 +398,117 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+    /**
+     * Валидация имени
+     *
+     * @param {string} nameId id input name
+     * @return {boolean}  true, если валидно
+     */
+    function ValidationName(nameId) {
+        if ($(nameId)) {
+            const name = $(nameId),
+                nameValue = name.val();
 
-    //vilidation forms
-    const forms = document.querySelectorAll('form');
-
-    forms.forEach((form) => {
-        $(form).submit(function (event) {
-            event.preventDefault();
-
-            if (form.querySelector('input[id="name"]')) {
-                const name = form.querySelector('input[id="name"]'),
-                    nameValue = name.value;
-
-                if (!nameValue) {
-                    name.classList.add('not-valid');
-                    addMess(name, 'Поле должно быть заполнено!');
-                    return;
-                }
-                if (!isValidName(nameValue)) {
-                    name.classList.add('not-valid');
-                    addMess(name, 'Поле не может содержать эти символы!');
-                    return;
-                }
-                removeMess(name);
-                name.classList.remove('not-valid');
+            if (!nameValue) {
+                name.addClass('not-valid');
+                addMess(name, 'Поле должно быть заполнено!');
+                return false;
             }
-            if (form.querySelector('input[id="tel"]')) {
-                const phone = form.querySelector('input[id="tel"]'),
-                    phoneValue = phone.value;
-
-                if (!phoneValue) {
-                    phone.classList.add('not-valid');
-                    addMess(phone, 'Поле должно быть заполнено!');
-
-                    return;
-                }
-                if (!isValidPhone(phoneValue)) {
-                    phone.classList.add('not-valid');
-                    addMess(phone, 'Поле не может иметь такой вид!');
-                    return;
-                }
-                removeMess(phone);
-                phone.classList.remove('not-valid');
+            if (!isValidName(nameValue)) {
+                name.addClass('not-valid');
+                addMess(name, 'Поле не может содержать эти символы!');
+                return false;
             }
-            if (form.querySelector('input[id="email"]')) {
-                const mail = form.querySelector('input[id="email"]'),
-                    mailValue = mail.value;
+            removeMess(name);
+        }
+        return true;
+    }
+    /**
+     * Валидация телефона
+     *
+     * @param {string} phoneId id input phone
+     * @return {boolean} true, если валидно
+     */
+    function ValidationPhone(phoneId) {
+        if ($(phoneId)) {
+            const phone = $(phoneId),
+                phoneValue = phone.val();
 
-                if (!mailValue) {
-                    mail.classList.add('not-valid');
-                    addMess(mail, 'Поле должно быть заполнено!');
-                    return;
-                }
-                if (!isValidMail(mailValue)) {
-                    mail.classList.add('not-valid');
-                    addMess(mail, 'Поле не может содержать эти символы!');
-                    return;
-                }
-                removeMess(mail);
-                mail.classList.remove('not-valid');
+            if (!phoneValue) {
+                phone.addClass('not-valid');
+                addMess(phone, 'Поле должно быть заполнено!');
+
+                return false;
             }
-            if (form.querySelector('input[id="comment"]')) {
-                const comment = form.querySelector('input[id="comment"]'),
-                    commentValue = comment.value;
-
-                if (!commentValue) {
-                    comment.classList.add('not-valid');
-                    addMess(comment, 'Поле должно быть заполнено!');
-                    return;
-                }
-
-                removeMess(comment);
-                comment.classList.remove('not-valid');
+            if (!isValidPhone(phoneValue)) {
+                phone.addClass('not-valid');
+                addMess(phone, 'Поле не может иметь такой вид!');
+                return false;
             }
-            const modalSuccess = document.querySelector('#success-modal'),
-                modals = $('[id $="-modal"]');
+            removeMess(phone);
+            phone.removeClass('not-valid');
+        }
+        return true;
+    }
+    /**
+     * Валидация майла
+     *
+     * @param {string} emailId id input email
+     * @return {boolean}true, если валидно
+     */
+    function ValidationEmail(emailId) {
+        if ($(emailId)) {
+            const mail = $(emailId),
+                mailValue = mail.value;
 
-            $(modals).removeClass('--active');
-            modalSuccess.classList.add('--active');
+            if (!mailValue) {
+                mail.addClass('not-valid');
+                addMess(mail, 'Поле должно быть заполнено!');
+                return false;
+            }
+            if (!isValidMail(mailValue)) {
+                mail.addClass('not-valid');
+                addMess(mail, 'Поле не может содержать эти символы!');
+                return false;
+            }
+            removeMess(mail);
+            mail.removeClass('not-valid');
+        }
+        return true;
+    }
+    /**
+     * Валидация комментария
+     *
+     * @param {string} commentId id input comment
+     * @return {boolean} true, если валидно
+     */
+    function ValidationComment(commentId) {
+        if ($(commentId)) {
+            const comment = $(commentId),
+                commentValue = comment.value;
 
-            $('body').width($(document).width()).addClass('locked');
+            if (!commentValue) {
+                comment.addClass('not-valid');
+                addMess(comment, 'Поле должно быть заполнено!');
+                return false;
+            }
+            removeMess(comment);
+            comment.removeClass('not-valid');
+        }
+        return true;
+    }
+    /**
+     * Скрывает все модалки, если они открыты, показывает модалку успеха отправки формы
+     */
+    function HideAllModalsForFormSuccess() {
+        const modalSuccess = document.querySelector('#success-modal'),
+            modals = $('[id $="-modal"]');
 
-            // var formData = $(this).serialize(); // Собираем все данные из формы
-            // $.ajax({
-            //     type: 'POST', // Метод отправки
-            //     url: 'public/script/send.php', // Путь до файла отправителя
-            //     data: formData,
-            //     success: function () {
-            //         // Код в этом блоке выполняется при успешной отправке сообщения
-            //         alert('Ваше сообщение отправлено!');
-            //     }
-            // });
-        });
-    });
+        $(modals).removeClass('--active');
+        modalSuccess.classList.add('--active');
+
+        $('body').width($(document).width()).addClass('locked');
+    }
     function addMess(elem, mess) {
         if ($(elem).next('.not-valid__mes').length) {
             $(elem).next('.not-valid__mes').text(mess);

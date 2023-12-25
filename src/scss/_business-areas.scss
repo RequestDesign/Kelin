@@ -160,7 +160,6 @@
 
         &-icons {
             display: flex;
-            justify-content: space-between;
             gap: 1.8rem;
 
             @include small-tablet {
@@ -172,8 +171,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
             min-width: 14.4rem;
             min-height: 9.8rem;
+            max-width: 14.4rem;
+            max-height: 9.8rem;
+            width: 14.4rem;
+            height: 9.8rem;
+
             border: 0.1rem solid $white;
             border-radius: 4rem;
             padding: 1.3rem;
