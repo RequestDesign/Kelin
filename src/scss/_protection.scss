@@ -91,9 +91,8 @@
         }
         &-slide {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             flex-wrap: nowrap;
-            justify-content: space-between;
             height: auto;
 
             @include small-tablet {
@@ -101,7 +100,18 @@
                 flex-direction: column;
                 gap: 2.4rem;
             }
+            &-container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                gap: 2rem;
 
+                @include small-tablet {
+                    flex-direction: column;
+                    gap: 4rem;
+                }
+            }
             &-title {
                 font-family: $font-family-URW;
                 font-size: 3.2rem;
@@ -129,11 +139,6 @@
 
             &-review {
                 color: $text-secondary;
-                // @include clamp-line(5);
-
-                // @include small-tablet {
-                //     @include clamp-line(10);
-                // }
             }
             &-cards {
                 display: flex;
@@ -156,7 +161,6 @@
                         font-size: 3.2rem;
                         font-weight: 400;
                         letter-spacing: 0.064rem;
-                        text-transform: uppercase;
 
                         @include small-tablet {
                             font-size: 4rem;

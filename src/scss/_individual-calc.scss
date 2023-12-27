@@ -1,5 +1,7 @@
 .individual-calc {
     &__content {
+        position: relative;
+
         @include small-tablet {
             padding: 3.2rem;
             padding-top: 5.2rem;
@@ -109,6 +111,32 @@
                     flex-direction: column;
                     gap: 2.4rem;
                 }
+            }
+        }
+        &-button {
+            z-index: 3;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 8.5rem;
+            height: 8.5rem;
+            border-radius: 50%;
+            border: 0.2rem solid $white;
+
+            @include small-tablet {
+                display: none;
+            }
+
+            &-next {
+                position: absolute;
+                bottom: 13rem;
+                right: -4rem;
+            }
+            &-prev {
+                position: absolute;
+                bottom: 13rem;
+                left: -4rem;
             }
         }
     }

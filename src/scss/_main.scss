@@ -140,4 +140,34 @@
 }
 .category-list-swiper {
     margin-bottom: 4.4rem;
+
+    &__container {
+        position: relative;
+    }
+    &-button {
+        z-index: 3;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 8.5rem;
+        height: 8.5rem;
+        border-radius: 50%;
+        border: 0.2rem solid $white;
+
+        @include small-tablet {
+            display: none;
+        }
+
+        &-next {
+            position: absolute;
+            bottom: 0;
+            right: -10rem;
+        }
+        &-prev {
+            position: absolute;
+            bottom: 0;
+            left: -10rem;
+        }
+    }
 }

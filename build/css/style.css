@@ -694,6 +694,24 @@ input.not-valid {
   z-index: -1;
 }
 
+q {
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.5) 14.39%, rgba(255, 255, 255, 0) 182.55%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(14.39%, rgba(255, 255, 255, 0.5)), color-stop(182.55%, rgba(255, 255, 255, 0)));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 14.39%, rgba(255, 255, 255, 0) 182.55%);
+  border: 0.1rem solid #fff;
+  padding: 5rem;
+  border-radius: 4rem;
+  color: #00589b;
+  font-size: 2.3rem;
+  font-weight: 700;
+  line-height: 2.875rem;
+}
+
+q::after,
+q::before {
+  content: none;
+}
+
 .map [class*=copyrights-pane] {
   display: none !important;
 }
@@ -3113,6 +3131,39 @@ input.not-valid {
   margin-bottom: 4.4rem;
 }
 
+.category-list-swiper__container {
+  position: relative;
+}
+
+.category-list-swiper-button {
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 8.5rem;
+  height: 8.5rem;
+  border-radius: 50%;
+  border: 0.2rem solid #fff;
+}
+
+.category-list-swiper-button-next {
+  position: absolute;
+  bottom: 0;
+  right: -10rem;
+}
+
+.category-list-swiper-button-prev {
+  position: absolute;
+  bottom: 0;
+  left: -10rem;
+}
+
 .spheres__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3291,6 +3342,7 @@ input.not-valid {
 
 .spheres-card-icon img {
   height: auto;
+  max-height: 100%;
 }
 
 .businesses-needs__title {
@@ -4954,16 +5006,29 @@ input.not-valid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  height: auto;
+}
+
+.protection-swiper-slide-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: auto;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 2rem;
 }
 
 .protection-swiper-slide-title {
@@ -5016,7 +5081,6 @@ input.not-valid {
   font-size: 3.2rem;
   font-weight: 400;
   letter-spacing: 0.064rem;
-  text-transform: uppercase;
 }
 
 .protection-swiper-slide-cards-item-description {
@@ -5736,6 +5800,10 @@ input.not-valid {
   border-radius: 50%;
 }
 
+.individual-calc__content {
+  position: relative;
+}
+
 .individual-calc__text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5833,6 +5901,35 @@ input.not-valid {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+.individual-calc-swiper-button {
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 8.5rem;
+  height: 8.5rem;
+  border-radius: 50%;
+  border: 0.2rem solid #fff;
+}
+
+.individual-calc-swiper-button-next {
+  position: absolute;
+  bottom: 13rem;
+  right: -4rem;
+}
+
+.individual-calc-swiper-button-prev {
+  position: absolute;
+  bottom: 13rem;
+  left: -4rem;
 }
 
 .price__title {
@@ -6608,6 +6705,13 @@ input.not-valid {
   .not-valid__mes {
     font-size: 3.2rem;
     padding: 4rem;
+  }
+
+  q {
+    padding: 3.2rem;
+    font-size: 3.6rem;
+    line-height: 4.5rem;
+    margin-top: 4rem;
   }
 
   .map [class*=inner-panes] {
@@ -7481,6 +7585,10 @@ input.not-valid {
     height: 3rem;
   }
 
+  .category-list-swiper-button {
+    display: none;
+  }
+
   .spheres__content {
     padding: 3.2rem;
     padding-top: 5.2rem;
@@ -8334,6 +8442,14 @@ input.not-valid {
     gap: 2.4rem;
   }
 
+  .protection-swiper-slide-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 4rem;
+  }
+
   .protection-swiper-slide-title {
     font-size: 4rem;
   }
@@ -8766,6 +8882,10 @@ input.not-valid {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 2.4rem;
+  }
+
+  .individual-calc-swiper-button {
+    display: none;
   }
 
   .price__content {

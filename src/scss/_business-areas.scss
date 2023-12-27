@@ -191,6 +191,7 @@
 
             img {
                 height: auto;
+                max-height: 100%;
 
                 @include small-tablet {
                     width: -webkit-fill-available;

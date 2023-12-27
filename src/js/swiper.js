@@ -115,7 +115,10 @@ resizableSwiper('(min-width: 0px)', '.individual-calc-swiper', {
     grabCursor: true,
     spaceBetween: rem(0.8),
     slidesPerView: 'auto',
-
+    navigation: {
+        nextEl: '.individual-calc-swiper-button-next',
+        prevEl: '.individual-calc-swiper-button-prev'
+    },
     breakpoints: {
         768: {
             spaceBetween: rem(1.6),
@@ -130,7 +133,10 @@ resizableSwiper('(min-width: 0px)', '.category-list-swiper', {
     grabCursor: true,
     spaceBetween: rem(0.8),
     slidesPerView: 'auto',
-
+    navigation: {
+        nextEl: '.category-list-swiper-button-next',
+        prevEl: '.category-list-swiper-button-prev'
+    },
     breakpoints: {
         768: {
             spaceBetween: rem(1.2)
